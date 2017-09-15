@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C2d-4p-blE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -27,9 +28,6 @@
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-3E-GPo">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <connections>
-                                    <segue destination="hFX-nn-Z6l" kind="presentation" id="V3D-ur-veW"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -47,7 +45,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-886" y="1578"/>
         </scene>
         <!--導覽頁-->
         <scene sceneID="81W-qk-QbP">
@@ -71,9 +69,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agq-2T-fH2">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <state key="normal" image="導覽頁"/>
-                                <connections>
-                                    <segue destination="YyO-Y0-kNk" kind="presentation" id="Ncb-y6-H9t"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -92,7 +87,159 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MZs-Df-4J7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="748" y="138.98050974512745"/>
+            <point key="canvasLocation" x="-39" y="1578"/>
+        </scene>
+        <!--導覽起始頁-->
+        <scene sceneID="Se3-lF-H0e">
+            <objects>
+                <viewController storyboardIdentifier="RPV" title="導覽起始頁" id="C2d-4p-blE" customClass="RootPageView" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Atp-G0-r37"/>
+                        <viewControllerLayoutGuide type="bottom" id="DxM-MQ-0lx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Rb-lW-qLc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-9E-yna">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="yvR-fH-8ti" kind="embed" id="g9B-S8-1da"/>
+                                </connections>
+                            </containerView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lv7-zw-IIc" userLabel="註冊/登入 定位框">
+                                <rect key="frame" x="0.0" y="537" width="375" height="130"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMZ-NJ-aYx" userLabel="註冊鈕定位框">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="130"/>
+                                        <subviews>
+                                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6w-qs-zlY">
+                                                <rect key="frame" x="18.5" y="35" width="160" height="60"/>
+                                                <color key="backgroundColor" red="0.53333336109999996" green="0.77647060160000003" blue="0.52156865600000002" alpha="1" colorSpace="deviceRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="註冊">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="regeisterBTN:" destination="C2d-4p-blE" eventType="touchUpInside" id="VKt-la-WB9"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="l6w-qs-zlY" firstAttribute="top" secondItem="eMZ-NJ-aYx" secondAttribute="top" constant="35" id="CY6-mA-UQT"/>
+                                            <constraint firstAttribute="trailing" secondItem="l6w-qs-zlY" secondAttribute="trailing" constant="9" id="DbT-NJ-SsR"/>
+                                            <constraint firstItem="l6w-qs-zlY" firstAttribute="leading" secondItem="eMZ-NJ-aYx" secondAttribute="leading" constant="18.300000000000001" id="hsH-ls-C2I"/>
+                                            <constraint firstAttribute="bottom" secondItem="l6w-qs-zlY" secondAttribute="bottom" constant="35" id="xYM-i1-0wV"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3sm-ev-Z8T" userLabel="登入鈕定位框">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="130"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Inh-4Q-k4o">
+                                                <rect key="frame" x="9" y="35" width="160" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <state key="normal" title="登入">
+                                                    <color key="titleColor" red="0.53333336109999996" green="0.77647060160000003" blue="0.52156865600000002" alpha="1" colorSpace="deviceRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loginBTN:" destination="C2d-4p-blE" eventType="touchUpInside" id="dFW-6G-LyE"/>
+                                                    <segue destination="YyO-Y0-kNk" kind="presentation" id="OoR-aU-uyh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Inh-4Q-k4o" firstAttribute="leading" secondItem="3sm-ev-Z8T" secondAttribute="leading" constant="9" id="Ykd-dw-NjU"/>
+                                            <constraint firstAttribute="bottom" secondItem="Inh-4Q-k4o" secondAttribute="bottom" constant="35" id="cpA-Xq-hUo"/>
+                                            <constraint firstAttribute="trailing" secondItem="Inh-4Q-k4o" secondAttribute="trailing" constant="18.300000000000001" id="s9F-h5-gRq"/>
+                                            <constraint firstItem="Inh-4Q-k4o" firstAttribute="top" secondItem="3sm-ev-Z8T" secondAttribute="top" constant="35" id="yOr-e6-lrv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="xoq-4m-g7B">
+                                <rect key="frame" x="137" y="500" width="100" height="37"/>
+                            </pageControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTM-AJ-30p" userLabel="PageView內文">
+                                <rect key="frame" x="62" y="270" width="250" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="原料回憶是以同時娛樂正確郵箱下載次數掌握簡介現金日誌，傳統想到介紹隨着後面好好戰爭上了達到您可以律師面對當中寂寞不以同時原料回憶">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="18" name=".PingFangTC-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineSpacing="16" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kg2-2q-sqG" userLabel="替代線條">
+                                <rect key="frame" x="62" y="270" width="250" height="1"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="壓力腦袋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MY-j5-flD" userLabel="PageView標題">
+                                <rect key="frame" x="87" y="191" width="200" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lv7-zw-IIc" firstAttribute="leading" secondItem="0Rb-lW-qLc" secondAttribute="leading" id="0q9-VO-VE5"/>
+                            <constraint firstItem="lv7-zw-IIc" firstAttribute="top" secondItem="xoq-4m-g7B" secondAttribute="bottom" id="70c-YV-e87"/>
+                            <constraint firstItem="DxM-MQ-0lx" firstAttribute="top" secondItem="bNX-9E-yna" secondAttribute="bottom" id="Kny-yf-x2I"/>
+                            <constraint firstItem="bNX-9E-yna" firstAttribute="leading" secondItem="0Rb-lW-qLc" secondAttribute="leading" id="TLI-zi-ebX"/>
+                            <constraint firstItem="DxM-MQ-0lx" firstAttribute="top" secondItem="lv7-zw-IIc" secondAttribute="bottom" id="WiI-44-7EM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xoq-4m-g7B" secondAttribute="trailing" constant="122" id="Y5b-0m-74c"/>
+                            <constraint firstAttribute="trailing" secondItem="lv7-zw-IIc" secondAttribute="trailing" id="Zhb-uI-h5d"/>
+                            <constraint firstAttribute="trailing" secondItem="bNX-9E-yna" secondAttribute="trailing" id="gve-aS-ZX9"/>
+                            <constraint firstItem="bNX-9E-yna" firstAttribute="top" secondItem="0Rb-lW-qLc" secondAttribute="top" id="nHN-Bi-web"/>
+                            <constraint firstItem="lv7-zw-IIc" firstAttribute="height" secondItem="0Rb-lW-qLc" secondAttribute="height" multiplier="130:667" id="pYx-lB-Cr1"/>
+                            <constraint firstItem="xoq-4m-g7B" firstAttribute="leading" secondItem="0Rb-lW-qLc" secondAttribute="leadingMargin" constant="121" id="qGj-Ck-NLA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pageControl" destination="xoq-4m-g7B" id="Bel-C0-ik3"/>
+                        <outlet property="welcomeDetailLabel" destination="FTM-AJ-30p" id="4Jd-hV-2ly"/>
+                        <outlet property="welcomeTitleLabel" destination="8MY-j5-flD" id="1sn-Is-zYZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6r6-Iv-NqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-39" y="139"/>
+        </scene>
+        <!--導覽頁內容頁-01-->
+        <scene sceneID="IDN-zH-OD6">
+            <objects>
+                <viewController storyboardIdentifier="VC1" title="導覽頁內容頁-01" id="45A-9U-6XR" customClass="ContentPageView_01" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZoE-f6-g2E"/>
+                        <viewControllerLayoutGuide type="bottom" id="xVZ-bi-wkv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XOE-en-ZRZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PageView-1" translatesAutoresizingMaskIntoConstraints="NO" id="lKv-Qw-JD3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xVZ-bi-wkv" firstAttribute="top" secondItem="lKv-Qw-JD3" secondAttribute="bottom" id="OEe-TA-2YJ"/>
+                            <constraint firstAttribute="trailing" secondItem="lKv-Qw-JD3" secondAttribute="trailing" id="bdn-Nw-eh6"/>
+                            <constraint firstItem="lKv-Qw-JD3" firstAttribute="top" secondItem="ZoE-f6-g2E" secondAttribute="bottom" constant="-20" id="iuG-om-GSQ"/>
+                            <constraint firstItem="lKv-Qw-JD3" firstAttribute="leading" secondItem="XOE-en-ZRZ" secondAttribute="leading" id="v7h-Fd-o2k"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6VA-dT-mpX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="867"/>
         </scene>
         <!--Memo Page View Controller-->
         <scene sceneID="N7f-Nw-gfr">
@@ -280,6 +427,14 @@
             </objects>
             <point key="canvasLocation" x="2524" y="138.98050974512745"/>
         </scene>
+        <!--導覽頁控制頁-->
+        <scene sceneID="fUw-Il-CuV">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="導覽頁控制頁" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="yvR-fH-8ti" customClass="PageViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c8M-gm-gY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="139"/>
+        </scene>
         <!--newDailyViewController-->
         <scene sceneID="I7d-Nq-TrR">
             <objects>
@@ -455,8 +610,69 @@
             </objects>
             <point key="canvasLocation" x="2524" y="867"/>
         </scene>
+        <!--導覽頁內容頁-02-->
+        <scene sceneID="LJq-UD-Bxe">
+            <objects>
+                <viewController storyboardIdentifier="VC2" title="導覽頁內容頁-02" id="6um-6a-e7L" customClass="ContentPageView_02" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9pi-gx-tD6"/>
+                        <viewControllerLayoutGuide type="bottom" id="BHP-X8-P2z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qwH-Qi-V4i">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PageView-2" translatesAutoresizingMaskIntoConstraints="NO" id="aFh-Yh-8HH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aFh-Yh-8HH" firstAttribute="leading" secondItem="qwH-Qi-V4i" secondAttribute="leading" id="ICs-2O-pEu"/>
+                            <constraint firstAttribute="trailing" secondItem="aFh-Yh-8HH" secondAttribute="trailing" id="YVE-AD-gf5"/>
+                            <constraint firstItem="aFh-Yh-8HH" firstAttribute="top" secondItem="9pi-gx-tD6" secondAttribute="bottom" constant="-20" id="Yl3-Ga-MTZ"/>
+                            <constraint firstItem="BHP-X8-P2z" firstAttribute="top" secondItem="aFh-Yh-8HH" secondAttribute="bottom" id="cmH-sx-qUk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1vY-uX-Hfe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="1579"/>
+        </scene>
+        <!--導覽頁內容頁-03-->
+        <scene sceneID="ohh-HM-P26">
+            <objects>
+                <viewController storyboardIdentifier="VC3" title="導覽頁內容頁-03" id="jTv-O7-2W6" customClass="ContentPageView_03" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7z4-eT-Ouu"/>
+                        <viewControllerLayoutGuide type="bottom" id="RPN-Q4-dP4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Khm-YS-Wgd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PageView-3" translatesAutoresizingMaskIntoConstraints="NO" id="64F-UG-yE6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="64F-UG-yE6" firstAttribute="leading" secondItem="Khm-YS-Wgd" secondAttribute="leading" id="2zx-sR-KCS"/>
+                            <constraint firstItem="64F-UG-yE6" firstAttribute="top" secondItem="7z4-eT-Ouu" secondAttribute="bottom" constant="-20" id="6Os-8D-bW8"/>
+                            <constraint firstItem="RPN-Q4-dP4" firstAttribute="top" secondItem="64F-UG-yE6" secondAttribute="bottom" id="k8u-vq-Gtc"/>
+                            <constraint firstAttribute="trailing" secondItem="64F-UG-yE6" secondAttribute="trailing" id="s7l-fa-Mhz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bqa-Iz-9N6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="844" y="2313"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="PageView-1" width="564" height="845"/>
+        <image name="PageView-2" width="564" height="789"/>
+        <image name="PageView-3" width="564" height="846"/>
         <image name="memopage" width="596" height="1058"/>
         <image name="newdaily" width="596" height="1058"/>
         <image name="statistics" width="596" height="1058"/>
