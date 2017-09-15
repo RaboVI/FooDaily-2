@@ -11,6 +11,11 @@
 		12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177BB81F1F7A2C00CA49CD /* ViewController.swift */; };
 		12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBA1F1F7A2C00CA49CD /* Main.storyboard */; };
 		12177BC11F1F7A2D00CA49CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */; };
+		12826F1A1F6B4F98008297C0 /* ContentPageView-01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F191F6B4F98008297C0 /* ContentPageView-01.swift */; };
+		12826F1C1F6B4FBC008297C0 /* ContentPageView_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1B1F6B4FBC008297C0 /* ContentPageView_02.swift */; };
+		12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */; };
+		12826F201F6B5934008297C0 /* RootPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1F1F6B5934008297C0 /* RootPageView.swift */; };
+		12826F221F6B596D008297C0 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F211F6B596D008297C0 /* PageViewController.swift */; };
 		12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349B1F20DBA600E8858E /* newDailyViewController.swift */; };
 		12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */; };
 		12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F934A71F20E56900E8858E /* statisticsViewController.swift */; };
@@ -25,6 +30,11 @@
 		12177BBB1F1F7A2C00CA49CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12177BC01F1F7A2D00CA49CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12177BC21F1F7A2D00CA49CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12826F191F6B4F98008297C0 /* ContentPageView-01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContentPageView-01.swift"; sourceTree = "<group>"; };
+		12826F1B1F6B4FBC008297C0 /* ContentPageView_02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPageView_02.swift; sourceTree = "<group>"; };
+		12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPageView_03.swift; sourceTree = "<group>"; };
+		12826F1F1F6B5934008297C0 /* RootPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPageView.swift; sourceTree = "<group>"; };
+		12826F211F6B596D008297C0 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		12F9349B1F20DBA600E8858E /* newDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newDailyViewController.swift; sourceTree = "<group>"; };
 		12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wantToEatViewController.swift; sourceTree = "<group>"; };
 		12F934A71F20E56900E8858E /* statisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statisticsViewController.swift; sourceTree = "<group>"; };
@@ -68,12 +78,25 @@
 				12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */,
 				12F934A71F20E56900E8858E /* statisticsViewController.swift */,
 				12F934AB1F20EB5000E8858E /* memoPageViewController.swift */,
-				12FD67C71F20767B0021EDD6 /* Assets.xcassets */,
+				12826F231F6B67C1008297C0 /* 導覽頁PageView */,
 				12177BBA1F1F7A2C00CA49CD /* Main.storyboard */,
 				12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */,
+				12FD67C71F20767B0021EDD6 /* Assets.xcassets */,
 				12177BC21F1F7A2D00CA49CD /* Info.plist */,
 			);
 			path = "BPT103-Project-Foodaily";
+			sourceTree = "<group>";
+		};
+		12826F231F6B67C1008297C0 /* 導覽頁PageView */ = {
+			isa = PBXGroup;
+			children = (
+				12826F1F1F6B5934008297C0 /* RootPageView.swift */,
+				12826F211F6B596D008297C0 /* PageViewController.swift */,
+				12826F191F6B4F98008297C0 /* ContentPageView-01.swift */,
+				12826F1B1F6B4FBC008297C0 /* ContentPageView_02.swift */,
+				12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */,
+			);
+			name = "導覽頁PageView";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,11 +172,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */,
+				12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */,
+				12826F221F6B596D008297C0 /* PageViewController.swift in Sources */,
 				12F934AC1F20EB5000E8858E /* memoPageViewController.swift in Sources */,
 				12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */,
 				12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */,
+				12826F201F6B5934008297C0 /* RootPageView.swift in Sources */,
+				12826F1A1F6B4F98008297C0 /* ContentPageView-01.swift in Sources */,
 				12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */,
 				12177BB71F1F7A2C00CA49CD /* AppDelegate.swift in Sources */,
+				12826F1C1F6B4FBC008297C0 /* ContentPageView_02.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
