@@ -17,7 +17,7 @@ class RootPageView: UIViewController,PageViewControllerDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     
     // welcomeTitleLabel要顯示的文字
-    let welcomeTitleText = ["1234","壓力腦袋","壓力腦袋"]
+    let welcomeTitleText = ["壓力腦袋","壓力腦袋","壓力腦袋"]
     
     // welcomeDetailLabel要顯示的文字
     let welcomeDetailText = [
