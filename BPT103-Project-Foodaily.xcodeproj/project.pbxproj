@@ -78,7 +78,7 @@
 				12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */,
 				12F934A71F20E56900E8858E /* statisticsViewController.swift */,
 				12F934AB1F20EB5000E8858E /* memoPageViewController.swift */,
-				12826F231F6B67C1008297C0 /* 導覽頁PageView */,
+				12826F231F6B67C1008297C0 /* WelcomePageView */,
 				12177BBA1F1F7A2C00CA49CD /* Main.storyboard */,
 				12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */,
 				12FD67C71F20767B0021EDD6 /* Assets.xcassets */,
@@ -87,7 +87,7 @@
 			path = "BPT103-Project-Foodaily";
 			sourceTree = "<group>";
 		};
-		12826F231F6B67C1008297C0 /* 導覽頁PageView */ = {
+		12826F231F6B67C1008297C0 /* WelcomePageView */ = {
 			isa = PBXGroup;
 			children = (
 				12826F1F1F6B5934008297C0 /* RootPageView.swift */,
@@ -96,7 +96,7 @@
 				12826F1B1F6B4FBC008297C0 /* ContentPageView_02.swift */,
 				12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */,
 			);
-			name = "導覽頁PageView";
+			name = WelcomePageView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

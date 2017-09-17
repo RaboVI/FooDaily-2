@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--歡迎頁-->
+        <!--LaunchScreen(Old)-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="歡迎頁" customClass="ViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="LaunchScreen(Old)" customClass="ViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="-886" y="1578"/>
         </scene>
-        <!--導覽頁-->
+        <!--PageView(Old)-->
         <scene sceneID="81W-qk-QbP">
             <objects>
-                <viewController id="hFX-nn-Z6l" userLabel="導覽頁" sceneMemberID="viewController">
+                <viewController id="hFX-nn-Z6l" userLabel="PageView(Old)" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uxV-2J-hCp"/>
                         <viewControllerLayoutGuide type="bottom" id="zCe-Vr-I8r"/>
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="-39" y="1578"/>
         </scene>
-        <!--導覽起始頁-->
+        <!--PageViewController-->
         <scene sceneID="Se3-lF-H0e">
             <objects>
-                <viewController storyboardIdentifier="RPV" title="導覽起始頁" id="C2d-4p-blE" customClass="RootPageView" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RPV" title="PageViewController" id="C2d-4p-blE" customClass="RootPageView" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Atp-G0-r37"/>
                         <viewControllerLayoutGuide type="bottom" id="DxM-MQ-0lx"/>
@@ -104,7 +104,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNX-9E-yna">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <connections>
-                                    <segue destination="yvR-fH-8ti" kind="embed" id="g9B-S8-1da"/>
+                                    <segue destination="yvR-fH-8ti" kind="embed" id="2bw-Wt-tQu"/>
                                 </connections>
                             </containerView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lv7-zw-IIc" userLabel="註冊/登入 定位框">
@@ -144,7 +144,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="loginBTN:" destination="C2d-4p-blE" eventType="touchUpInside" id="dFW-6G-LyE"/>
-                                                    <segue destination="YyO-Y0-kNk" kind="presentation" id="OoR-aU-uyh"/>
+                                                    <segue destination="YyO-Y0-kNk" kind="presentation" id="koH-fe-QTq"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -212,10 +212,10 @@
             </objects>
             <point key="canvasLocation" x="-39" y="139"/>
         </scene>
-        <!--導覽頁內容頁-01-->
+        <!--ContentPageView_01-->
         <scene sceneID="IDN-zH-OD6">
             <objects>
-                <viewController storyboardIdentifier="VC1" title="導覽頁內容頁-01" id="45A-9U-6XR" customClass="ContentPageView_01" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VC1" title="ContentPageView_01" id="45A-9U-6XR" customClass="ContentPageView_01" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZoE-f6-g2E"/>
                         <viewControllerLayoutGuide type="bottom" id="xVZ-bi-wkv"/>
@@ -278,10 +278,10 @@
             </objects>
             <point key="canvasLocation" x="1617" y="-580"/>
         </scene>
-        <!--主頁面-->
+        <!--Main Page-->
         <scene sceneID="fFT-Sc-EOG">
             <objects>
-                <viewController id="YyO-Y0-kNk" userLabel="主頁面" sceneMemberID="viewController">
+                <viewController title="Main Page" id="YyO-Y0-kNk" userLabel="Main Page" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kLC-oz-WDw"/>
                         <viewControllerLayoutGuide type="bottom" id="BiY-NP-ti6"/>
@@ -427,10 +427,10 @@
             </objects>
             <point key="canvasLocation" x="2524" y="138.98050974512745"/>
         </scene>
-        <!--導覽頁控制頁-->
+        <!--PageViewController-->
         <scene sceneID="fUw-Il-CuV">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" title="導覽頁控制頁" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="yvR-fH-8ti" customClass="PageViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" title="PageViewController" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="yvR-fH-8ti" customClass="PageViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c8M-gm-gY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="844" y="139"/>
@@ -610,10 +610,10 @@
             </objects>
             <point key="canvasLocation" x="2524" y="867"/>
         </scene>
-        <!--導覽頁內容頁-02-->
+        <!--ContentPageView_02-->
         <scene sceneID="LJq-UD-Bxe">
             <objects>
-                <viewController storyboardIdentifier="VC2" title="導覽頁內容頁-02" id="6um-6a-e7L" customClass="ContentPageView_02" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VC2" title="ContentPageView_02" id="6um-6a-e7L" customClass="ContentPageView_02" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9pi-gx-tD6"/>
                         <viewControllerLayoutGuide type="bottom" id="BHP-X8-P2z"/>
@@ -639,10 +639,10 @@
             </objects>
             <point key="canvasLocation" x="844" y="1579"/>
         </scene>
-        <!--導覽頁內容頁-03-->
+        <!--ContentPageView_03-->
         <scene sceneID="ohh-HM-P26">
             <objects>
-                <viewController storyboardIdentifier="VC3" title="導覽頁內容頁-03" id="jTv-O7-2W6" customClass="ContentPageView_03" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VC3" title="ContentPageView_03" id="jTv-O7-2W6" customClass="ContentPageView_03" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7z4-eT-Ouu"/>
                         <viewControllerLayoutGuide type="bottom" id="RPN-Q4-dP4"/>
