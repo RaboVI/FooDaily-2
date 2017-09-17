@@ -10,14 +10,13 @@ import UIKit
 
 class PageViewController: UIPageViewController,UIPageViewControllerDelegate,UIPageViewControllerDataSource {
 
+    // 宣告一個變數並繼承PageViewControllerDelegate
     weak var pageDelegate: PageViewControllerDelegate?
     
     // 宣告一個計時器的變數
     var timer: Timer!
     
-    
-    /// 可能問題點1. 若把index寫死，可能無法觸發viewControllerAfter/Before這兩個方法
-    /// 可能的解決方法：將index指定為vclist.index，但我設let index = vclist.index(of: viewController) 會報錯!
+    // 宣告一個計時器的變數
     var index = 0
     
     // 將三個viewController包在一個陣列裡面，並指定各個viewController的Identifier
@@ -34,39 +33,25 @@ class PageViewController: UIPageViewController,UIPageViewControllerDelegate,UIPa
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: name)
     }
     
-    /// 讓原本UIPageView下方點點的黑底消失
-    //    override func viewDidLayoutSubviews() {
-    //        super.viewDidLayoutSubviews()
-    //
-    //        for vc in view.subviews {
-    //            if vc is UIScrollView {
-    //                vc.frame = view.bounds
-    //                break
-    //            }
-    //        }
-    //    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 注意，當有導覽點的時候，需要加入下方的程式碼。否則第一頁會是全黑的。
         setViewControllers([vclist[index]], direction: .forward, animated: true, completion: nil)
         
-        // 將delegate簽給PageViewController
+        // 將delegate及DataSource簽給PageViewController
         dataSource = self
-        
         delegate = self
         
-        // 設定一個計時器，每2秒執行#selector內的function
+        // MARK: - 自動換頁的function
+        // 設定一個計時器，每4秒執行#selector內的function
         timer = Timer.scheduledTimer(timeInterval: 4, target: self, selector: #selector(autoChangePageView), userInfo: nil, repeats: true)
         
-        //页面数量改变，通知委托对象
+        // 實作pageDelegate的方法，並把參數指定為vclist.count
         pageDelegate?.pageViewController(self, didUpdatePageCount: vclist.count)
     }
     
     // 有簽UIPageViewControllerDataSource就一定要有的方法，否則會報錯
-    /// 手動換頁的方法，目前因為自動換頁的關係，基本不會被執行到
-    /// 只有當手動換頁時，導覽點才會跟著移動。
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         
         guard let manualIndex = vclist.index(of: viewController) else {
@@ -85,8 +70,6 @@ class PageViewController: UIPageViewController,UIPageViewControllerDelegate,UIPa
     }
     
     // 有簽UIPageViewControllerDataSource就一定要有的方法，否則會報錯
-    /// 手動換頁的方法，目前因為自動換頁的關係，基本不會被執行到
-    /// 只有當手動換頁時，導覽點才會跟著移動。
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         
         guard let manualIndex = vclist.index(of: viewController) else {
@@ -110,16 +93,6 @@ class PageViewController: UIPageViewController,UIPageViewControllerDelegate,UIPa
         return vclist[previousIndex]
     }
     
-    // 決定要有幾個點
-    //    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-    //        return vclist.count
-    //    }
-    
-    // 決定起始點的位置，0是第一個
-    //    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-    //        return index
-    //    }
-    
     // 設計一個function給timer內的#selector使用，內部的程式碼將負責換頁
     func autoChangePageView() {
         
@@ -139,7 +112,6 @@ class PageViewController: UIPageViewController,UIPageViewControllerDelegate,UIPa
         // Dispose of any resources that can be recreated.
     }
     
-    
     /*
      // MARK: - Navigation
      
@@ -149,17 +121,16 @@ class PageViewController: UIPageViewController,UIPageViewControllerDelegate,UIPa
      // Pass the selected object to the new view controller.
      }
      */
-    
 }
 
-//自定义视图控制器代理协议
+// 自行定義一個PageViewControllerDelegate
 protocol PageViewControllerDelegate: class {
     
-    //当页面数量改变时调用
+    // 當頁面總數改變時執行的method
     func pageViewController(_ pageViewController: PageViewController,
                             didUpdatePageCount count: Int)
     
-    //当前页索引改变时调用
+    // 當index改變時執行的methoid
     func pageViewController(_ pageViewController: PageViewController,
                             didUpdatePageIndex index: Int)
 }

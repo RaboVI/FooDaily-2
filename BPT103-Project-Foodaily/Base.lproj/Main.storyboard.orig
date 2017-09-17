@@ -668,24 +668,6 @@
             </objects>
             <point key="canvasLocation" x="844" y="2313"/>
         </scene>
-        <!--test-->
-        <scene sceneID="gzY-IL-V0W">
-            <objects>
-                <navigationController title="test" automaticallyAdjustsScrollViewInsets="NO" id="MP3-6g-jUm" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="goj-5k-mrE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="HnB-4R-opT" kind="relationship" relationship="rootViewController" id="uS9-P3-2rs"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Jon-cH-WJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2340" y="1891.304347826087"/>
-        </scene>
     </scenes>
     <resources>
         <image name="PageView-1" width="564" height="845"/>
