@@ -639,7 +639,46 @@
             </objects>
             <point key="canvasLocation" x="844" y="1579"/>
         </scene>
+<<<<<<< HEAD
+        <!--1234-->
+        <scene sceneID="2aH-GS-Jqm">
+            <objects>
+                <collectionViewController title="1234" id="HnB-4R-opT" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="nIr-14-f8C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DtZ-2K-PeH">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LjM-dI-tlQ">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="HnB-4R-opT" id="u0A-tx-kdW"/>
+                            <outlet property="delegate" destination="HnB-4R-opT" id="5N4-Z8-ttg"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="3bm-IH-ws5"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kmP-q4-yXi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3279.1999999999998" y="1891.304347826087"/>
+        </scene>
+        <!--導覽頁內容頁-03-->
+=======
         <!--ContentPageView_03-->
+>>>>>>> 導覽頁-by-Rabo
         <scene sceneID="ohh-HM-P26">
             <objects>
                 <viewController storyboardIdentifier="VC3" title="ContentPageView_03" id="jTv-O7-2W6" customClass="ContentPageView_03" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
@@ -667,6 +706,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqa-Iz-9N6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="844" y="2313"/>
+        </scene>
+        <!--test-->
+        <scene sceneID="gzY-IL-V0W">
+            <objects>
+                <navigationController title="test" automaticallyAdjustsScrollViewInsets="NO" id="MP3-6g-jUm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="goj-5k-mrE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="HnB-4R-opT" kind="relationship" relationship="rootViewController" id="uS9-P3-2rs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jon-cH-WJe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2340" y="1891.304347826087"/>
         </scene>
     </scenes>
     <resources>
