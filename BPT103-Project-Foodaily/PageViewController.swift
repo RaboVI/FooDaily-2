@@ -121,6 +121,11 @@ class PageViewController: UIPageViewController,UIPageViewControllerDelegate,UIPa
      // Pass the selected object to the new view controller.
      }
      */
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        timer.invalidate()
+        timer = nil
+    }
 }
 
 // 自行定義一個PageViewControllerDelegate
