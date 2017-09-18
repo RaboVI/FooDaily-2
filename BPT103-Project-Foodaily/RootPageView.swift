@@ -16,11 +16,8 @@ class RootPageView: UIViewController,PageViewControllerDelegate {
     // 設立一個導覽點，會由PageViewController的Delegate傳回值來控制
     @IBOutlet weak var pageControl: UIPageControl!
     
-<<<<<<< HEAD
+
     // welcomeTitleLabel上要顯示的文字
-=======
-    // welcomeTitleLabel要顯示的文字
->>>>>>> parent of e604aac... Revert "將 “1234” 改回 “壓力腦袋 ”"
     let welcomeTitleText = ["壓力腦袋","壓力腦袋","壓力腦袋"]
     
     // welcomeDetailLabel上要顯示的文字

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="C2d-4p-blE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dpK-Mu-s6h">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -277,6 +277,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2RZ-36-ynh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1617" y="-580"/>
+        </scene>
+        <!--Main Masonry Collection View Controller-->
+        <scene sceneID="nqT-OS-OXp">
+            <objects>
+                <collectionViewController id="uTt-G2-Tij" customClass="MainMasonryCollectionViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ylb-on-SXA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hqq-Zn-MnW" customClass="MainMasonryFlowLayout" customModule="BPT103_Project_Foodaily" customModuleProvider="target">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Euy-hh-WXT" customClass="MainMasonryCollectionViewCell" customModule="BPT103_Project_Foodaily" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lqv-nL-Hwe">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="lqv-nL-Hwe" firstAttribute="leading" secondItem="Euy-hh-WXT" secondAttribute="leading" id="1g9-7M-To3"/>
+                                    <constraint firstItem="lqv-nL-Hwe" firstAttribute="top" secondItem="Euy-hh-WXT" secondAttribute="top" id="fKX-9b-yxS"/>
+                                    <constraint firstAttribute="bottom" secondItem="lqv-nL-Hwe" secondAttribute="bottom" id="giT-zl-gww"/>
+                                    <constraint firstAttribute="trailing" secondItem="lqv-nL-Hwe" secondAttribute="trailing" id="jGp-M0-qQ5"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="testImageView" destination="lqv-nL-Hwe" id="Ogm-Zi-6Vw"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="uTt-G2-Tij" id="Boo-9J-lbJ"/>
+                            <outlet property="delegate" destination="uTt-G2-Tij" id="IdE-Rk-VUe"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="vMm-93-jt0"/>
+                    <connections>
+                        <outlet property="MMCollectionView" destination="Ylb-on-SXA" id="L9i-7f-9Ve"/>
+                        <outlet property="flowLayout" destination="hqq-Zn-MnW" id="hbn-97-xMs"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hd0-iI-RbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3855.1999999999998" y="-641.82908545727139"/>
         </scene>
         <!--Main Page-->
         <scene sceneID="fFT-Sc-EOG">
@@ -667,6 +720,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bqa-Iz-9N6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="844" y="2313"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UMt-hH-LML">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dpK-Mu-s6h" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qQR-mc-l7Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uTt-G2-Tij" kind="relationship" relationship="rootViewController" id="Apv-9O-siI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zF-hq-E8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2916" y="-641.82908545727139"/>
         </scene>
     </scenes>
     <resources>
