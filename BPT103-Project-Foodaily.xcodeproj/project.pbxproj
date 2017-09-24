@@ -11,6 +11,13 @@
 		12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177BB81F1F7A2C00CA49CD /* ViewController.swift */; };
 		12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBA1F1F7A2C00CA49CD /* Main.storyboard */; };
 		12177BC11F1F7A2D00CA49CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */; };
+		123B88991F7826BC005FB718 /* MemberSignInAndOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88981F7826BC005FB718 /* MemberSignInAndOutViewController.swift */; };
+		123B889B1F782AD7005FB718 /* UINavigationController+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */; };
+		123B889F1F782C11005FB718 /* MemberLogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B889E1F782C11005FB718 /* MemberLogInPage.swift */; };
+		123B88A11F783F0C005FB718 /* MemberForgetPasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88A01F783F0C005FB718 /* MemberForgetPasswordPage.swift */; };
+		123B88A31F783FA2005FB718 /* MemberCreateAccountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88A21F783FA2005FB718 /* MemberCreateAccountPage.swift */; };
+		123B88A51F7850C4005FB718 /* MemberProfiolePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88A41F7850C4005FB718 /* MemberProfiolePage.swift */; };
+		123B88A71F785539005FB718 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 123B88A61F785539005FB718 /* GoogleService-Info.plist */; };
 		12826F1A1F6B4F98008297C0 /* ContentPageView-01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F191F6B4F98008297C0 /* ContentPageView-01.swift */; };
 		12826F1C1F6B4FBC008297C0 /* ContentPageView_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1B1F6B4FBC008297C0 /* ContentPageView_02.swift */; };
 		12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */; };
@@ -21,6 +28,7 @@
 		12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F934A71F20E56900E8858E /* statisticsViewController.swift */; };
 		12F934AC1F20EB5000E8858E /* memoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F934AB1F20EB5000E8858E /* memoPageViewController.swift */; };
 		12FD67C81F20767B0021EDD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12FD67C71F20767B0021EDD6 /* Assets.xcassets */; };
+		6A333927ED366EBC1DE8E905 /* Pods_BPT103_Project_Foodaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE7F78C34D3F59D174D26B7 /* Pods_BPT103_Project_Foodaily.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,13 @@
 		12177BBB1F1F7A2C00CA49CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12177BC01F1F7A2D00CA49CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12177BC21F1F7A2D00CA49CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		123B88981F7826BC005FB718 /* MemberSignInAndOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSignInAndOutViewController.swift; sourceTree = "<group>"; };
+		123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transparent.swift"; sourceTree = "<group>"; };
+		123B889E1F782C11005FB718 /* MemberLogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLogInPage.swift; sourceTree = "<group>"; };
+		123B88A01F783F0C005FB718 /* MemberForgetPasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberForgetPasswordPage.swift; sourceTree = "<group>"; };
+		123B88A21F783FA2005FB718 /* MemberCreateAccountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCreateAccountPage.swift; sourceTree = "<group>"; };
+		123B88A41F7850C4005FB718 /* MemberProfiolePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProfiolePage.swift; sourceTree = "<group>"; };
+		123B88A61F785539005FB718 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12826F191F6B4F98008297C0 /* ContentPageView-01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContentPageView-01.swift"; sourceTree = "<group>"; };
 		12826F1B1F6B4FBC008297C0 /* ContentPageView_02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPageView_02.swift; sourceTree = "<group>"; };
 		12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPageView_03.swift; sourceTree = "<group>"; };
@@ -40,6 +55,9 @@
 		12F934A71F20E56900E8858E /* statisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statisticsViewController.swift; sourceTree = "<group>"; };
 		12F934AB1F20EB5000E8858E /* memoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoPageViewController.swift; sourceTree = "<group>"; };
 		12FD67C71F20767B0021EDD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1E4A4D5F87B3827849C6E37E /* Pods-BPT103-Project-Foodaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPT103-Project-Foodaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BPT103-Project-Foodaily/Pods-BPT103-Project-Foodaily.debug.xcconfig"; sourceTree = "<group>"; };
+		9DE7F78C34D3F59D174D26B7 /* Pods_BPT103_Project_Foodaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BPT103_Project_Foodaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5E0299527D4856C95BA434E /* Pods-BPT103-Project-Foodaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPT103-Project-Foodaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-BPT103-Project-Foodaily/Pods-BPT103-Project-Foodaily.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A333927ED366EBC1DE8E905 /* Pods_BPT103_Project_Foodaily.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,6 +77,8 @@
 			children = (
 				12177BB51F1F7A2C00CA49CD /* BPT103-Project-Foodaily */,
 				12177BB41F1F7A2C00CA49CD /* Products */,
+				C7BF0DF1FEF56731E63A547A /* Pods */,
+				DD44CF07B0EAA4EC9408A1D6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,12 +100,35 @@
 				12F934A71F20E56900E8858E /* statisticsViewController.swift */,
 				12F934AB1F20EB5000E8858E /* memoPageViewController.swift */,
 				12826F231F6B67C1008297C0 /* WelcomePageView */,
+				123B889D1F782B05005FB718 /* Member LogIn/Out Pages */,
+				123B889C1F782AE5005FB718 /* Extension */,
 				12177BBA1F1F7A2C00CA49CD /* Main.storyboard */,
 				12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */,
 				12FD67C71F20767B0021EDD6 /* Assets.xcassets */,
 				12177BC21F1F7A2D00CA49CD /* Info.plist */,
+				123B88A61F785539005FB718 /* GoogleService-Info.plist */,
 			);
 			path = "BPT103-Project-Foodaily";
+			sourceTree = "<group>";
+		};
+		123B889C1F782AE5005FB718 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		123B889D1F782B05005FB718 /* Member LogIn/Out Pages */ = {
+			isa = PBXGroup;
+			children = (
+				123B88981F7826BC005FB718 /* MemberSignInAndOutViewController.swift */,
+				123B889E1F782C11005FB718 /* MemberLogInPage.swift */,
+				123B88A01F783F0C005FB718 /* MemberForgetPasswordPage.swift */,
+				123B88A21F783FA2005FB718 /* MemberCreateAccountPage.swift */,
+				123B88A41F7850C4005FB718 /* MemberProfiolePage.swift */,
+			);
+			name = "Member LogIn/Out Pages";
 			sourceTree = "<group>";
 		};
 		12826F231F6B67C1008297C0 /* WelcomePageView */ = {
@@ -99,6 +143,23 @@
 			name = WelcomePageView;
 			sourceTree = "<group>";
 		};
+		C7BF0DF1FEF56731E63A547A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E4A4D5F87B3827849C6E37E /* Pods-BPT103-Project-Foodaily.debug.xcconfig */,
+				C5E0299527D4856C95BA434E /* Pods-BPT103-Project-Foodaily.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DD44CF07B0EAA4EC9408A1D6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9DE7F78C34D3F59D174D26B7 /* Pods_BPT103_Project_Foodaily.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +167,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 12177BC51F1F7A2D00CA49CD /* Build configuration list for PBXNativeTarget "BPT103-Project-Foodaily" */;
 			buildPhases = (
+				D21261C21DC028D313B379EE /* [CP] Check Pods Manifest.lock */,
 				12177BAF1F1F7A2C00CA49CD /* Sources */,
 				12177BB01F1F7A2C00CA49CD /* Frameworks */,
 				12177BB11F1F7A2C00CA49CD /* Resources */,
+				B9F2465C699343A8B5D6477B /* [CP] Embed Pods Frameworks */,
+				1829E84E830C967D62BD506C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,10 +225,59 @@
 				12177BC11F1F7A2D00CA49CD /* LaunchScreen.storyboard in Resources */,
 				12FD67C81F20767B0021EDD6 /* Assets.xcassets in Resources */,
 				12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */,
+				123B88A71F785539005FB718 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1829E84E830C967D62BD506C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BPT103-Project-Foodaily/Pods-BPT103-Project-Foodaily-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9F2465C699343A8B5D6477B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BPT103-Project-Foodaily/Pods-BPT103-Project-Foodaily-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D21261C21DC028D313B379EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		12177BAF1F1F7A2C00CA49CD /* Sources */ = {
@@ -173,14 +286,20 @@
 			files = (
 				12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */,
 				12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */,
+				123B889B1F782AD7005FB718 /* UINavigationController+Transparent.swift in Sources */,
 				12826F221F6B596D008297C0 /* PageViewController.swift in Sources */,
+				123B889F1F782C11005FB718 /* MemberLogInPage.swift in Sources */,
 				12F934AC1F20EB5000E8858E /* memoPageViewController.swift in Sources */,
 				12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */,
 				12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */,
+				123B88A11F783F0C005FB718 /* MemberForgetPasswordPage.swift in Sources */,
 				12826F201F6B5934008297C0 /* RootPageView.swift in Sources */,
+				123B88991F7826BC005FB718 /* MemberSignInAndOutViewController.swift in Sources */,
 				12826F1A1F6B4F98008297C0 /* ContentPageView-01.swift in Sources */,
 				12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */,
+				123B88A51F7850C4005FB718 /* MemberProfiolePage.swift in Sources */,
 				12177BB71F1F7A2C00CA49CD /* AppDelegate.swift in Sources */,
+				123B88A31F783FA2005FB718 /* MemberCreateAccountPage.swift in Sources */,
 				12826F1C1F6B4FBC008297C0 /* ContentPageView_02.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +423,7 @@
 		};
 		12177BC61F1F7A2D00CA49CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E4A4D5F87B3827849C6E37E /* Pods-BPT103-Project-Foodaily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BPT103-Project-Foodaily/Info.plist";
@@ -316,6 +436,7 @@
 		};
 		12177BC71F1F7A2D00CA49CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5E0299527D4856C95BA434E /* Pods-BPT103-Project-Foodaily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BPT103-Project-Foodaily/Info.plist";

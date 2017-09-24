@@ -1,0 +1,6 @@
+framework module Pods_BPT103_Project_Foodaily {
+  umbrella header "Pods-BPT103-Project-Foodaily-umbrella.h"
+
+  export *
+  module * { export * }
+}
