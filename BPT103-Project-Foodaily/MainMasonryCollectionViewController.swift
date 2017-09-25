@@ -15,19 +15,10 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     @IBOutlet weak var flowLayout: MainMasonryFlowLayout!
     @IBOutlet var MMCollectionView: UICollectionView!
     
-    var dailyItem = [UIImage]()
-    
+    let dataManager = FakeDataManager.shared   
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        for _ in 1...6 {
-            for i in 0...6 {
-                dailyItem.append(UIImage(named: "0\(i).jpg")!)
-            }
-        }
-        
-        flowLayout.dailyItem = dailyItem
         
         self.collectionView?.collectionViewLayout = flowLayout
 
@@ -36,7 +27,6 @@ class MainMasonryCollectionViewController: UICollectionViewController {
 
 
         // Do any additional setup after loading the view.
-        
 
     }
 
@@ -65,13 +55,21 @@ class MainMasonryCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return dailyItem.count
+        return dataManager.dailyItem.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let dailyItem = dataManager.dailyItem[indexPath.row]
+        let width = (self.view.bounds.size.width - flowLayout.minimumInteritemSpacing - flowLayout.sectionInset.left - flowLayout.sectionInset.right) / 2
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MainMasonryCollectionViewCell
     
-        cell.testImageView.image = dailyItem[indexPath.row]
+        cell.setCellDetail(image: dailyItem.image,
+                           shopName: dailyItem.shopName,
+                           createDate: dailyItem.createDate,
+                           starCount: dailyItem.starCount,
+                           width: width)
         
         return cell
     }

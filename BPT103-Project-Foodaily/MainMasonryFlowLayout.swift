@@ -10,10 +10,11 @@ import UIKit
 
 class MainMasonryFlowLayout: UICollectionViewFlowLayout {
     
+    let dataMananger = FakeDataManager.shared
     
     // 建立存放日記物件陣列
     
-    var dailyItem = [UIImage]()
+//    var dailyItem = [UIImage]()
     var layoutAttributes = [UICollectionViewLayoutAttributes]()
     var layoutItemSize = CGSize()
 
@@ -24,19 +25,21 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
         
         // 設定 section and cell 空間配置
         // section
-        sectionInset.top        = 10
-        sectionInset.left       = 10
-        sectionInset.right      = 10
+        sectionInset.top        = 2.5
+        sectionInset.left       = 2.5
+        sectionInset.right      = 2.5
         
         // cell
-        minimumLineSpacing      = 10
-        minimumInteritemSpacing = 10
+        minimumLineSpacing      = 0
+        minimumInteritemSpacing = 0
         
         
         
         // compute cell width
         guard let collectionViewWidth = collectionView?.bounds.size.width else { return }
         let cellWidth = (collectionViewWidth - sectionInset.left - sectionInset.right - minimumInteritemSpacing) / 2
+        
+        print(cellWidth)
         
         computeAndSaveAttributes(cellWidth: cellWidth)
         
@@ -67,7 +70,7 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
         
         
         
-        for item in dailyItem {
+        for image in dataMananger.dailyItem {
             
             // 建立一個 attribute 物件，並給予位置設定
             let indexPath = IndexPath.init(row: row,
@@ -87,18 +90,24 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
             let cellX = columnX[minHeightColume]
             let cellY = minHeight
             
+            /*
             // 依比例計算出調整後的高度  originHeight * finalWidth / originWidth
             let cellHeight = item.size.height * cellWidth / item.size.width
+            */
+            
+            let cellSize = MainMasonryCollectionViewCell.computeCellSize(image: image.image,
+                                                                         width: cellWidth)
             
             // 設定 attribute 的 frame，並加入到 attributes 中
             attribute.frame = CGRect(x: cellX,
                                      y: cellY,
-                                     width: cellWidth,
-                                     height: cellHeight)
+                                     width: cellSize.width,
+                                     height: cellSize.height)
+            
             attributes.append(attribute)
             
             // 記錄增加物件後的 column 高度
-            columnHeights[minHeightColume] += cellHeight + minimumLineSpacing
+            columnHeights[minHeightColume] += cellSize.height + minimumLineSpacing
             
             
             row += 1
@@ -108,9 +117,9 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
         
         let maxHeight = columnHeights.sorted().last!
         
-        var defaultColumnCount: CGFloat = CGFloat(dailyItem.count / 2)
+        var defaultColumnCount: CGFloat = CGFloat(dataMananger.dailyItem.count / 2)
         
-        if dailyItem.count % 2 == 1 {
+        if dataMananger.dailyItem.count % 2 == 1 {
             defaultColumnCount += 1
         }
         

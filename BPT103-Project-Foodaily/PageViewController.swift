@@ -94,7 +94,7 @@ class PageViewController: UIPageViewController,UIPageViewControllerDelegate,UIPa
     }
     
     // 設計一個function給timer內的#selector使用，內部的程式碼將負責換頁
-    func autoChangePageView() {
+    @objc func autoChangePageView() {
         
         index += 1
         if index < self.vclist.count {
