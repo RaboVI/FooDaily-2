@@ -11,6 +11,8 @@
 		12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177BB81F1F7A2C00CA49CD /* ViewController.swift */; };
 		12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBA1F1F7A2C00CA49CD /* Main.storyboard */; };
 		12177BC11F1F7A2D00CA49CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */; };
+		1227DB361F78D9B400023A18 /* UITextField+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227DB351F78D9B300023A18 /* UITextField+Placeholder.swift */; };
+		1227DB381F78F3D400023A18 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1227DB371F78F3D400023A18 /* Rubik-Medium.ttf */; };
 		123B88991F7826BC005FB718 /* MemberSignInAndOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88981F7826BC005FB718 /* MemberSignInAndOutViewController.swift */; };
 		123B889B1F782AD7005FB718 /* UINavigationController+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */; };
 		123B889F1F782C11005FB718 /* MemberLogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B889E1F782C11005FB718 /* MemberLogInPage.swift */; };
@@ -38,6 +40,9 @@
 		12177BBB1F1F7A2C00CA49CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12177BC01F1F7A2D00CA49CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12177BC21F1F7A2D00CA49CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1227DB351F78D9B300023A18 /* UITextField+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Placeholder.swift"; sourceTree = "<group>"; };
+		1227DB371F78F3D400023A18 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		1227DB391F78F7A600023A18 /* FooDaily Color ticket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FooDaily Color ticket.png"; sourceTree = "<group>"; };
 		123B88981F7826BC005FB718 /* MemberSignInAndOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSignInAndOutViewController.swift; sourceTree = "<group>"; };
 		123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transparent.swift"; sourceTree = "<group>"; };
 		123B889E1F782C11005FB718 /* MemberLogInPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberLogInPage.swift; sourceTree = "<group>"; };
@@ -93,6 +98,8 @@
 		12177BB51F1F7A2C00CA49CD /* BPT103-Project-Foodaily */ = {
 			isa = PBXGroup;
 			children = (
+				1227DB391F78F7A600023A18 /* FooDaily Color ticket.png */,
+				1227DB341F78D97D00023A18 /* TextFont */,
 				12177BB61F1F7A2C00CA49CD /* AppDelegate.swift */,
 				12177BB81F1F7A2C00CA49CD /* ViewController.swift */,
 				12F9349B1F20DBA600E8858E /* newDailyViewController.swift */,
@@ -111,9 +118,18 @@
 			path = "BPT103-Project-Foodaily";
 			sourceTree = "<group>";
 		};
+		1227DB341F78D97D00023A18 /* TextFont */ = {
+			isa = PBXGroup;
+			children = (
+				1227DB371F78F3D400023A18 /* Rubik-Medium.ttf */,
+			);
+			name = TextFont;
+			sourceTree = "<group>";
+		};
 		123B889C1F782AE5005FB718 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				1227DB351F78D9B300023A18 /* UITextField+Placeholder.swift */,
 				123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */,
 			);
 			name = Extension;
@@ -226,6 +242,7 @@
 				12FD67C81F20767B0021EDD6 /* Assets.xcassets in Resources */,
 				12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */,
 				123B88A71F785539005FB718 /* GoogleService-Info.plist in Resources */,
+				1227DB381F78F3D400023A18 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +310,7 @@
 				12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */,
 				12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */,
 				123B88A11F783F0C005FB718 /* MemberForgetPasswordPage.swift in Sources */,
+				1227DB361F78D9B400023A18 /* UITextField+Placeholder.swift in Sources */,
 				12826F201F6B5934008297C0 /* RootPageView.swift in Sources */,
 				123B88991F7826BC005FB718 /* MemberSignInAndOutViewController.swift in Sources */,
 				12826F1A1F6B4F98008297C0 /* ContentPageView-01.swift in Sources */,

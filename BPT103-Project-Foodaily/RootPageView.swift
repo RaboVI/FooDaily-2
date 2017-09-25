@@ -13,6 +13,9 @@ class RootPageView: UIViewController,PageViewControllerDelegate {
     @IBOutlet weak var welcomeTitleLabel: UILabel!
     @IBOutlet weak var welcomeDetailLabel: UILabel!
     
+    @IBOutlet weak var logInBtn: UIButton!
+    @IBOutlet weak var signUpBtn: UIButton!
+    
     // 設立一個導覽點，會由PageViewController的Delegate傳回值來控制
     @IBOutlet weak var pageControl: UIPageControl!
     
@@ -35,6 +38,9 @@ class RootPageView: UIViewController,PageViewControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        logInBtn.layer.cornerRadius = 30
+        signUpBtn.layer.cornerRadius = 30
 
         // Do any additional setup after loading the view.
         welcomeDetailLabel.text = welcomeDetailText[0]

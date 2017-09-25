@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class MemberSignInAndOutViewController: UIViewController {
 
     @IBOutlet weak var signInWithEmailBtn: UIButton!
     @IBOutlet weak var signInWithFacebookBtn: UIButton!
     @IBOutlet weak var signInWithGoogleBtn: UIButton!
+    @IBOutlet weak var signUpWithEmailBtn: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +27,9 @@ class MemberSignInAndOutViewController: UIViewController {
         signInWithEmailBtn.layer.borderWidth = 2
         signInWithFacebookBtn.layer.cornerRadius = 30
         signInWithGoogleBtn.layer.cornerRadius = 30
+        signUpWithEmailBtn.layer.cornerRadius = 30
+        signUpWithEmailBtn.layer.borderColor = UIColor.white.cgColor
+        signUpWithEmailBtn.layer.borderWidth = 2
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,18 +37,13 @@ class MemberSignInAndOutViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // 設定透過EMAIL登陸
-    @IBAction func signInWithEmailBtnDidPressed(_ sender: Any) {
-        
-    }
-    
     // 設定透過FB登錄
-    @IBAction func signInWithFacebookBtnDidPressed(_ sender: Any) {
+    @IBAction func signInWithFacebookBtnDidPressed(_ sender: UIButton) {
         
     }
     
     // 設定透過Google登錄
-    @IBAction func signInWithGoogleBtnDidPressed(_ sender: Any) {
+    @IBAction func signInWithGoogleBtnDidPressed(_ sender: UIButton) {
         
     }
     

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class MemberProfiolePage: UIViewController {
 
@@ -14,17 +15,26 @@ class MemberProfiolePage: UIViewController {
     
     @IBOutlet weak var signOutBtn: UIButton!
     
-    @IBOutlet weak var nameTextLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "My Profile"
+        
+        if let currentUser = Auth.auth().currentUser {
+            nameLabel.text = currentUser.displayName
+        }
+        
         // Do any additional setup after loading the view.
-        memberProfileImage.layer.cornerRadius = 100
+        memberProfileImage.layer.borderColor = UIColor.white.cgColor
+        memberProfileImage.layer.borderWidth = 2
+        memberProfileImage.layer.cornerRadius = memberProfileImage.frame.width / 2
         memberProfileImage.layer.shadowColor = UIColor.darkGray.cgColor
         memberProfileImage.layer.shadowOffset = CGSize(width: 5, height: 3)
         memberProfileImage.layer.shadowOpacity = 0.8
         memberProfileImage.layer.shouldRasterize = true
+        memberProfileImage.clipsToBounds = true
         
         signOutBtn.layer.cornerRadius = 30
     }
@@ -35,8 +45,26 @@ class MemberProfiolePage: UIViewController {
     }
     
     // 設定登出按鈕
-    @IBAction func signOutBtnDidPressed(_ sender: Any) {
+    @IBAction func signOutBtnDidPressed(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+            
+        } catch {
+            let alertController = UIAlertController(title: "Logout Error.", message: error.localizedDescription, preferredStyle: .alert)
+            let okayAction =  UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alertController.addAction(okayAction)
+            present(alertController, animated: true, completion: nil)
+            
+            return
+        }
         
+        // 呈現歡迎畫面
+        if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeView") {
+            UIApplication.shared.keyWindow?.rootViewController = viewController
+            self.dismiss(animated: true, completion: nil)
+            
+        }
     }
     
     // 回到主畫面

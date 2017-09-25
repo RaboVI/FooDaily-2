@@ -17,6 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // 設定一般UI元件的顏色與樣式
+        customizeUIStyle()
+        
         // Firebase configure
         FirebaseApp.configure()
         
@@ -24,6 +27,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGray
         pageControl.currentPageIndicatorTintColor = UIColor.white
+        
+        for i in UIFont.familyNames {
+            
+            print(UIFont.fontNames(forFamilyName: i))
+        }
         
         return true
     }
@@ -51,5 +59,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension AppDelegate {
+    func customizeUIStyle() {
+        
+        // Customize Navigation bar items
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir", size: 18)!, NSForegroundColorAttributeName: UIColor.white], for: UIControlState.normal)
+    }
 }
 

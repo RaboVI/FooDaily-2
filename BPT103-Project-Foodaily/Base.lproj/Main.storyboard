@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign Up-->
+        <!--Member Create Account Page-->
         <scene sceneID="YrZ-NB-QrU">
             <objects>
                 <viewController id="W58-we-0ue" customClass="MemberCreateAccountPage" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
@@ -56,7 +56,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O4i-IB-TAw">
                                 <rect key="frame" x="37" y="228" width="300" height="2"/>
@@ -64,7 +64,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2mo-lf-PIT">
-                                <rect key="frame" x="27" y="298" width="320" height="70"/>
+                                <rect key="frame" x="27" y="298" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.81960784310000001" blue="0.52941176469999995" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal">
@@ -85,7 +85,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign Up" id="ANc-zI-zrC">
+                    <navigationItem key="navigationItem" id="ANc-zI-zrC">
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="VeW-b0-1D5">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
@@ -175,7 +175,7 @@
                                 <rect key="frame" x="137" y="500" width="100" height="37"/>
                             </pageControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FTM-AJ-30p" userLabel="PageView內文">
-                                <rect key="frame" x="62" y="270" width="250" height="200"/>
+                                <rect key="frame" x="62" y="233" width="250" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="原料回憶是以同時娛樂正確郵箱下載次數掌握簡介現金日誌，傳統想到介紹隨着後面好好戰爭上了達到您可以律師面對當中寂寞不以同時原料回憶">
@@ -189,12 +189,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kg2-2q-sqG" userLabel="替代線條">
-                                <rect key="frame" x="62" y="270" width="250" height="1"/>
+                                <rect key="frame" x="62" y="232" width="250" height="1"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="壓力腦袋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8MY-j5-flD" userLabel="PageView標題">
-                                <rect key="frame" x="87" y="191" width="200" height="80"/>
+                                <rect key="frame" x="87" y="144" width="200" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -217,19 +217,21 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="logInBtn" destination="Inh-4Q-k4o" id="ca9-j1-Ag9"/>
                         <outlet property="pageControl" destination="xoq-4m-g7B" id="Bel-C0-ik3"/>
+                        <outlet property="signUpBtn" destination="l6w-qs-zlY" id="j5e-dr-Imc"/>
                         <outlet property="welcomeDetailLabel" destination="FTM-AJ-30p" id="4Jd-hV-2ly"/>
                         <outlet property="welcomeTitleLabel" destination="8MY-j5-flD" id="1sn-Is-zYZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6r6-Iv-NqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2484" y="139"/>
+            <point key="canvasLocation" x="-2484" y="138.98050974512745"/>
         </scene>
         <!--Member SignInAndSignOut-->
         <scene sceneID="O9U-IO-8xM">
             <objects>
-                <viewController title="Member SignInAndSignOut" id="x3p-rc-M6C" customClass="MemberSignInAndOutViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WelcomeView" title="Member SignInAndSignOut" id="x3p-rc-M6C" customClass="MemberSignInAndOutViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tPv-FC-RbF"/>
                         <viewControllerLayoutGuide type="bottom" id="loE-TA-pM7"/>
@@ -265,7 +267,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Soh-jX-wjF">
-                                <rect key="frame" x="27" y="337" width="320" height="70"/>
+                                <rect key="frame" x="27" y="303" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -279,30 +281,11 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <action selector="signInWithEmailBtnDidPressed:" destination="x3p-rc-M6C" eventType="touchUpInside" id="2jW-M7-0wu"/>
                                     <segue destination="zh4-Xb-5qZ" kind="presentation" id="h4r-ix-nVY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ox-Df-wjp">
-                                <rect key="frame" x="27" y="496" width="320" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.3411764705882353" green="0.43137254901960786" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="SIGN IN WITH FACEBOOK">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name="Optima-Bold"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <action selector="signInWithFacebookBtnDidPressed:" destination="x3p-rc-M6C" eventType="touchUpInside" id="Z1c-88-tKj"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FTu-Zs-bOB">
-                                <rect key="frame" x="27" y="574" width="320" height="70"/>
+                                <rect key="frame" x="27" y="502" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76078431372549016" green="0.37647058823529411" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -320,7 +303,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e22-Ol-Z2l">
-                                <rect key="frame" x="112" y="453" width="150" height="30"/>
+                                <rect key="frame" x="112" y="401" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal">
@@ -337,7 +320,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rku-2H-hYb">
-                                <rect key="frame" x="162" y="415" width="50" height="30"/>
+                                <rect key="frame" x="162" y="368" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
                                     <fragment content="or">
@@ -350,6 +333,43 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpv-eX-zyr">
+                                <rect key="frame" x="27" y="587" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="CREATE ACCOUNT">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Optima-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <segue destination="aMl-bI-xfK" kind="presentation" id="J8O-2a-Zuj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1ox-Df-wjp">
+                                <rect key="frame" x="27" y="434" width="320" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.3411764705882353" green="0.43137254901960786" blue="0.64313725490196072" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SIGN IN WITH FACEBOOK">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="Optima-Bold"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="signInWithFacebookBtnDidPressed:" destination="x3p-rc-M6C" eventType="touchUpInside" id="Z1c-88-tKj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -363,6 +383,7 @@
                         <outlet property="signInWithEmailBtn" destination="Soh-jX-wjF" id="b7o-om-Cil"/>
                         <outlet property="signInWithFacebookBtn" destination="1ox-Df-wjp" id="Ju7-sc-VOG"/>
                         <outlet property="signInWithGoogleBtn" destination="FTu-Zs-bOB" id="0HM-Vv-4ae"/>
+                        <outlet property="signUpWithEmailBtn" destination="fpv-eX-zyr" id="xb2-9X-zk9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6W-Su-hQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -409,7 +430,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0xU-7z-FyU">
-                                <rect key="frame" x="27" y="231" width="320" height="70"/>
+                                <rect key="frame" x="27" y="231" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48627450980392156" green="0.81960784313725488" blue="0.52941176470588236" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal">
@@ -452,7 +473,7 @@
                             <constraint firstItem="OZG-NO-uQ6" firstAttribute="leading" secondItem="ved-Zk-jD7" secondAttribute="leading" id="w90-Xb-XMq"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Log in" id="UWL-r2-Dcd">
+                    <navigationItem key="navigationItem" id="UWL-r2-Dcd">
                         <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="xut-PK-HZe">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -485,7 +506,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Member SingInAndSignOut_01" translatesAutoresizingMaskIntoConstraints="NO" id="yXI-Ci-OuT">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ENTER YOUR EMAIL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Fd-o7-WKo">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ENTER YOUR EMAIL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Fd-o7-WKo" userLabel="Email Text Field">
                                 <rect key="frame" x="37" y="92" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -498,7 +519,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ppB-aC-zCm">
-                                <rect key="frame" x="27" y="232" width="320" height="70"/>
+                                <rect key="frame" x="27" y="232" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.81960784310000001" blue="0.52941176469999995" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal">
@@ -526,7 +547,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emialTextField" destination="7Fd-o7-WKo" id="2nW-33-zi5"/>
+                        <outlet property="emailTextField" destination="7Fd-o7-WKo" id="gyn-ms-kVk"/>
                         <outlet property="resetMyPasswordBtn" destination="ppB-aC-zCm" id="iZE-1k-vmc"/>
                     </connections>
                 </viewController>
@@ -740,22 +761,8 @@
                                     <action selector="backToMainPageView:" destination="4qA-P3-ffJ" eventType="touchUpInside" id="2y0-EQ-eit"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVm-NH-zWm">
-                                <rect key="frame" x="127" y="311" width="120" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Label">
-                                        <attributes>
-                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <font key="NSFont" size="24" name="Optima-Regular"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IkS-lr-tU4">
-                                <rect key="frame" x="27" y="555" width="320" height="60"/>
+                                <rect key="frame" x="27" y="558" width="320" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48627450979999998" green="0.81960784310000001" blue="0.52941176469999995" alpha="1" colorSpace="deviceRGB"/>
                                 <state key="normal">
@@ -773,6 +780,20 @@
                                     <action selector="signOutBtnDidPressed:" destination="4qA-P3-ffJ" eventType="touchUpInside" id="olS-08-Cjz"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVm-NH-zWm" userLabel="Name Label">
+                                <rect key="frame" x="87" y="311" width="200" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Label">
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="36" name="Optima-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -784,7 +805,7 @@
                     </view>
                     <connections>
                         <outlet property="memberProfileImage" destination="xPT-2f-Tup" id="SCE-go-4f3"/>
-                        <outlet property="nameTextLabel" destination="UVm-NH-zWm" id="dop-jG-vlU"/>
+                        <outlet property="nameLabel" destination="UVm-NH-zWm" id="dyd-bf-fXN"/>
                         <outlet property="signOutBtn" destination="IkS-lr-tU4" id="T8V-ja-Fu7"/>
                     </connections>
                 </viewController>
@@ -1085,4 +1106,7 @@
         <image name="下拉式選單" width="30" height="30"/>
         <image name="主頁面" width="596" height="1058"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="j5N-nX-T28"/>
+    </inferredMetricsTieBreakers>
 </document>
