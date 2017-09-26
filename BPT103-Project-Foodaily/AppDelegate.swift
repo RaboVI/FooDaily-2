@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import FBSDKCoreKit
+import GoogleSignIn
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,15 +25,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Firebase configure
         FirebaseApp.configure()
         
+        // Facebook Login configure
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        // Google Login configure
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        
         // 控制導覽點顏色
         let pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGray
         pageControl.currentPageIndicatorTintColor = UIColor.white
         
-        for i in UIFont.familyNames {
-            
-            print(UIFont.fontNames(forFamilyName: i))
-        }
+        // print出所有UIFont裡面的字體，透過print出的字體確認要新增字體的確切名稱。
+//        for i in UIFont.familyNames {
+//            print(UIFont.fontNames(forFamilyName: i))
+//        }
         
         return true
     }
@@ -57,8 +65,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
+    
+    // 傳遞Facebook及Google的登入處理結果
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        var handled = false
+        
+        if url.absoluteString.contains("fb") {
+            handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, options: options)
+        }else{
+            handled = GIDSignIn.sharedInstance().handle(url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: [:])
+        }
+        
+        return handled
+    }
 }
 
 extension AppDelegate {

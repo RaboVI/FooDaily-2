@@ -8,6 +8,8 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
+import FBSDKLoginKit
 
 class MemberProfiolePage: UIViewController {
 
@@ -24,6 +26,8 @@ class MemberProfiolePage: UIViewController {
         
         if let currentUser = Auth.auth().currentUser {
             nameLabel.text = currentUser.displayName
+            
+            print(currentUser.photoURL ?? "沒有抓到圖片喔！")
         }
         
         // Do any additional setup after loading the view.
@@ -47,6 +51,24 @@ class MemberProfiolePage: UIViewController {
     // 設定登出按鈕
     @IBAction func signOutBtnDidPressed(_ sender: UIButton) {
         do {
+            // 判斷使用者目前的登陸方法，如果是Google，則調用GIDSignIn中的SignOut讓使用者登出。
+            // 注意，透過此方法每次使用者都要輸入密碼來驗證。
+            if let providerData = Auth.auth().currentUser?.providerData {
+                let userInfo = providerData[0]
+                
+                switch userInfo.providerID {
+                case "google.com":
+                    GIDSignIn.sharedInstance().signOut()
+
+                case "facebook.com":
+                    let  manager = FBSDKLoginManager()
+                    manager.logOut()
+                    
+                default:
+                    break
+                }
+            }
+            
             try Auth.auth().signOut()
             
         } catch {
