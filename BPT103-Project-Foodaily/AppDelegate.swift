@@ -85,7 +85,7 @@ extension AppDelegate {
     func customizeUIStyle() {
         
         // Customize Navigation bar items
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir", size: 18)!, NSForegroundColorAttributeName: UIColor.white], for: UIControlState.normal)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!, NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
     }
 }
 

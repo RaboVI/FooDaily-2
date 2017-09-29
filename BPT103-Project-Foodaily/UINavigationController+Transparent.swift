@@ -19,6 +19,6 @@ extension UINavigationController {
         self.navigationBar.isTranslucent = true
         self.navigationBar.tintColor = UIColor.white
         // 設定NavigationBar上title的文字字體、大小及顏色
-        self.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont(name: "Rubik-Medium", size: 20)!,NSForegroundColorAttributeName: UIColor.white]
+        self.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Rubik-Medium", size: 20)!,NSAttributedStringKey.foregroundColor: UIColor.white]
     }
 }

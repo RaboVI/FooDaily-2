@@ -121,10 +121,14 @@ class MemberSignInAndOutViewController: UIViewController,GIDSignInDelegate,GIDSi
             }
             
             // 呈現主視窗
+//            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+//                UIApplication.shared.keyWindow?.rootViewController = viewController
+//                self.dismiss(animated: true, completion: nil)
+//            }
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-                UIApplication.shared.keyWindow?.rootViewController = viewController
-                self.dismiss(animated: true, completion: nil)
+                    self.navigationController?.present(viewController, animated: true, completion: nil)
             }
+
         }
     }
     
