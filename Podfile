@@ -13,6 +13,9 @@ target 'BPT103-Project-Foodaily' do
   # install in 20170925-0509
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+  # install in 20171002-1106
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
   
   # Pods for Facebook
   # install in 20170925-0509
