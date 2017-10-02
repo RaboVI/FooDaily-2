@@ -30,6 +30,10 @@
 		12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F934A71F20E56900E8858E /* statisticsViewController.swift */; };
 		12F934AC1F20EB5000E8858E /* memoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F934AB1F20EB5000E8858E /* memoPageViewController.swift */; };
 		12FD67C81F20767B0021EDD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12FD67C71F20767B0021EDD6 /* Assets.xcassets */; };
+		661C6BC61F81EDDF00832446 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C6BC41F81EDDF00832446 /* CacheManager.swift */; };
+		661C6BC71F81EDDF00832446 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C6BC51F81EDDF00832446 /* PostService.swift */; };
+		661C6BCA1F81EE0700832446 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C6BC91F81EE0700832446 /* Post.swift */; };
+		661C6BCD1F81EE2E00832446 /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C6BCC1F81EE2E00832446 /* UIImage+Scale.swift */; };
 		6A333927ED366EBC1DE8E905 /* Pods_BPT103_Project_Foodaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE7F78C34D3F59D174D26B7 /* Pods_BPT103_Project_Foodaily.framework */; };
 		B38C14B81F78B83F000F61F7 /* GenRyuMinTW-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B38C14B61F78B83A000F61F7 /* GenRyuMinTW-Bold.ttf */; };
 		B38C14BA1F78C81B000F61F7 /* UITextFont_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C14B91F78C81B000F61F7 /* UITextFont_Extension.swift */; };
@@ -82,6 +86,10 @@
 		12F934AB1F20EB5000E8858E /* memoPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memoPageViewController.swift; sourceTree = "<group>"; };
 		12FD67C71F20767B0021EDD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E4A4D5F87B3827849C6E37E /* Pods-BPT103-Project-Foodaily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPT103-Project-Foodaily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BPT103-Project-Foodaily/Pods-BPT103-Project-Foodaily.debug.xcconfig"; sourceTree = "<group>"; };
+		661C6BC41F81EDDF00832446 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		661C6BC51F81EDDF00832446 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		661C6BC91F81EE0700832446 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		661C6BCC1F81EE2E00832446 /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
 		9DE7F78C34D3F59D174D26B7 /* Pods_BPT103_Project_Foodaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BPT103_Project_Foodaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38C14B61F78B83A000F61F7 /* GenRyuMinTW-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenRyuMinTW-Bold.ttf"; sourceTree = "<group>"; };
 		B38C14B91F78C81B000F61F7 /* UITextFont_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFont_Extension.swift; sourceTree = "<group>"; };
@@ -140,6 +148,9 @@
 		12177BB51F1F7A2C00CA49CD /* BPT103-Project-Foodaily */ = {
 			isa = PBXGroup;
 			children = (
+				661C6BCB1F81EE0C00832446 /* Util */,
+				661C6BC81F81EDE700832446 /* Model */,
+				661C6BC31F81EDA300832446 /* Service */,
 				B37005261F78ACA1003A0CC9 /* font */,
 				1227DB391F78F7A600023A18 /* FooDaily Color ticket.png */,
 				12177BB61F1F7A2C00CA49CD /* AppDelegate.swift */,
@@ -201,6 +212,31 @@
 				12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */,
 			);
 			name = WelcomePageView;
+			sourceTree = "<group>";
+		};
+		661C6BC31F81EDA300832446 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				661C6BC41F81EDDF00832446 /* CacheManager.swift */,
+				661C6BC51F81EDDF00832446 /* PostService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		661C6BC81F81EDE700832446 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				661C6BC91F81EE0700832446 /* Post.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		661C6BCB1F81EE0C00832446 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				661C6BCC1F81EE2E00832446 /* UIImage+Scale.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		B37005261F78ACA1003A0CC9 /* font */ = {
@@ -422,17 +458,21 @@
 				123B889F1F782C11005FB718 /* MemberLogInPage.swift in Sources */,
 				12F934AC1F20EB5000E8858E /* memoPageViewController.swift in Sources */,
 				12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */,
+				661C6BC61F81EDDF00832446 /* CacheManager.swift in Sources */,
 				12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */,
 				123B88A11F783F0C005FB718 /* MemberForgetPasswordPage.swift in Sources */,
 				1227DB361F78D9B400023A18 /* UITextField+Placeholder.swift in Sources */,
 				12826F201F6B5934008297C0 /* RootPageView.swift in Sources */,
 				123B88991F7826BC005FB718 /* MemberSignInAndOutViewController.swift in Sources */,
 				12826F1A1F6B4F98008297C0 /* ContentPageView-01.swift in Sources */,
+				661C6BCD1F81EE2E00832446 /* UIImage+Scale.swift in Sources */,
 				B3CFFE171F6FD9D200861E70 /* FakeDataManager.swift in Sources */,
 				B3CFFE191F6FDC3B00861E70 /* DailyItem.swift in Sources */,
 				12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */,
 				123B88A51F7850C4005FB718 /* MemberProfiolePage.swift in Sources */,
 				12177BB71F1F7A2C00CA49CD /* AppDelegate.swift in Sources */,
+				661C6BC71F81EDDF00832446 /* PostService.swift in Sources */,
+				661C6BCA1F81EE0700832446 /* Post.swift in Sources */,
 				123B88A31F783FA2005FB718 /* MemberCreateAccountPage.swift in Sources */,
 				12826F1C1F6B4FBC008297C0 /* ContentPageView_02.swift in Sources */,
 			);
