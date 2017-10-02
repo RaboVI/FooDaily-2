@@ -10,8 +10,6 @@ import UIKit
 
 class DailyItem {
 
-    
-    
     let bg = UIView()
     
     let imageView = UIImageView()
@@ -27,8 +25,6 @@ class DailyItem {
 //    let starCount: Int
 //    
 //    let width: CGFloat
-    
-    
     
     init(image: [UIImage],
          shopName: String,
@@ -90,9 +86,6 @@ class DailyItem {
                                  height: imageSize.height)
         
         imageView.image = image
-        
-        
-        
     }
     
     
@@ -108,11 +101,4 @@ class DailyItem {
                                            imageSize: CGSize) {
         
     }
-    
-    
-    
-    
-    
-    
-
 }
