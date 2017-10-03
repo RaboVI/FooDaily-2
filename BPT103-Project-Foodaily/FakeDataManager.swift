@@ -12,9 +12,9 @@ class FakeDataManager: NSObject {
     
     static let shared = FakeDataManager()
     
-//    private override init() {
-//        dailyItem = [data0, data1, data2, data3, data4, data5, data6]
-//    }
+    private override init() {
+        dailyItem = [data0, data1, data2, data3, data4, data5, data6]
+    }
     
 //    var dailyImage = [UIImage(named: "00.jpg"),
 //                      UIImage(named: "01.jpg"),
