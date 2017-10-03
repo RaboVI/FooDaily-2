@@ -19,7 +19,6 @@
 		123B88A11F783F0C005FB718 /* MemberForgetPasswordPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88A01F783F0C005FB718 /* MemberForgetPasswordPage.swift */; };
 		123B88A31F783FA2005FB718 /* MemberCreateAccountPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88A21F783FA2005FB718 /* MemberCreateAccountPage.swift */; };
 		123B88A51F7850C4005FB718 /* MemberProfiolePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88A41F7850C4005FB718 /* MemberProfiolePage.swift */; };
-		123B88A71F785539005FB718 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 123B88A61F785539005FB718 /* GoogleService-Info.plist */; };
 		12826F1A1F6B4F98008297C0 /* ContentPageView-01.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F191F6B4F98008297C0 /* ContentPageView-01.swift */; };
 		12826F1C1F6B4FBC008297C0 /* ContentPageView_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1B1F6B4FBC008297C0 /* ContentPageView_02.swift */; };
 		12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */; };
@@ -34,6 +33,7 @@
 		661C6BC71F81EDDF00832446 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C6BC51F81EDDF00832446 /* PostService.swift */; };
 		661C6BCA1F81EE0700832446 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C6BC91F81EE0700832446 /* Post.swift */; };
 		661C6BCD1F81EE2E00832446 /* UIImage+Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661C6BCC1F81EE2E00832446 /* UIImage+Scale.swift */; };
+		661C6BCF1F8209DA00832446 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 661C6BCE1F8209DA00832446 /* GoogleService-Info.plist */; };
 		6A333927ED366EBC1DE8E905 /* Pods_BPT103_Project_Foodaily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DE7F78C34D3F59D174D26B7 /* Pods_BPT103_Project_Foodaily.framework */; };
 		B38C14B81F78B83F000F61F7 /* GenRyuMinTW-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B38C14B61F78B83A000F61F7 /* GenRyuMinTW-Bold.ttf */; };
 		B38C14BA1F78C81B000F61F7 /* UITextFont_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C14B91F78C81B000F61F7 /* UITextFont_Extension.swift */; };
@@ -74,7 +74,6 @@
 		123B88A01F783F0C005FB718 /* MemberForgetPasswordPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberForgetPasswordPage.swift; sourceTree = "<group>"; };
 		123B88A21F783FA2005FB718 /* MemberCreateAccountPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberCreateAccountPage.swift; sourceTree = "<group>"; };
 		123B88A41F7850C4005FB718 /* MemberProfiolePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberProfiolePage.swift; sourceTree = "<group>"; };
-		123B88A61F785539005FB718 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		12826F191F6B4F98008297C0 /* ContentPageView-01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ContentPageView-01.swift"; sourceTree = "<group>"; };
 		12826F1B1F6B4FBC008297C0 /* ContentPageView_02.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPageView_02.swift; sourceTree = "<group>"; };
 		12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPageView_03.swift; sourceTree = "<group>"; };
@@ -90,6 +89,7 @@
 		661C6BC51F81EDDF00832446 /* PostService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		661C6BC91F81EE0700832446 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		661C6BCC1F81EE2E00832446 /* UIImage+Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Scale.swift"; sourceTree = "<group>"; };
+		661C6BCE1F8209DA00832446 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9DE7F78C34D3F59D174D26B7 /* Pods_BPT103_Project_Foodaily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BPT103_Project_Foodaily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B38C14B61F78B83A000F61F7 /* GenRyuMinTW-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenRyuMinTW-Bold.ttf"; sourceTree = "<group>"; };
 		B38C14B91F78C81B000F61F7 /* UITextFont_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFont_Extension.swift; sourceTree = "<group>"; };
@@ -148,6 +148,7 @@
 		12177BB51F1F7A2C00CA49CD /* BPT103-Project-Foodaily */ = {
 			isa = PBXGroup;
 			children = (
+				661C6BCE1F8209DA00832446 /* GoogleService-Info.plist */,
 				661C6BCB1F81EE0C00832446 /* Util */,
 				661C6BC81F81EDE700832446 /* Model */,
 				661C6BC31F81EDA300832446 /* Service */,
@@ -163,7 +164,6 @@
 				12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */,
 				12FD67C71F20767B0021EDD6 /* Assets.xcassets */,
 				12177BC21F1F7A2D00CA49CD /* Info.plist */,
-				123B88A61F785539005FB718 /* GoogleService-Info.plist */,
 			);
 			path = "BPT103-Project-Foodaily";
 			sourceTree = "<group>";
@@ -386,8 +386,8 @@
 				B38C14DF1F792303000F61F7 /* solidStar@3x.png in Resources */,
 				B38C14DB1F792303000F61F7 /* hollowStar@2x.png in Resources */,
 				B38C14DD1F792303000F61F7 /* solidStar.png in Resources */,
+				661C6BCF1F8209DA00832446 /* GoogleService-Info.plist in Resources */,
 				12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */,
-				123B88A71F785539005FB718 /* GoogleService-Info.plist in Resources */,
 				1227DB381F78F3D400023A18 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

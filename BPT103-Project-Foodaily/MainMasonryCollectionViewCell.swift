@@ -29,6 +29,7 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
                        createDate: String,
                        starCount: Int,
                        width: CGFloat) {
+       
         
         let imageSize = computeImage(image: image,
                                      width: width)

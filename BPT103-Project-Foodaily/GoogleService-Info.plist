@@ -7,34 +7,34 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>629322979238-79ophe4hq1sidlcvfh2j1vcuspkr125t.apps.googleusercontent.com</string>
+	<string>657053891452-8mkjl26nq5jsp562a55fnlr3rp905jl5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.629322979238-79ophe4hq1sidlcvfh2j1vcuspkr125t</string>
+	<string>com.googleusercontent.apps.657053891452-8mkjl26nq5jsp562a55fnlr3rp905jl5</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD_cvYEHpqG4v9WNJ8ORy1GCDaBWrE16cw</string>
+	<string>AIzaSyDwq5w2N8GiLRDnmunOuLLHezuPKF06UPs</string>
 	<key>GCM_SENDER_ID</key>
-	<string>629322979238</string>
+	<string>657053891452</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.RaboLu.BPT103-Project-Foodaily</string>
 	<key>PROJECT_ID</key>
-	<string>foodaily-2017bpt103</string>
+	<string>firstoragech36</string>
 	<key>STORAGE_BUCKET</key>
-	<string>foodaily-2017bpt103.appspot.com</string>
+	<string>firstoragech36.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:629322979238:ios:6fb64088cb12120e</string>
+	<string>1:657053891452:ios:6fb64088cb12120e</string>
 	<key>DATABASE_URL</key>
-	<string>https://foodaily-2017bpt103.firebaseio.com</string>
+	<string>https://firstoragech36.firebaseio.com</string>
 </dict>
 </plist>
