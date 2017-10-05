@@ -15,7 +15,9 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     @IBOutlet weak var flowLayout: MainMasonryFlowLayout!
     @IBOutlet var MMCollectionView: UICollectionView!
     
-    let dataManager = FakeDataManager.shared   
+    let dataManager = FakeDataManager.shared
+    
+    let createNewDairyBtn = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,8 +29,53 @@ class MainMasonryCollectionViewController: UICollectionViewController {
 
 
         // Do any additional setup after loading the view.
-
+        let createNewDairyBtnSize = CGSize(width: 60,
+                                           height: 60)
+        
+        let createNewDairyBtnSpace: CGFloat = 20
+        
+        let createNewDairyBtnX = MMCollectionView.frame.midX - createNewDairyBtnSize.width / 2
+        let createNewDairyBtnY = UIScreen.main.bounds.height - createNewDairyBtnSpace - createNewDairyBtnSize.height
+        
+        createNewDairyBtn.backgroundColor = #colorLiteral(red: 0.9215686275, green: 0.4509803922, blue: 0.3411764706, alpha: 1)
+        
+        createNewDairyBtn.setImage(UIImage(named: "plue.png"),
+                                   for: .normal)
+        
+        createNewDairyBtn.frame = CGRect(x: createNewDairyBtnX,
+                                         y: createNewDairyBtnY,
+                                         width: createNewDairyBtnSize.width,
+                                         height: createNewDairyBtnSize.height)
+        
+        createNewDairyBtn.layer.cornerRadius = createNewDairyBtnSize.width / 2
+        
+        createNewDairyBtn.layer.shadowOffset = CGSize(width: 1, height: 1)
+        createNewDairyBtn.layer.shadowOpacity = 0.2
+        createNewDairyBtn.layer.shadowRadius = 3.5
+        createNewDairyBtn.layer.shadowColor = UIColor(red: 44.0/255.0,
+                                                       green: 62.0/255.0,
+                                                       blue: 80.0/255.0,
+                                                       alpha: 1.0).cgColor
+        
+        createNewDairyBtn.addTarget(self, action: #selector(createNewDairy), for: .touchUpInside)
+        
+        self.view.addSubview(createNewDairyBtn)
+        
     }
+    
+    
+    
+    
+    @objc func createNewDairy() {
+        
+        let createDiaryStoryboard = UIStoryboard.init(name: "CreateDiary", bundle: .main)
+        let vc = createDiaryStoryboard.instantiateViewController(withIdentifier: "CreateDiaryViewController")
+        
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        present(vc, animated: true, completion: nil)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -104,5 +151,8 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     
     }
     */
+    
+    
+    
 
 }
