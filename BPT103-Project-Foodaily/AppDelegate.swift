@@ -19,6 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        for family in UIFont.familyNames {
+            print("字體庫目前有： \(family)")
+        }
+        
         // 設定一般UI元件的顏色與樣式
         customizeUIStyle()
         

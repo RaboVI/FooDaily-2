@@ -22,6 +22,8 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "FooDaily"
+        
         self.collectionView?.collectionViewLayout = flowLayout
 
         // Uncomment the following line to preserve selection between presentations
