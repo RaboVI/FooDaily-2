@@ -72,6 +72,12 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
                                  height: imageSize.height)
         
         imageView.image = image
+        
+        bg.layer.cornerRadius = 7.5
+        imageView.layer.cornerRadius = 5
+//        bg.clipsToBounds = true
+        imageView.clipsToBounds = true
+        
         bg.backgroundColor = UIColor(red: 255, green: 255, blue: 255, alpha: 1)
         bg.layer.shadowOffset = CGSize(width: 1, height: 1)
         bg.layer.shadowOpacity = 0.2
@@ -80,6 +86,9 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
                                        green: 62.0/255.0,
                                        blue: 80.0/255.0,
                                        alpha: 1.0).cgColor
+        
+        
+        
         self.addSubview(bg)
         self.addSubview(imageView)
         
@@ -206,6 +215,9 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
         return CGSize(width: width, height: height)
         
     }
+    
+    
+    
     
     
 }

@@ -48,9 +48,12 @@
 	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>請授權相機功能，讓日記能夠添加照片。</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>GenRyuMinTW-Bold.ttf</string>
+		<string>GenRyuMinTW-Regular.ttf</string>
 		<string>Akrobat-Bold.otf</string>
 	</array>
 	<key>UIAppFonts</key>
