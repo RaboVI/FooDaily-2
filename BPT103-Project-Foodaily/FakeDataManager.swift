@@ -8,6 +8,15 @@
 
 import UIKit
 
+struct daily {
+    var shopName = String()
+    var foodName = String()
+    var createDate = String()
+    var starCount = Int()
+    var image = UIImage()
+    
+}
+
 class FakeDataManager: NSObject {
     
     static let shared = FakeDataManager()
@@ -73,14 +82,5 @@ class FakeDataManager: NSObject {
     private func setting() {
         
     }
-    
-}
-
-struct daily {
-    var shopName = String()
-    var foodName = String()
-    var createDate = String()
-    var starCount = Int()
-    var image = UIImage()
     
 }
