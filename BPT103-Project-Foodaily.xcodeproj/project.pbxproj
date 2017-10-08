@@ -71,7 +71,7 @@
 		B3CFFE0F1F6F6CE300861E70 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3CFFE081F6F6CE300861E70 /* 04.jpg */; };
 		B3CFFE101F6F6CE300861E70 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3CFFE091F6F6CE300861E70 /* 05.jpg */; };
 		B3CFFE111F6F6CE300861E70 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3CFFE0A1F6F6CE300861E70 /* 06.jpg */; };
-		B3CFFE171F6FD9D200861E70 /* FakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */; };
+		B3CFFE171F6FD9D200861E70 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFFE161F6FD9D200861E70 /* DataManager.swift */; };
 		B3F842A21F7E299F00806610 /* CreateDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F842A11F7E299F00806610 /* CreateDiaryViewController.swift */; };
 		B3F842A31F7E625500806610 /* GenRyuMinTW-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30A58DF1F7CE4A4002F1AC8 /* GenRyuMinTW-Regular.ttf */; };
 /* End PBXBuildFile section */
@@ -146,7 +146,7 @@
 		B3CFFE081F6F6CE300861E70 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 		B3CFFE091F6F6CE300861E70 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
 		B3CFFE0A1F6F6CE300861E70 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
-		B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDataManager.swift; sourceTree = "<group>"; };
+		B3CFFE161F6FD9D200861E70 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		B3F842A11F7E299F00806610 /* CreateDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryViewController.swift; sourceTree = "<group>"; };
 		C5E0299527D4856C95BA434E /* Pods-BPT103-Project-Foodaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPT103-Project-Foodaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-BPT103-Project-Foodaily/Pods-BPT103-Project-Foodaily.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,9 +184,9 @@
 		12177BB51F1F7A2C00CA49CD /* BPT103-Project-Foodaily */ = {
 			isa = PBXGroup;
 			children = (
+				12177BB61F1F7A2C00CA49CD /* AppDelegate.swift */,
 				1275436D1F8A0CDA0064BDC7 /* Model */,
 				1275436C1F8A0A200064BDC7 /* Resources */,
-				12177BB61F1F7A2C00CA49CD /* AppDelegate.swift */,
 				1227DC111F81E66500023A18 /* Old Pages */,
 				12826F231F6B67C1008297C0 /* WelcomePageView */,
 				123B889D1F782B05005FB718 /* Member LogIn/Out Pages */,
@@ -250,6 +250,7 @@
 		1275436D1F8A0CDA0064BDC7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B3CFFE161F6FD9D200861E70 /* DataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,7 +325,6 @@
 		B3CFFDFC1F6F6C1000861E70 /* MainView */ = {
 			isa = PBXGroup;
 			children = (
-				B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */,
 				B3CFFDFD1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift */,
 				B3CFFDFF1F6F6C4100861E70 /* MainMasonryCollectionViewCell.swift */,
 				B3CFFE011F6F6C5500861E70 /* MainMasonryFlowLayout.swift */,
@@ -541,7 +541,7 @@
 				12826F201F6B5934008297C0 /* RootPageView.swift in Sources */,
 				123B88991F7826BC005FB718 /* MemberSignInAndOutViewController.swift in Sources */,
 				12826F1A1F6B4F98008297C0 /* ContentPageView-01.swift in Sources */,
-				B3CFFE171F6FD9D200861E70 /* FakeDataManager.swift in Sources */,
+				B3CFFE171F6FD9D200861E70 /* DataManager.swift in Sources */,
 				B319BC141F7D68830088220D /* CreateDiaryCollectionView.swift in Sources */,
 				B3F842A21F7E299F00806610 /* CreateDiaryViewController.swift in Sources */,
 				B30A58E11F7CE5D8002F1AC8 /* CreateDiaryPageView_01.swift in Sources */,
