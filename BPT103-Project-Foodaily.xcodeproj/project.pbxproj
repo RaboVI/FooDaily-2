@@ -25,6 +25,7 @@
 		12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */; };
 		12826F201F6B5934008297C0 /* RootPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1F1F6B5934008297C0 /* RootPageView.swift */; };
 		12826F221F6B596D008297C0 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F211F6B596D008297C0 /* PageViewController.swift */; };
+		12B71D591F8A137E0027589D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B71D581F8A137E0027589D /* DataManager.swift */; };
 		12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349B1F20DBA600E8858E /* newDailyViewController.swift */; };
 		12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */; };
 		12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F934A71F20E56900E8858E /* statisticsViewController.swift */; };
@@ -71,7 +72,7 @@
 		B3CFFE0F1F6F6CE300861E70 /* 04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3CFFE081F6F6CE300861E70 /* 04.jpg */; };
 		B3CFFE101F6F6CE300861E70 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3CFFE091F6F6CE300861E70 /* 05.jpg */; };
 		B3CFFE111F6F6CE300861E70 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3CFFE0A1F6F6CE300861E70 /* 06.jpg */; };
-		B3CFFE171F6FD9D200861E70 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFFE161F6FD9D200861E70 /* DataManager.swift */; };
+		B3CFFE171F6FD9D200861E70 /* FakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */; };
 		B3F842A21F7E299F00806610 /* CreateDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F842A11F7E299F00806610 /* CreateDiaryViewController.swift */; };
 		B3F842A31F7E625500806610 /* GenRyuMinTW-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30A58DF1F7CE4A4002F1AC8 /* GenRyuMinTW-Regular.ttf */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPageView_03.swift; sourceTree = "<group>"; };
 		12826F1F1F6B5934008297C0 /* RootPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPageView.swift; sourceTree = "<group>"; };
 		12826F211F6B596D008297C0 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		12B71D581F8A137E0027589D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		12F9349B1F20DBA600E8858E /* newDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newDailyViewController.swift; sourceTree = "<group>"; };
 		12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wantToEatViewController.swift; sourceTree = "<group>"; };
 		12F934A71F20E56900E8858E /* statisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statisticsViewController.swift; sourceTree = "<group>"; };
@@ -146,7 +148,7 @@
 		B3CFFE081F6F6CE300861E70 /* 04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04.jpg; sourceTree = "<group>"; };
 		B3CFFE091F6F6CE300861E70 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
 		B3CFFE0A1F6F6CE300861E70 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
-		B3CFFE161F6FD9D200861E70 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDataManager.swift; sourceTree = "<group>"; };
 		B3F842A11F7E299F00806610 /* CreateDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryViewController.swift; sourceTree = "<group>"; };
 		C5E0299527D4856C95BA434E /* Pods-BPT103-Project-Foodaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPT103-Project-Foodaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-BPT103-Project-Foodaily/Pods-BPT103-Project-Foodaily.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -250,7 +252,8 @@
 		1275436D1F8A0CDA0064BDC7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B3CFFE161F6FD9D200861E70 /* DataManager.swift */,
+				B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */,
+				12B71D581F8A137E0027589D /* DataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -283,11 +286,11 @@
 			isa = PBXGroup;
 			children = (
 				B37FC26B1F7A57CC000E83F4 /* CreateDiary.storyboard */,
+				B3F842A11F7E299F00806610 /* CreateDiaryViewController.swift */,
 				B30A58E21F7D1B5D002F1AC8 /* CreateDiaryCollectionViewCell.swift */,
 				B32E8FAB1F8242BB0009431E /* CreateDiaryHeaderCollectionReusableView.swift */,
 				B346B6171F8191170060DE0E /* CreateDiaryFooterCollectionReusableView.swift */,
 				B319BC131F7D68820088220D /* CreateDiaryCollectionView.swift */,
-				B3F842A11F7E299F00806610 /* CreateDiaryViewController.swift */,
 				B30A58E01F7CE5D8002F1AC8 /* CreateDiaryPageView_01.swift */,
 			);
 			name = CreateDiary;
@@ -522,6 +525,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B32E8FAC1F8242BB0009431E /* CreateDiaryHeaderCollectionReusableView.swift in Sources */,
+				12B71D591F8A137E0027589D /* DataManager.swift in Sources */,
 				12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */,
 				B3CFFDFE1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift in Sources */,
 				12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */,
@@ -541,7 +545,7 @@
 				12826F201F6B5934008297C0 /* RootPageView.swift in Sources */,
 				123B88991F7826BC005FB718 /* MemberSignInAndOutViewController.swift in Sources */,
 				12826F1A1F6B4F98008297C0 /* ContentPageView-01.swift in Sources */,
-				B3CFFE171F6FD9D200861E70 /* DataManager.swift in Sources */,
+				B3CFFE171F6FD9D200861E70 /* FakeDataManager.swift in Sources */,
 				B319BC141F7D68830088220D /* CreateDiaryCollectionView.swift in Sources */,
 				B3F842A21F7E299F00806610 /* CreateDiaryViewController.swift in Sources */,
 				B30A58E11F7CE5D8002F1AC8 /* CreateDiaryPageView_01.swift in Sources */,

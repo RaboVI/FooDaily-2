@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateDiaryViewController: UIViewController {
     
     @IBOutlet weak var createDiaryCollectionView: CreateDiaryCollectionView!
+    
+    private let dataManager = DataManager()
+    
+    var userName: String?
     
     var cellCount = 1
     var cellWidth: CGFloat = 0
@@ -18,6 +23,10 @@ class CreateDiaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        if let currentUser = Auth.auth().currentUser {
+            userName = currentUser.displayName
+        }
         
         
         let blurEffect = UIBlurEffect(style: .light)
@@ -29,8 +38,6 @@ class CreateDiaryViewController: UIViewController {
         
         
         createDiaryCollectionView.showsVerticalScrollIndicator = false
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,22 +56,58 @@ class CreateDiaryViewController: UIViewController {
     }
     */
     
-    
+    // 按下按鈕後上傳
     @IBAction func saveNewDiaryBtn(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        
+        let createDiaryCellHeader = createDiaryCollectionView.supplementaryView(forElementKind: "UICollectionElementKindSectionHeader", at: IndexPath(row: 0, section: 0)) as! CreateDiaryHeaderCollectionReusableView
+        
+        for i in 0..<cellCount {
+            let indexPath = IndexPath(row: i, section: 0)
+            let createDiaryCell = createDiaryCollectionView.cellForItem(at: indexPath) as! CreateDiaryCollectionViewCell
+        
+            guard let currentUser = userName,
+                let shopName = createDiaryCellHeader.shopNameField.text,
+                let foodName = createDiaryCell.foodNameField.text,
+                let price = createDiaryCell.priceField.text,
+                let noteText = createDiaryCell.noteTextView.text,
+                let remarkText = createDiaryCell.remarkTextView.text,
+                let starCount = createDiaryCell.starCount
+            else{
+               return
+            }
+            
+            if let foodImage = createDiaryCell.foodImage {
+                dataManager.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: foodImage, userName: currentUser)
+            }else{
+                let alertController = UIAlertController(title: "您還沒有選用相片喔！", message: "或使用FooDaily預設的精美照片！", preferredStyle: .alert)
+                
+                let tempImageAction = UIAlertAction(title: "預設相片", style: .default, handler: { (UIAlertAciotn:UIAlertAction) in
+                    
+                    if let tempFoodImage = UIImage(named: "PageView-1.jpg") {
+                        self.dataManager.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: tempFoodImage, userName: currentUser)
+                         self.dismiss(animated: true, completion: nil)
+                    }
+                })
+                
+                let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+                
+                alertController.addAction(tempImageAction)
+                alertController.addAction(cancelAction)
+                present(alertController, animated: true, completion: nil)
+            }
+            
+            NSLog("\n 使用者名稱：\(currentUser) 餐廳名稱：\(shopName)\n 餐點名稱：\(foodName)\n 餐點價格：\(price)\n 評價：\(starCount)\n 筆記：\(noteText)\n 備註：\(remarkText)")
+
+        }
     }
     
     @IBAction func cancelBtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
-    
-
 }
 
-
-
 extension CreateDiaryViewController: UICollectionViewDataSource {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellCount
     }
@@ -79,6 +122,7 @@ extension CreateDiaryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionElementKindSectionHeader {
+            print(UICollectionElementKindSectionHeader)
             var reusableView = CreateDiaryHeaderCollectionReusableView()
             reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! CreateDiaryHeaderCollectionReusableView
             
@@ -101,10 +145,7 @@ extension CreateDiaryViewController: UICollectionViewDataSource {
             
             return reusebleView
         }
-        
-        
     }
-    
     
     @objc func addCell() {
         
@@ -116,6 +157,4 @@ extension CreateDiaryViewController: UICollectionViewDataSource {
         }, completion: nil)
         
     }
-    
-    
 }

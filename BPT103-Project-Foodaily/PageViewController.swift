@@ -124,7 +124,7 @@ class PageViewController: UIPageViewController,UIPageViewControllerDelegate,UIPa
     
     override func viewWillDisappear(_ animated: Bool) {
         timer.invalidate()
-        timer = nil
+//        timer = nil
     }
 }
 

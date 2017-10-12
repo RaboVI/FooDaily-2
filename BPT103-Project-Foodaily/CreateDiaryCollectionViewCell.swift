@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate, UITextViewDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var createDiaryScrollView: UIScrollView!
     @IBOutlet weak var createDiaryPageControl: UIPageControl!
@@ -16,19 +16,19 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var scrollViewBgview: UIView!
     @IBOutlet weak var cameraBtnOL: UIButton!
-    @IBOutlet weak var foodNameField: UITextField!
-    @IBOutlet weak var priceField: UITextField!
+    @IBOutlet weak var foodNameField: UITextField! //upload
+    @IBOutlet weak var priceField: UITextField! //upload
     @IBOutlet weak var star01BtnOL: UIButton!
     @IBOutlet weak var star02BtnOL: UIButton!
     @IBOutlet weak var star03BtnOL: UIButton!
     @IBOutlet weak var star04BtnOL: UIButton!
     @IBOutlet weak var star05BtnOL: UIButton!
-    @IBOutlet weak var noteTextView: UITextView!
+    @IBOutlet weak var noteTextView: UITextView! //upload，character<50
     @IBOutlet weak var noteTextViewBgView: UIView!
     
     @IBOutlet weak var remarkLabel: UILabel!
     @IBOutlet weak var remarkTextViewBgView: UIView!
-    @IBOutlet weak var remarkTextView: UITextView!
+    @IBOutlet weak var remarkTextView: UITextView! //upload
     @IBOutlet weak var remarkTextViewWidth: NSLayoutConstraint!
     
     /// scrollView 中 內縮間距
@@ -42,6 +42,12 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
     var starBtnArray = [UIButton]()
     
     var delegate: UIViewController?
+    
+    var foodImage: UIImage? //upload
+    
+    var starCount: Int? //upload
+    
+    var userName: String? //upload
     
     override func awakeFromNib() {
         
@@ -150,6 +156,7 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
         if noteTextView.text.isEmpty {
             noteTextView.text = noteTextViewPlaceholder
             noteTextView.textColor = UIColor.lightGray
+            
         }
     }
     
@@ -163,23 +170,28 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
     
     
     @IBAction func Star01Btn(_ sender: Any) {
-        setStar(starCount: 1)
+        starCount = 1
+        setStar(starCount: starCount!)
     }
     
     @IBAction func Star02Btn(_ sender: Any) {
-        setStar(starCount: 2)
+        starCount = 2
+        setStar(starCount: starCount!)
     }
     
     @IBAction func Star03Btn(_ sender: Any) {
-        setStar(starCount: 3)
+        starCount = 3
+        setStar(starCount: starCount!)
     }
     
     @IBAction func Star04Btn(_ sender: Any) {
-        setStar(starCount: 4)
+        starCount = 4
+        setStar(starCount: starCount!)
     }
     
     @IBAction func Star05Btn(_ sender: Any) {
-        setStar(starCount: 5)
+        starCount = 5
+        setStar(starCount: starCount!)
     }
     
     func setStar(starCount: Int) {
@@ -195,7 +207,7 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
     
     
     
-    
+    // 取用相機拍照或從相簿裡取用照片
     @IBAction func cameraBtn(_ sender: Any) {
         // 產生一個UIImagePickerController的實體
         let imagePickerController = UIImagePickerController()
@@ -240,7 +252,10 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             // 讓photoImageView呈現剛剛選取的照片
+            cameraBtnOL.contentMode = .scaleAspectFill
             cameraBtnOL.setImage(image, for: .normal)
+            foodImage = image
+           
         }
         // 可以自動產生一組獨一無二的 ID 號碼，方便等一下上傳圖片的命名
 //        uniqueString = UUID().uuidString
