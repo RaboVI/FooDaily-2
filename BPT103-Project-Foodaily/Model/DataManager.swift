@@ -142,7 +142,7 @@ class DataManager {
         uplaodTask.observe(.failure) { (snapshot) in
             
             if let error = snapshot.error {
-                NSLog("\(error.localizedDescription)")
+                NSLog("檔案上傳失敗，原因：\(error.localizedDescription)")
             }
         }
     }
