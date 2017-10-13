@@ -10,53 +10,55 @@ import UIKit
 import FirebaseDatabase
 import FirebaseStorage
 
-// MARK: -宣告DiaryItem的結構
+// MARK: -宣告DiaryItem的模型結構
 struct DiaryItem {
     
     var shopName: String
     var foodName: String
-    var price: Int
+    var price: String
     var starCount: Int
-    var notes: String
-    var remark: String
+    var noteText: String
+    var remarkText: String
     var createDate: String
     var timeStamp: Int
-    var user: String
+    var userName: String
     var foodImage: UIImage
     
+    // 宣告一系列Dairy字典要用的Key值
     enum DirayInfoKey {
         static let shopName = "ShopName"
         static let foodName = "FoodName"
         static let price = "Price"
         static let starCount = "StarCount"
-        static let notes = "Notes"
-        static let remaek = "Remaek"
+        static let noteText = "NoteText"
+        static let remarkText = "RemarkText"
         static let createDate = "CreateDate"
         static let timeStamp = "TimeStamp"
-        static let user = "User"
+        static let userName = "UserName"
         static let foodImage = "FoodImage"
     }
     
+    // 替變數初始化
     init(shopName: String,
          foodName: String,
-         price: Int,
+         price: String,
          starCount: Int,
-         notes: String,
-         remaek: String,
+         noteText: String,
+         reamrkText: String,
          createDate: String,
          timeStamp: Int,
-         user: String,
+         userName: String,
          foodImage: UIImage)
     {
         self.shopName = shopName
         self.foodName = foodName
         self.price = price
         self.starCount = starCount
-        self.notes = notes
-        self.remark = remaek
+        self.noteText = noteText
+        self.remarkText = reamrkText
         self.createDate = createDate
         self.timeStamp = timeStamp
-        self.user = user
+        self.userName = userName
         self.foodImage = foodImage
     }
 }
@@ -65,13 +67,9 @@ struct DiaryItem {
 class DataManager {
     
     // 宣告一個singleton物件
-    private static var shared: DataManager?
-    static func sharedInstance() -> DataManager {
-        if shared == nil {
-            shared = DataManager()
-        }
-        return shared!
-    }
+    static let shared: DataManager = DataManager()
+
+    private init() {}
     
     // Firebase Datebase Reference
     // Firebase Database 資料路徑設定，創建一個子層叫Diary
@@ -103,7 +101,6 @@ class DataManager {
         // 準備一個觀察者來觀察uploadTask在成功、上傳中、失敗時要做的事
         // 當資料成功上傳時
         uplaodTask.observe(.success) { (snapshot) in
-            
             // 當照片完整上傳至Storage時，在Database上寫入一筆資料
             // 設定要寫入Database中資料的格式，注意FIrebase Database只接受NSNumber/NSString/NSArray/NSDictionary
             if let imageURL = snapshot.metadata?.downloadURL()?.absoluteString {
@@ -116,21 +113,21 @@ class DataManager {
                 dateFormatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
                 let createTime = dateFormatter.string(from: unFormateDate)
                 
-                // 宣告一個字典，並將要上傳至Database內的資料放進字典中
-                let post: [String : Any] = [
-                                            "ShopName" : shopName,
-                                            "FoodName" : foodName,
-                                            "Price" : price,
-                                            "StarCount" : starCount,
-                                            "NoteText" : noteText,
-                                            "RemarkText" : remarkText,
-                                            "FoodImageURL" : imageURL,
-                                            "CreateTime" : createTime,
-                                            "TimeStamp" : timeStamp,
-                                            "UserName" : userName
+                // 宣告一個字典，並將要上傳至Database內的資料放進字典中(符合JSON的結構)
+                let diaryPost: [String : Any] = [
+                                            DiaryItem.DirayInfoKey.shopName : shopName,
+                                            DiaryItem.DirayInfoKey.foodName : foodName,
+                                            DiaryItem.DirayInfoKey.price : price,
+                                            DiaryItem.DirayInfoKey.starCount : starCount,
+                                            DiaryItem.DirayInfoKey.noteText : noteText,
+                                            DiaryItem.DirayInfoKey.remarkText : remarkText,
+                                            DiaryItem.DirayInfoKey.foodImage : imageURL,
+                                            DiaryItem.DirayInfoKey.createDate : createTime,
+                                            DiaryItem.DirayInfoKey.timeStamp : timeStamp,
+                                            DiaryItem.DirayInfoKey.userName : userName
                 ]
                 // 上傳資料至Database
-                databaseRef.setValue(post)
+                databaseRef.setValue(diaryPost)
             }
         }
         // 當資料正在上傳中
@@ -141,7 +138,6 @@ class DataManager {
             // 在console上印出上傳照片的進度，並以百分比顯示
             NSLog("Uploading %@.jpg...  %.1f％ complete",databaseRef.key, persentComplete)
         }
-        
         // 當資料上傳失敗時
         uplaodTask.observe(.failure) { (snapshot) in
             
@@ -149,7 +145,6 @@ class DataManager {
                 NSLog("\(error.localizedDescription)")
             }
         }
-        
     }
     
     // MARK: -Firebase 下載實作

@@ -13,8 +13,6 @@ class CreateDiaryViewController: UIViewController {
     
     @IBOutlet weak var createDiaryCollectionView: CreateDiaryCollectionView!
     
-    private let dataManager = DataManager()
-    
     var userName: String?
     
     var cellCount = 1
@@ -77,15 +75,22 @@ class CreateDiaryViewController: UIViewController {
             }
             
             if let foodImage = createDiaryCell.foodImage {
-                dataManager.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: foodImage, userName: currentUser)
+                DataManager.shared.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: foodImage, userName: currentUser)
+                
+                NSLog("\n 使用者名稱：\(currentUser) 餐廳名稱：\(shopName)\n 餐點名稱：\(foodName)\n 餐點價格：\(price)\n 評價：\(starCount)\n 筆記：\(noteText)\n 備註：\(remarkText)")
+                
+                self.dismiss(animated: true, completion: nil)
             }else{
-                let alertController = UIAlertController(title: "您還沒有選用相片喔！", message: "或使用FooDaily預設的精美照片！", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "您還沒有選用相片喔！", message: "或使用FooDaily的預設照片。", preferredStyle: .alert)
                 
                 let tempImageAction = UIAlertAction(title: "預設相片", style: .default, handler: { (UIAlertAciotn:UIAlertAction) in
                     
                     if let tempFoodImage = UIImage(named: "PageView-1.jpg") {
-                        self.dataManager.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: tempFoodImage, userName: currentUser)
-                         self.dismiss(animated: true, completion: nil)
+                        DataManager.shared.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: tempFoodImage, userName: currentUser)
+                        
+                        NSLog("\n 使用者名稱：\(currentUser) 餐廳名稱：\(shopName)\n 餐點名稱：\(foodName)\n 餐點價格：\(price)\n 評價：\(starCount)\n 筆記：\(noteText)\n 備註：\(remarkText)")
+                        
+                        self.dismiss(animated: true, completion: nil)
                     }
                 })
                 
@@ -93,11 +98,9 @@ class CreateDiaryViewController: UIViewController {
                 
                 alertController.addAction(tempImageAction)
                 alertController.addAction(cancelAction)
+                
                 present(alertController, animated: true, completion: nil)
             }
-            
-            NSLog("\n 使用者名稱：\(currentUser) 餐廳名稱：\(shopName)\n 餐點名稱：\(foodName)\n 餐點價格：\(price)\n 評價：\(starCount)\n 筆記：\(noteText)\n 備註：\(remarkText)")
-
         }
     }
     
