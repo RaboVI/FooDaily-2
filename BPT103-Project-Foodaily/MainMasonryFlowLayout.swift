@@ -12,13 +12,8 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
     
     let dataMananger = FakeDataManager.shared
     
-    // 建立存放日記物件陣列
-    
-//    var dailyItem = [UIImage]()
     var layoutAttributes = [UICollectionViewLayoutAttributes]()
     var layoutItemSize = CGSize()
-
-    
     
     override func prepare() {
         super.prepare()
@@ -33,20 +28,17 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
         minimumLineSpacing      = 0
         minimumInteritemSpacing = 0
         
-        
-        
         // compute cell width
         guard let collectionViewWidth = collectionView?.bounds.size.width else { return }
         let cellWidth = (collectionViewWidth - sectionInset.left - sectionInset.right - minimumInteritemSpacing) / 2
         
-        print(cellWidth)
+        print("")
+        print("瀑布流現在cell的寬度是：\(cellWidth)")
         
         computeAndSaveAttributes(cellWidth: cellWidth)
         
         itemSize = layoutItemSize
     }
-    
-    
     
     func computeAndSaveAttributes(cellWidth: CGFloat) {
         
@@ -67,7 +59,6 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
         // 設定各個column 的 x 軸位置
         let columnX: [CGFloat] = [sectionInset.left,
                                   sectionInset.right + cellWidth + minimumInteritemSpacing]
-        
         
         
         for image in dataMananger.dailyItem {
@@ -109,7 +100,6 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
             // 記錄增加物件後的 column 高度
             columnHeights[minHeightColume] += cellSize.height + minimumLineSpacing
             
-            
             row += 1
             
         }
@@ -118,6 +108,7 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
         let maxHeight = columnHeights.sorted().last!
         
         var defaultColumnCount: CGFloat = CGFloat(dataMananger.dailyItem.count / 2)
+        
         
         if dataMananger.dailyItem.count % 2 == 1 {
             defaultColumnCount += 1
@@ -132,9 +123,6 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
     }
     
     
-    
-    
-    
     // 個人理解為： 將設定好的每個 cell 格式，並將之送回
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
@@ -142,7 +130,4 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
         
         return layoutAttributes
     }
-    
-    
-    
 }

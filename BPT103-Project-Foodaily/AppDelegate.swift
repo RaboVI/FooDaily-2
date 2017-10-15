@@ -15,13 +15,9 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
-        for family in UIFont.familyNames {
-            print("字體庫目前有： \(family)")
-        }
         
         // 設定一般UI元件的顏色與樣式
         customizeUIStyle()
@@ -89,7 +85,7 @@ extension AppDelegate {
     func customizeUIStyle() {
         
         // Customize Navigation bar items
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Avenir", size: 18)!, NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
+        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Akrobat", size: 18)!, NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
     }
 }
 

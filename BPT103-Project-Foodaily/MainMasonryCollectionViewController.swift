@@ -17,10 +17,50 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     
     let dataManager = FakeDataManager.shared
     
+    let newDataManager = DataManager.shared
+    
     let createNewDairyBtn = UIButton()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+            // 嘗試抓取Firebase資料，若成功則顯示在Console上
+            newDataManager.downloadFromFirebase { (success, error, result) in
+                
+                guard success == true else {
+                    print("獲取Firebase資料失敗或中斷")
+                    return
+                }
+                
+                guard let allDiary = result else {
+                    print("沒有得到Database的資料內容")
+                    return
+                }
+                
+                allDiary.forEach({ (everyDiary) in
+                    
+                    print("-----------------------------------")
+                    print("餐廳名稱： \(everyDiary.shopName)")
+                    print("餐點名稱： \(everyDiary.foodName)")
+                    print("價格： \(everyDiary.price)")
+                    print("評價： \(everyDiary.starCount)")
+                    print("筆記： \(everyDiary.noteText)")
+                    print("備註： \(everyDiary.remarkText)")
+                    print("使用者： \(everyDiary.userName)")
+                    print("記錄日期： \(everyDiary.createTime)")
+                    print("時戳： \(everyDiary.timeStamp)")
+                    print("照片URL： \(everyDiary.foodImageURL)")
+                    
+                    self.newDataManager.downloadImage(foodImageURLString: everyDiary.foodImageURL, imageDoneHandler: { (success, error, result) in
+                        
+                        guard let result = result else {
+                            return
+                        }
+                        self.newDataManager.appendImage(image: result)
+                    })
+                })
+            }
+
         
         self.title = "FooDaily"
         
@@ -104,6 +144,9 @@ class MainMasonryCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
+        
+        print("")
+        print("現在Section內共有： \(dataManager.dailyItem.count) 個items")
         return dataManager.dailyItem.count
     }
 

@@ -18,7 +18,8 @@ class CreateDiaryHeaderCollectionReusableView: UICollectionReusableView {
     let shopNameField = UITextField()
     
     func setHeader(width: CGFloat) {
-        print(self.frame.size)
+        print("")
+        print("目前self.frame.size的大小是：\(self.frame.size)")
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
         let blurViewWidth = width - cellPadding * 2
@@ -44,7 +45,8 @@ class CreateDiaryHeaderCollectionReusableView: UICollectionReusableView {
         shopNameField.font = UIFont.systemFont(ofSize: 22)
         shopNameField.sizeToFit()
         let shopNameFieldHeight = shopNameField.frame.height
-        print(shopNameFieldHeight)
+        print("")
+        print("目前shopNameFieldHeight是：\(shopNameFieldHeight)")
         let shopNameFieldY = blurView.frame.minY + (blurView.frame.height - shopNameFieldHeight) / 2
         
         

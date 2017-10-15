@@ -50,9 +50,12 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>請授權相機功能，讓日記能夠添加照片。</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>請授權相簿功能，讓日記能夠添加照片。</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>請授權相簿功能，讓日記能夠添加照片。</string>
 	<key>UIAppFonts</key>
 	<array>
-		<string>Rubik-Medium.ttf</string>
 		<string>Akrobat-Bold.otf</string>
 		<string>GenRyuMinTW-Bold.ttf</string>
 		<string>GenRyuMinTW-Regular.ttf</string>

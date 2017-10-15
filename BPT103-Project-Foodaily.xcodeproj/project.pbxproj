@@ -12,7 +12,6 @@
 		12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBA1F1F7A2C00CA49CD /* Main.storyboard */; };
 		12177BC11F1F7A2D00CA49CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */; };
 		1227DB361F78D9B400023A18 /* UITextField+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227DB351F78D9B300023A18 /* UITextField+Placeholder.swift */; };
-		1227DB381F78F3D400023A18 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1227DB371F78F3D400023A18 /* Rubik-Medium.ttf */; };
 		123B88991F7826BC005FB718 /* MemberSignInAndOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88981F7826BC005FB718 /* MemberSignInAndOutViewController.swift */; };
 		123B889B1F782AD7005FB718 /* UINavigationController+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */; };
 		123B889F1F782C11005FB718 /* MemberLogInPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B889E1F782C11005FB718 /* MemberLogInPage.swift */; };
@@ -26,6 +25,7 @@
 		12826F201F6B5934008297C0 /* RootPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1F1F6B5934008297C0 /* RootPageView.swift */; };
 		12826F221F6B596D008297C0 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F211F6B596D008297C0 /* PageViewController.swift */; };
 		12B71D591F8A137E0027589D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B71D581F8A137E0027589D /* DataManager.swift */; };
+		12B71D5E1F921A250027589D /* DiaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B71D5D1F921A250027589D /* DiaryItem.swift */; };
 		12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349B1F20DBA600E8858E /* newDailyViewController.swift */; };
 		12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */; };
 		12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F934A71F20E56900E8858E /* statisticsViewController.swift */; };
@@ -85,7 +85,6 @@
 		12177BC01F1F7A2D00CA49CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12177BC21F1F7A2D00CA49CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1227DB351F78D9B300023A18 /* UITextField+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Placeholder.swift"; sourceTree = "<group>"; };
-		1227DB371F78F3D400023A18 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		1227DB391F78F7A600023A18 /* FooDaily color ticket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FooDaily color ticket.png"; sourceTree = "<group>"; };
 		123B88981F7826BC005FB718 /* MemberSignInAndOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSignInAndOutViewController.swift; sourceTree = "<group>"; };
 		123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Transparent.swift"; sourceTree = "<group>"; };
@@ -100,6 +99,7 @@
 		12826F1F1F6B5934008297C0 /* RootPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPageView.swift; sourceTree = "<group>"; };
 		12826F211F6B596D008297C0 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 		12B71D581F8A137E0027589D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		12B71D5D1F921A250027589D /* DiaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryItem.swift; sourceTree = "<group>"; };
 		12F9349B1F20DBA600E8858E /* newDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newDailyViewController.swift; sourceTree = "<group>"; };
 		12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wantToEatViewController.swift; sourceTree = "<group>"; };
 		12F934A71F20E56900E8858E /* statisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statisticsViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */,
+				12B71D5D1F921A250027589D /* DiaryItem.swift */,
 				12B71D581F8A137E0027589D /* DataManager.swift */,
 			);
 			path = Model;
@@ -275,7 +276,6 @@
 			children = (
 				B38C14C01F78EED3000F61F7 /* Akrobat-Bold.otf */,
 				B38C14B61F78B83A000F61F7 /* GenRyuMinTW-Bold.ttf */,
-				1227DB371F78F3D400023A18 /* Rubik-Medium.ttf */,
 				B30A58DF1F7CE4A4002F1AC8 /* GenRyuMinTW-Regular.ttf */,
 			);
 			name = "Text Fonts";
@@ -465,7 +465,6 @@
 				B32E8F9C1F8213630009431E /* addCell.png in Resources */,
 				12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */,
 				123B88A71F785539005FB718 /* GoogleService-Info.plist in Resources */,
-				1227DB381F78F3D400023A18 /* Rubik-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,6 +553,7 @@
 				12177BB71F1F7A2C00CA49CD /* AppDelegate.swift in Sources */,
 				123B88A31F783FA2005FB718 /* MemberCreateAccountPage.swift in Sources */,
 				12826F1C1F6B4FBC008297C0 /* ContentPageView_02.swift in Sources */,
+				12B71D5E1F921A250027589D /* DiaryItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

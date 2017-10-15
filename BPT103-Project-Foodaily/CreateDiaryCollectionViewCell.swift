@@ -16,19 +16,19 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var scrollViewBgview: UIView!
     @IBOutlet weak var cameraBtnOL: UIButton!
-    @IBOutlet weak var foodNameField: UITextField! //upload
-    @IBOutlet weak var priceField: UITextField! //upload
+    @IBOutlet weak var foodNameField: UITextField!
+    @IBOutlet weak var priceField: UITextField!
     @IBOutlet weak var star01BtnOL: UIButton!
     @IBOutlet weak var star02BtnOL: UIButton!
     @IBOutlet weak var star03BtnOL: UIButton!
     @IBOutlet weak var star04BtnOL: UIButton!
     @IBOutlet weak var star05BtnOL: UIButton!
-    @IBOutlet weak var noteTextView: UITextView! //upload，character<50
+    @IBOutlet weak var noteTextView: UITextView!
     @IBOutlet weak var noteTextViewBgView: UIView!
     
     @IBOutlet weak var remarkLabel: UILabel!
     @IBOutlet weak var remarkTextViewBgView: UIView!
-    @IBOutlet weak var remarkTextView: UITextView! //upload
+    @IBOutlet weak var remarkTextView: UITextView!
     @IBOutlet weak var remarkTextViewWidth: NSLayoutConstraint!
     
     /// scrollView 中 內縮間距
@@ -43,11 +43,11 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
     
     var delegate: UIViewController?
     
-    var foodImage: UIImage? //upload
+    var foodImage: UIImage?
     
-    var starCount: Int? //upload
+    var starCount: Int?
     
-    var userName: String? //upload
+    var userName: String?
     
     override func awakeFromNib() {
         
@@ -222,7 +222,7 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 // 決定imagePickerController要使用的功能，相機功能
                 imagePickerController.sourceType = .camera
-//                self.present(imagePickerController, animated: true, completion: nil)
+
                 self.delegate?.present(imagePickerController, animated: true, completion: nil)
             }else{
                 print("沒有偵測到相機")
@@ -255,10 +255,7 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
             cameraBtnOL.contentMode = .scaleAspectFill
             cameraBtnOL.setImage(image, for: .normal)
             foodImage = image
-           
         }
-        // 可以自動產生一組獨一無二的 ID 號碼，方便等一下上傳圖片的命名
-//        uniqueString = UUID().uuidString
         
         // 選取完畢，退出imagePickerController
         picker.dismiss(animated: true, completion: nil)

@@ -10,77 +10,31 @@ import UIKit
 import FirebaseDatabase
 import FirebaseStorage
 
-// MARK: -宣告DiaryItem的模型結構
-struct DiaryItem {
-    
-    var shopName: String
-    var foodName: String
-    var price: String
-    var starCount: Int
-    var noteText: String
-    var remarkText: String
-    var createDate: String
-    var timeStamp: Int
-    var userName: String
-    var foodImage: UIImage
-    
-    // 宣告一系列Dairy字典要用的Key值
-    enum DirayInfoKey {
-        static let shopName = "ShopName"
-        static let foodName = "FoodName"
-        static let price = "Price"
-        static let starCount = "StarCount"
-        static let noteText = "NoteText"
-        static let remarkText = "RemarkText"
-        static let createDate = "CreateDate"
-        static let timeStamp = "TimeStamp"
-        static let userName = "UserName"
-        static let foodImage = "FoodImage"
-    }
-    
-    // 替變數初始化
-    init(shopName: String,
-         foodName: String,
-         price: String,
-         starCount: Int,
-         noteText: String,
-         reamrkText: String,
-         createDate: String,
-         timeStamp: Int,
-         userName: String,
-         foodImage: UIImage)
-    {
-        self.shopName = shopName
-        self.foodName = foodName
-        self.price = price
-        self.starCount = starCount
-        self.noteText = noteText
-        self.remarkText = reamrkText
-        self.createDate = createDate
-        self.timeStamp = timeStamp
-        self.userName = userName
-        self.foodImage = foodImage
-    }
-}
+typealias DoneHandler = (Bool, Error?, [DiaryItem]?) -> Void
+typealias ImageDoneHandler = (Bool, Error?, UIImage?) -> Void
 
-// MARK: -宣告DataＭanager
-class DataManager {
+class DataManager: NSObject {
+    
+    var allDiary = [DiaryItem]()
+    
+    var foodImageArray = [UIImage]()
     
     // 宣告一個singleton物件
     static let shared: DataManager = DataManager()
-
-    private init() {}
     
-    // Firebase Datebase Reference
+    // 若不繼承NSObject會無法override
+    private override init() {
+        
+    }
+    
     // Firebase Database 資料路徑設定，創建一個子層叫Diary
     let BASE_DB_REF: DatabaseReference = Database.database().reference()
     let DIARY_DB_REF: DatabaseReference = Database.database().reference().child("Diary")
     
-    // Firbase Storage Reference
     // Firbase storage 圖片路徑設定，創建一個子層叫Diary
     let DIARY_STORAGE_REF: StorageReference = Storage.storage().reference().child("Diary")
     
-    // MARK: -Firebase 上傳實作
+    // MARK: -Firebase 上傳資料實作
     func uploadToFirebase(shopName: String, foodName: String, price: String, starCount: Int, noteText: String, remarkText: String, foodImage: UIImage, userName: String) {
         
         let databaseRef = DIARY_DB_REF.childByAutoId()
@@ -121,8 +75,8 @@ class DataManager {
                                             DiaryItem.DirayInfoKey.starCount : starCount,
                                             DiaryItem.DirayInfoKey.noteText : noteText,
                                             DiaryItem.DirayInfoKey.remarkText : remarkText,
-                                            DiaryItem.DirayInfoKey.foodImage : imageURL,
-                                            DiaryItem.DirayInfoKey.createDate : createTime,
+                                            DiaryItem.DirayInfoKey.foodImageURL : imageURL,
+                                            DiaryItem.DirayInfoKey.createTime : createTime,
                                             DiaryItem.DirayInfoKey.timeStamp : timeStamp,
                                             DiaryItem.DirayInfoKey.userName : userName
                 ]
@@ -147,9 +101,67 @@ class DataManager {
         }
     }
     
-    // MARK: -Firebase 下載實作
-    func downloadFromFirebase() {
-        //...
+    // MARK: -Firebase 下載資料實作
+    func downloadFromFirebase(doneHandler: @escaping DoneHandler) {
+        
+        var allDiary: [DiaryItem] = []
+        // 先透過Firebase的內建方法將資料按照時戳(1970年至今總秒數)，由大到小(由新到舊)排列
+        let diaryQuery = DIARY_DB_REF.queryOrdered(byChild: DiaryItem.DirayInfoKey.timeStamp)
+        // 去針對某一特定條件去設置一個觀察者，在這邊是針對.value(任何針對資料的改動)做監聽
+        diaryQuery.observeSingleEvent(of: .value) { (snapshot) in
+            
+            // 注意，任何從Firebase上得到的資料都會是snapshot的型別，內容是資料在Firebase資料庫內的地址
+            // 在這邊我們指定要撈出所有的資料
+            for diary in snapshot.children.allObjects as! [DataSnapshot] {
+                // 撈到資料後，讀取裡面的內容(.value)，由於Firebase透過JSON格式儲存資料，所以我們指定撈回來的資料為[String : Any]的字典形式
+                let diaryData = diary.value as? [String : Any] ?? [:]
+                // 確認有撈到資料後，將資料整包帶進allDiary內
+                if let diaryPost = DiaryItem(diaryDataFromFirebase: diaryData) {
+                    allDiary.append(diaryPost)
+                }
+            }
+
+            if allDiary.count > 0 {
+                // 將撈回來的資料按照時戳由大到小排列
+                // 後面尾隨閉包的寫法我看不懂 by Rabo
+                allDiary.sort(by: {$0.timeStamp > $1.timeStamp})
+            }
+            // 把得到的allDiary放到doneHandler去當作參數，並在實際呼叫時實作
+            doneHandler(true, nil, allDiary)
+        }
+        
     }
+    
+    // MARK: -下載圖片功能實作
+    func downloadImage(foodImageURLString: String, imageDoneHandler: @escaping ImageDoneHandler) {
+        
+        // 如果撈回來的資料內的imageURL為空白，就下載預設的圖片
+        if foodImageURLString == "" {
+            imageDoneHandler(true, nil, UIImage(named: "00.jpg")) // 待補預設照片
+            return
+        }
+        
+        if let imageURL = URL(string: foodImageURLString) {
+            
+            let downloadTask = URLSession.shared.dataTask(with: imageURL, completionHandler: { (data, response, error) in
+                
+                // 由於不能再背景碰UI，所以將圖片的載入放到主執行緒來執行
+                DispatchQueue.main.async {
+                    let foodImage = UIImage(data: data!)
+                    imageDoneHandler(true, error, foodImage)
+                }
+            })
+            downloadTask.resume()
+        }
+        
+    }
+    
+    // MARK: -將下載的圖片放到圖片陣列中，準備給Flowlayout使用
+    func appendImage(image: UIImage) {
+        
+        foodImageArray.append(image)
+        print("目前Image的內容是：\(image)")
+    }
+    
     
 }

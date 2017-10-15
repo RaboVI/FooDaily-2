@@ -202,9 +202,6 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
     }
     
    
-    
-    
-    
     class func computeCellSize(image: UIImage,
                                width: CGFloat) -> CGSize {
         
@@ -215,9 +212,5 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
         return CGSize(width: width, height: height)
         
     }
-    
-    
-    
-    
-    
+
 }
