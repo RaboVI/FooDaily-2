@@ -73,6 +73,7 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
         
         imageView.image = image
         
+        
         bg.layer.cornerRadius = 7.5
         imageView.layer.cornerRadius = 5
 //        bg.clipsToBounds = true

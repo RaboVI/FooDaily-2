@@ -14,6 +14,7 @@ class CreateDiaryHeaderCollectionReusableView: UICollectionReusableView {
     let headerY: CGFloat = 44
     let headerHeigh: CGFloat = 64
 //    var headerWidth: CGFloat = 0
+    let shopNameField = UITextField()
     
     func setHeader(width: CGFloat) {
         print(self.frame.size)
@@ -36,7 +37,7 @@ class CreateDiaryHeaderCollectionReusableView: UICollectionReusableView {
         blurView.clipsToBounds = true
         self.backgroundColor = UIColor.clear
         
-        let shopNameField = UITextField()
+        
         shopNameField.placeholder = "店 家 名 稱"
         //        shopNameField.font = UIFont(name: "GenRyuMinTW-Regular", size: 22)
         shopNameField.font = UIFont.systemFont(ofSize: 22)

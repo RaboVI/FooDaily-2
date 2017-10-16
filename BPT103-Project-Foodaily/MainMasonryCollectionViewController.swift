@@ -104,7 +104,7 @@ class MainMasonryCollectionViewController: UICollectionViewController {
         // #warning Incomplete implementation, return the number of items
         return dataManager.dailyItem.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let dailyItem = dataManager.dailyItem[indexPath.row]

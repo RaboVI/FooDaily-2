@@ -79,8 +79,10 @@ extension CreateDiaryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         if kind == UICollectionElementKindSectionHeader {
+            print(indexPath)
             var reusableView = CreateDiaryHeaderCollectionReusableView()
             reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! CreateDiaryHeaderCollectionReusableView
+            
             
 //            reusableView.headerWidth = createDiaryCollectionView.frame.size.width
             

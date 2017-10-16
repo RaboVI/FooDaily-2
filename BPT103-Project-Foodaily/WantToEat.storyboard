@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Want To Eat Table View Controller-->
+        <scene sceneID="9gt-OQ-Faf">
+            <objects>
+                <tableViewController restorationIdentifier="WantToEatTableViewController" storyboardIdentifier="WantToEatTableViewController" id="uMh-CN-8cf" customClass="WantToEatTableViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="n1J-dh-2pK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="91" id="AsM-UC-0R0" customClass="WantToEatTableViewCell" customModule="BPT103_Project_Foodaily" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="91"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AsM-UC-0R0" id="IjK-Qt-Iwo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8Q-Tc-utF">
+                                            <rect key="frame" x="8" y="8" width="359" height="74.5"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WR-sm-N2M">
+                                                    <rect key="frame" x="37.5" y="8" width="284" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="cCX-e0-5lN"/>
+                                                    </constraints>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="25" name=".AppleSystemUIFont"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-fH-IWq">
+                                                    <rect key="frame" x="37.5" y="37" width="284" height="1"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="2eU-xt-44l"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF6-4z-Z1A">
+                                                    <rect key="frame" x="37" y="46" width="284.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="ogY-By-nWE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pF6-4z-Z1A" secondAttribute="trailing" constant="37.5" id="15j-CE-q3X"/>
+                                                <constraint firstAttribute="trailing" secondItem="bgr-fH-IWq" secondAttribute="trailing" constant="37.5" id="3Nr-2g-AZp"/>
+                                                <constraint firstItem="bgr-fH-IWq" firstAttribute="centerY" secondItem="d8Q-Tc-utF" secondAttribute="centerY" id="Dwj-XL-po6"/>
+                                                <constraint firstItem="pF6-4z-Z1A" firstAttribute="leading" secondItem="d8Q-Tc-utF" secondAttribute="leading" constant="37.5" id="QTs-u3-KMJ"/>
+                                                <constraint firstItem="bgr-fH-IWq" firstAttribute="leading" secondItem="d8Q-Tc-utF" secondAttribute="leading" constant="37.5" id="TuW-05-leS"/>
+                                                <constraint firstItem="0WR-sm-N2M" firstAttribute="top" secondItem="d8Q-Tc-utF" secondAttribute="top" constant="8" id="Uu1-n3-10W"/>
+                                                <constraint firstItem="0WR-sm-N2M" firstAttribute="leading" secondItem="d8Q-Tc-utF" secondAttribute="leading" constant="37.5" id="cHm-9R-8se"/>
+                                                <constraint firstAttribute="bottom" secondItem="pF6-4z-Z1A" secondAttribute="bottom" constant="8" id="hdg-PV-5pJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="0WR-sm-N2M" secondAttribute="trailing" constant="37.5" id="w7i-Zx-hDc"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="d8Q-Tc-utF" firstAttribute="top" secondItem="IjK-Qt-Iwo" secondAttribute="topMargin" id="9Yq-1i-uTZ"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="d8Q-Tc-utF" secondAttribute="bottom" id="AxK-qH-dYq"/>
+                                        <constraint firstItem="d8Q-Tc-utF" firstAttribute="leading" secondItem="IjK-Qt-Iwo" secondAttribute="leadingMargin" id="XAT-2t-3aV"/>
+                                        <constraint firstItem="d8Q-Tc-utF" firstAttribute="trailing" secondItem="IjK-Qt-Iwo" secondAttribute="trailingMargin" id="rwf-l7-rUI"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="bgView" destination="d8Q-Tc-utF" id="UYX-Nj-K8F"/>
+                                    <outlet property="lineView" destination="bgr-fH-IWq" id="EaS-91-QVl"/>
+                                    <outlet property="remarkLabel" destination="pF6-4z-Z1A" id="1R8-OE-Idq"/>
+                                    <outlet property="titleLabel" destination="0WR-sm-N2M" id="hLv-IV-99d"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="uMh-CN-8cf" id="Mjn-3C-X0v"/>
+                            <outlet property="delegate" destination="uMh-CN-8cf" id="ZTR-gI-Ayx"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Esh-G2-dWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13.6" y="169.56521739130437"/>
+        </scene>
+    </scenes>
+</document>
