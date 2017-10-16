@@ -16,7 +16,7 @@ class CreateDiaryHeaderCollectionReusableView: UICollectionReusableView {
 //    var headerWidth: CGFloat = 0
     let shopNameField = UITextField()
     
-    let shopNameField = UITextField()
+    
     
     func setHeader(width: CGFloat) {
         print("")
