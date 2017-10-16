@@ -144,7 +144,7 @@
 		B346B6151F8176670060DE0E /* addCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCell.png; sourceTree = "<group>"; };
 		B346B6161F8176680060DE0E /* addCell@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addCell@3x.png"; sourceTree = "<group>"; };
 		B346B6171F8191170060DE0E /* CreateDiaryFooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryFooterCollectionReusableView.swift; sourceTree = "<group>"; };
-		B3535D431F86B47F00BE6EF6 /* DiaryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = DiaryView.storyboard; path = ../../../../DiaryView.storyboard; sourceTree = "<group>"; };
+		B3535D431F86B47F00BE6EF6 /* DiaryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DiaryView.storyboard; sourceTree = "<group>"; };
 		B3535D451F86B51C00BE6EF6 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
 		B3535D471F86B70700BE6EF6 /* DiaryViewCustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewCustomSegue.swift; sourceTree = "<group>"; };
 		B3535D491F86B73100BE6EF6 /* DiaryViewCustomSegueUnwind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewCustomSegueUnwind.swift; sourceTree = "<group>"; };
@@ -222,13 +222,11 @@
 				1275436D1F8A0CDA0064BDC7 /* Model */,
 				1275436C1F8A0A200064BDC7 /* Resources */,
 				1227DC111F81E66500023A18 /* Old Pages */,
-				12826F231F6B67C1008297C0 /* WelcomePageView */,
 				123B889D1F782B05005FB718 /* Member LogIn/Out Pages */,
 				B3CFFDFC1F6F6C1000861E70 /* MainView */,
-				B37FC26D1F7A5A93000E83F4 /* CreateDiary */,
 				123B889C1F782AE5005FB718 /* Extension */,
 				B3535D421F86B44A00BE6EF6 /* DiaryView */,
-				B37FC26D1F7A5A93000E83F4 /* createDiary */,
+				B37FC26D1F7A5A93000E83F4 /* CreateDiary */,
 				B31439F61F94324A00A5529B /* WantToEat */,
 				12826F231F6B67C1008297C0 /* WelcomePageView */,
 				12177BBA1F1F7A2C00CA49CD /* Main.storyboard */,
@@ -320,7 +318,6 @@
 		B3535D421F86B44A00BE6EF6 /* DiaryView */ = {
 			isa = PBXGroup;
 			children = (
-				B30A52411F8B9560004281CD /* 0907-02.jpg */,
 				B3535D431F86B47F00BE6EF6 /* DiaryView.storyboard */,
 				B3535D451F86B51C00BE6EF6 /* DiaryViewController.swift */,
 				B3535D471F86B70700BE6EF6 /* DiaryViewCustomSegue.swift */,
@@ -329,7 +326,7 @@
 			name = DiaryView;
 			sourceTree = "<group>";
 		};
-		B37005261F78ACA1003A0CC9 /* font */ = {
+		B37005261F78ACA1003A0CC9 /* Text Fonts */ = {
 			isa = PBXGroup;
 			children = (
 				B38C14C01F78EED3000F61F7 /* Akrobat-Bold.otf */,
@@ -498,7 +495,6 @@
 			files = (
 				B32E8FA61F8234460009431E /* cancel@2x.png in Resources */,
 				B38C14DC1F792303000F61F7 /* hollowStar@3x.png in Resources */,
-				B30A52421F8B9570004281CD /* 0907-02.jpg in Resources */,
 				B30A58DE1F7CE342002F1AC8 /* camera@3x.png in Resources */,
 				B31439F81F94327B00A5529B /* WantToEat.storyboard in Resources */,
 				B3DA1E831F927C5A00DCC867 /* moreContent.png in Resources */,
