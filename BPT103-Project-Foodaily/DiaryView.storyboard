@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IM8-aY-tRo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -79,7 +78,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRY-47-SfG">
-                                <rect key="frame" x="170.5" y="625" width="33" height="22"/>
+                                <rect key="frame" x="171" y="625" width="33" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JRY-47-SfG" secondAttribute="height" multiplier="23:15" id="iWb-9S-fOD"/>
                                 </constraints>
@@ -157,7 +156,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BoF-bR-sLL">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BoF-bR-sLL">
                                         <rect key="frame" x="32" y="60.5" width="311" height="67"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -180,7 +179,7 @@
                                             <constraint firstAttribute="height" constant="2" id="uxr-Gv-Zja"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹幹" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gn4-xU-ZP5">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Gn4-xU-ZP5">
                                         <rect key="frame" x="32" y="172" width="311" height="108"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -277,30 +276,8 @@
             </objects>
             <point key="canvasLocation" x="120.8" y="4.9475262368815596"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="wmL-Y4-k5G">
-            <objects>
-                <viewController id="1iR-DZ-LAR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="zx9-mS-G9Z">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="0907-02.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eMc-ag-AQf">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <viewLayoutGuide key="safeArea" id="VJk-yC-FJP"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4br-Xv-bbE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="939" y="2"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="0907-02.jpg" width="597" height="1058"/>
         <image name="cancolWhite.png" width="34" height="18"/>
         <image name="hollowStar.png" width="30" height="30"/>
         <image name="more.png" width="34" height="18"/>
