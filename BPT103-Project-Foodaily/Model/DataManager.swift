@@ -104,11 +104,10 @@ class DataManager: NSObject {
     // MARK: -Firebase 下載資料實作
     func downloadFromFirebase(doneHandler: @escaping DoneHandler) {
         
-        var allDiary: [DiaryItem] = []
         // 先透過Firebase的內建方法將資料按照時戳(1970年至今總秒數)，由大到小(由新到舊)排列
         let diaryQuery = DIARY_DB_REF.queryOrdered(byChild: DiaryItem.DirayInfoKey.timeStamp)
         // 去針對某一特定條件去設置一個觀察者，在這邊是針對.value(任何針對資料的改動)做監聽
-        diaryQuery.observeSingleEvent(of: .value) { (snapshot) in
+        diaryQuery.observe(.value) { (snapshot) in
             
             // 注意，任何從Firebase上得到的資料都會是snapshot的型別，內容是資料在Firebase資料庫內的地址
             // 在這邊我們指定要撈出所有的資料
@@ -117,19 +116,19 @@ class DataManager: NSObject {
                 let diaryData = diary.value as? [String : Any] ?? [:]
                 // 確認有撈到資料後，將資料整包帶進allDiary內
                 if let diaryPost = DiaryItem(diaryDataFromFirebase: diaryData) {
-                    allDiary.append(diaryPost)
+                    self.allDiary.append(diaryPost)
                 }
             }
 
-            if allDiary.count > 0 {
+            if self.allDiary.count > 0 {
                 // 將撈回來的資料按照時戳由大到小排列
                 // 後面尾隨閉包的寫法我看不懂 by Rabo
-                allDiary.sort(by: {$0.timeStamp > $1.timeStamp})
+                self.allDiary.sort(by: {$0.timeStamp > $1.timeStamp})
             }
             // 把得到的allDiary放到doneHandler去當作參數，並在實際呼叫時實作
-            doneHandler(true, nil, allDiary)
+
+            doneHandler(true, nil, self.allDiary)
         }
-        
     }
     
     // MARK: -下載圖片功能實作
@@ -146,14 +145,13 @@ class DataManager: NSObject {
             let downloadTask = URLSession.shared.dataTask(with: imageURL, completionHandler: { (data, response, error) in
                 
                 // 由於不能再背景碰UI，所以將圖片的載入放到主執行緒來執行
-                DispatchQueue.main.async {
+                DispatchQueue.main.sync {
                     let foodImage = UIImage(data: data!)
                     imageDoneHandler(true, error, foodImage)
                 }
             })
             downloadTask.resume()
         }
-        
     }
     
     // MARK: -將下載的圖片放到圖片陣列中，準備給Flowlayout使用
@@ -162,6 +160,5 @@ class DataManager: NSObject {
         foodImageArray.append(image)
         print("目前Image的內容是：\(image)")
     }
-    
     
 }

@@ -10,7 +10,7 @@ import UIKit
 
 class MainMasonryFlowLayout: UICollectionViewFlowLayout {
     
-    let dataMananger = FakeDataManager.shared
+    let dataManager = DataManager.shared
     
     var layoutAttributes = [UICollectionViewLayoutAttributes]()
     var layoutItemSize = CGSize()
@@ -61,8 +61,8 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
                                   sectionInset.right + cellWidth + minimumInteritemSpacing]
         
         
-        for image in dataMananger.dailyItem {
-            
+        for image in dataManager.foodImageArray {
+        
             // 建立一個 attribute 物件，並給予位置設定
             let indexPath = IndexPath.init(row: row,
                                            section: 0)
@@ -86,7 +86,8 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
             let cellHeight = item.size.height * cellWidth / item.size.width
             */
             
-            let cellSize = MainMasonryCollectionViewCell.computeCellSize(image: image.image,
+            print(" 現在Flowlayout內使用的Image分別是：\(image)")
+            let cellSize = MainMasonryCollectionViewCell.computeCellSize(image: image,
                                                                          width: cellWidth)
             
             // 設定 attribute 的 frame，並加入到 attributes 中
@@ -104,13 +105,11 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
             
         }
         
-        
         let maxHeight = columnHeights.sorted().last!
         
-        var defaultColumnCount: CGFloat = CGFloat(dataMananger.dailyItem.count / 2)
+        var defaultColumnCount: CGFloat = CGFloat(dataManager.allDiary.count / 2)
         
-        
-        if dataMananger.dailyItem.count % 2 == 1 {
+        if dataManager.allDiary.count % 2 == 1 {
             defaultColumnCount += 1
         }
         
@@ -122,12 +121,10 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
         
     }
     
-    
     // 個人理解為： 將設定好的每個 cell 格式，並將之送回
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         
         // ...
-        
         return layoutAttributes
     }
 }

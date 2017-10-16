@@ -156,7 +156,6 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
         self.addSubview(createDateLabel)
         
         
-        
         let star1 = UIImageView()
         let star2 = UIImageView()
         let star3 = UIImageView()
@@ -210,7 +209,6 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
         let height = image.size.height * (width - imageMargin) / image.size.width + imageMargin + commentStampHeight
         
         return CGSize(width: width, height: height)
-        
     }
 
 }
