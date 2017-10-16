@@ -688,7 +688,7 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="Dmb-F7-2Hi">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="head" id="jnn-7g-ym7">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="head" id="jnn-7g-ym7">
                             <connections>
                                 <segue destination="4qA-P3-ffJ" kind="show" id="nqe-Go-UpF"/>
                             </connections>
