@@ -131,6 +131,7 @@ extension CreateDiaryViewController: UICollectionViewDataSource {
             var reusableView = CreateDiaryHeaderCollectionReusableView()
             reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! CreateDiaryHeaderCollectionReusableView
             
+            
 //            reusableView.headerWidth = createDiaryCollectionView.frame.size.width
             
             reusableView.setHeader(width: cellWidth)

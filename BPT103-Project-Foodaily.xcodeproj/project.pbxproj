@@ -37,6 +37,9 @@
 		B30A58DE1F7CE342002F1AC8 /* camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B30A58DA1F7CE33B002F1AC8 /* camera@3x.png */; };
 		B30A58E11F7CE5D8002F1AC8 /* CreateDiaryPageView_01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A58E01F7CE5D8002F1AC8 /* CreateDiaryPageView_01.swift */; };
 		B30A58E31F7D1B5D002F1AC8 /* CreateDiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A58E21F7D1B5D002F1AC8 /* CreateDiaryCollectionViewCell.swift */; };
+		B31439F81F94327B00A5529B /* WantToEat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31439F71F94327B00A5529B /* WantToEat.storyboard */; };
+		B31439FA1F94368C00A5529B /* WantToEatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31439F91F94368C00A5529B /* WantToEatTableViewController.swift */; };
+		B31439FC1F9436A000A5529B /* WantToEatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31439FB1F9436A000A5529B /* WantToEatTableViewCell.swift */; };
 		B319BC141F7D68830088220D /* CreateDiaryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319BC131F7D68820088220D /* CreateDiaryCollectionView.swift */; };
 		B32E8F9C1F8213630009431E /* addCell.png in Resources */ = {isa = PBXBuildFile; fileRef = B346B6151F8176670060DE0E /* addCell.png */; };
 		B32E8F9D1F8213630009431E /* addCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B32E8F9B1F82135F0009431E /* addCell@2x.png */; };
@@ -49,6 +52,10 @@
 		B32E8FAA1F8234460009431E /* checked@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B32E8F9F1F82343B0009431E /* checked@3x.png */; };
 		B32E8FAC1F8242BB0009431E /* CreateDiaryHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32E8FAB1F8242BB0009431E /* CreateDiaryHeaderCollectionReusableView.swift */; };
 		B346B6181F8191170060DE0E /* CreateDiaryFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B346B6171F8191170060DE0E /* CreateDiaryFooterCollectionReusableView.swift */; };
+		B3535D441F86B47F00BE6EF6 /* DiaryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3535D431F86B47F00BE6EF6 /* DiaryView.storyboard */; };
+		B3535D461F86B51C00BE6EF6 /* DiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3535D451F86B51C00BE6EF6 /* DiaryViewController.swift */; };
+		B3535D481F86B70700BE6EF6 /* DiaryViewCustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3535D471F86B70700BE6EF6 /* DiaryViewCustomSegue.swift */; };
+		B3535D4A1F86B73100BE6EF6 /* DiaryViewCustomSegueUnwind.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3535D491F86B73100BE6EF6 /* DiaryViewCustomSegueUnwind.swift */; };
 		B37FC2681F7A5383000E83F4 /* plue.png in Resources */ = {isa = PBXBuildFile; fileRef = B37FC2661F7A5375000E83F4 /* plue.png */; };
 		B37FC2691F7A5383000E83F4 /* plue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B37FC2671F7A5377000E83F4 /* plue@2x.png */; };
 		B37FC26A1F7A5383000E83F4 /* plue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B37FC2651F7A5372000E83F4 /* plue@3x.png */; };
@@ -73,6 +80,15 @@
 		B3CFFE101F6F6CE300861E70 /* 05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3CFFE091F6F6CE300861E70 /* 05.jpg */; };
 		B3CFFE111F6F6CE300861E70 /* 06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B3CFFE0A1F6F6CE300861E70 /* 06.jpg */; };
 		B3CFFE171F6FD9D200861E70 /* FakeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */; };
+		B3DA1E7A1F9279C100DCC867 /* cancolWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DA1E741F9279B400DCC867 /* cancolWhite.png */; };
+		B3DA1E7B1F9279C100DCC867 /* cancolWhite@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DA1E761F9279B600DCC867 /* cancolWhite@2x.png */; };
+		B3DA1E7C1F9279C100DCC867 /* cancolWhite@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DA1E791F9279BA00DCC867 /* cancolWhite@3x.png */; };
+		B3DA1E7D1F9279C100DCC867 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DA1E781F9279B800DCC867 /* more.png */; };
+		B3DA1E7E1F9279C100DCC867 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DA1E751F9279B400DCC867 /* more@2x.png */; };
+		B3DA1E7F1F9279C100DCC867 /* more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DA1E771F9279B700DCC867 /* more@3x.png */; };
+		B3DA1E831F927C5A00DCC867 /* moreContent.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DA1E811F927C5200DCC867 /* moreContent.png */; };
+		B3DA1E841F927C5A00DCC867 /* moreContent@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DA1E821F927C5300DCC867 /* moreContent@2x.png */; };
+		B3DA1E851F927C5A00DCC867 /* moreContent@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3DA1E801F927C5100DCC867 /* moreContent@3x.png */; };
 		B3F842A21F7E299F00806610 /* CreateDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3F842A11F7E299F00806610 /* CreateDiaryViewController.swift */; };
 		B3F842A31F7E625500806610 /* GenRyuMinTW-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B30A58DF1F7CE4A4002F1AC8 /* GenRyuMinTW-Regular.ttf */; };
 /* End PBXBuildFile section */
@@ -113,6 +129,9 @@
 		B30A58DF1F7CE4A4002F1AC8 /* GenRyuMinTW-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenRyuMinTW-Regular.ttf"; sourceTree = "<group>"; };
 		B30A58E01F7CE5D8002F1AC8 /* CreateDiaryPageView_01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryPageView_01.swift; sourceTree = "<group>"; };
 		B30A58E21F7D1B5D002F1AC8 /* CreateDiaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		B31439F71F94327B00A5529B /* WantToEat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WantToEat.storyboard; sourceTree = "<group>"; };
+		B31439F91F94368C00A5529B /* WantToEatTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantToEatTableViewController.swift; sourceTree = "<group>"; };
+		B31439FB1F9436A000A5529B /* WantToEatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantToEatTableViewCell.swift; sourceTree = "<group>"; };
 		B319BC131F7D68820088220D /* CreateDiaryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryCollectionView.swift; sourceTree = "<group>"; };
 		B32E8F9B1F82135F0009431E /* addCell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addCell@2x.png"; sourceTree = "<group>"; };
 		B32E8F9F1F82343B0009431E /* checked@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checked@3x.png"; sourceTree = "<group>"; };
@@ -125,6 +144,10 @@
 		B346B6151F8176670060DE0E /* addCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addCell.png; sourceTree = "<group>"; };
 		B346B6161F8176680060DE0E /* addCell@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addCell@3x.png"; sourceTree = "<group>"; };
 		B346B6171F8191170060DE0E /* CreateDiaryFooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryFooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		B3535D431F86B47F00BE6EF6 /* DiaryView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = DiaryView.storyboard; path = ../../../../DiaryView.storyboard; sourceTree = "<group>"; };
+		B3535D451F86B51C00BE6EF6 /* DiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewController.swift; sourceTree = "<group>"; };
+		B3535D471F86B70700BE6EF6 /* DiaryViewCustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewCustomSegue.swift; sourceTree = "<group>"; };
+		B3535D491F86B73100BE6EF6 /* DiaryViewCustomSegueUnwind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryViewCustomSegueUnwind.swift; sourceTree = "<group>"; };
 		B37FC2651F7A5372000E83F4 /* plue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plue@3x.png"; sourceTree = "<group>"; };
 		B37FC2661F7A5375000E83F4 /* plue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plue.png; sourceTree = "<group>"; };
 		B37FC2671F7A5377000E83F4 /* plue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plue@2x.png"; sourceTree = "<group>"; };
@@ -149,6 +172,15 @@
 		B3CFFE091F6F6CE300861E70 /* 05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 05.jpg; sourceTree = "<group>"; };
 		B3CFFE0A1F6F6CE300861E70 /* 06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 06.jpg; sourceTree = "<group>"; };
 		B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeDataManager.swift; sourceTree = "<group>"; };
+		B3DA1E741F9279B400DCC867 /* cancolWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancolWhite.png; sourceTree = "<group>"; };
+		B3DA1E751F9279B400DCC867 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
+		B3DA1E761F9279B600DCC867 /* cancolWhite@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancolWhite@2x.png"; sourceTree = "<group>"; };
+		B3DA1E771F9279B700DCC867 /* more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@3x.png"; sourceTree = "<group>"; };
+		B3DA1E781F9279B800DCC867 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
+		B3DA1E791F9279BA00DCC867 /* cancolWhite@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cancolWhite@3x.png"; sourceTree = "<group>"; };
+		B3DA1E801F927C5100DCC867 /* moreContent@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moreContent@3x.png"; sourceTree = "<group>"; };
+		B3DA1E811F927C5200DCC867 /* moreContent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moreContent.png; sourceTree = "<group>"; };
+		B3DA1E821F927C5300DCC867 /* moreContent@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "moreContent@2x.png"; sourceTree = "<group>"; };
 		B3F842A11F7E299F00806610 /* CreateDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDiaryViewController.swift; sourceTree = "<group>"; };
 		C5E0299527D4856C95BA434E /* Pods-BPT103-Project-Foodaily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BPT103-Project-Foodaily.release.xcconfig"; path = "Pods/Target Support Files/Pods-BPT103-Project-Foodaily/Pods-BPT103-Project-Foodaily.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -195,6 +227,10 @@
 				B3CFFDFC1F6F6C1000861E70 /* MainView */,
 				B37FC26D1F7A5A93000E83F4 /* CreateDiary */,
 				123B889C1F782AE5005FB718 /* Extension */,
+				B3535D421F86B44A00BE6EF6 /* DiaryView */,
+				B37FC26D1F7A5A93000E83F4 /* createDiary */,
+				B31439F61F94324A00A5529B /* WantToEat */,
+				12826F231F6B67C1008297C0 /* WelcomePageView */,
 				12177BBA1F1F7A2C00CA49CD /* Main.storyboard */,
 				12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */,
 				12FD67C71F20767B0021EDD6 /* Assets.xcassets */,
@@ -271,7 +307,29 @@
 			name = WelcomePageView;
 			sourceTree = "<group>";
 		};
-		B37005261F78ACA1003A0CC9 /* Text Fonts */ = {
+		B31439F61F94324A00A5529B /* WantToEat */ = {
+			isa = PBXGroup;
+			children = (
+				B31439F71F94327B00A5529B /* WantToEat.storyboard */,
+				B31439F91F94368C00A5529B /* WantToEatTableViewController.swift */,
+				B31439FB1F9436A000A5529B /* WantToEatTableViewCell.swift */,
+			);
+			name = WantToEat;
+			sourceTree = "<group>";
+		};
+		B3535D421F86B44A00BE6EF6 /* DiaryView */ = {
+			isa = PBXGroup;
+			children = (
+				B30A52411F8B9560004281CD /* 0907-02.jpg */,
+				B3535D431F86B47F00BE6EF6 /* DiaryView.storyboard */,
+				B3535D451F86B51C00BE6EF6 /* DiaryViewController.swift */,
+				B3535D471F86B70700BE6EF6 /* DiaryViewCustomSegue.swift */,
+				B3535D491F86B73100BE6EF6 /* DiaryViewCustomSegueUnwind.swift */,
+			);
+			name = DiaryView;
+			sourceTree = "<group>";
+		};
+		B37005261F78ACA1003A0CC9 /* font */ = {
 			isa = PBXGroup;
 			children = (
 				B38C14C01F78EED3000F61F7 /* Akrobat-Bold.otf */,
@@ -299,6 +357,15 @@
 		B38C14D61F790B14000F61F7 /* App Icons */ = {
 			isa = PBXGroup;
 			children = (
+				B3DA1E811F927C5200DCC867 /* moreContent.png */,
+				B3DA1E821F927C5300DCC867 /* moreContent@2x.png */,
+				B3DA1E801F927C5100DCC867 /* moreContent@3x.png */,
+				B3DA1E741F9279B400DCC867 /* cancolWhite.png */,
+				B3DA1E761F9279B600DCC867 /* cancolWhite@2x.png */,
+				B3DA1E791F9279BA00DCC867 /* cancolWhite@3x.png */,
+				B3DA1E781F9279B800DCC867 /* more.png */,
+				B3DA1E751F9279B400DCC867 /* more@2x.png */,
+				B3DA1E771F9279B700DCC867 /* more@3x.png */,
 				B32E8FA11F82343D0009431E /* cancel.png */,
 				B32E8FA41F82343F0009431E /* cancel@2x.png */,
 				B32E8FA01F82343C0009431E /* cancel@3x.png */,
@@ -431,7 +498,12 @@
 			files = (
 				B32E8FA61F8234460009431E /* cancel@2x.png in Resources */,
 				B38C14DC1F792303000F61F7 /* hollowStar@3x.png in Resources */,
+				B30A52421F8B9570004281CD /* 0907-02.jpg in Resources */,
 				B30A58DE1F7CE342002F1AC8 /* camera@3x.png in Resources */,
+				B31439F81F94327B00A5529B /* WantToEat.storyboard in Resources */,
+				B3DA1E831F927C5A00DCC867 /* moreContent.png in Resources */,
+				B3535D441F86B47F00BE6EF6 /* DiaryView.storyboard in Resources */,
+				B3DA1E7D1F9279C100DCC867 /* more.png in Resources */,
 				B37FC26A1F7A5383000E83F4 /* plue@3x.png in Resources */,
 				B32E8FA51F8234460009431E /* cancel.png in Resources */,
 				B3CFFE0E1F6F6CE300861E70 /* 03.jpg in Resources */,
@@ -444,20 +516,27 @@
 				B3CFFE0D1F6F6CE300861E70 /* 02.jpg in Resources */,
 				B32E8FA81F8234460009431E /* checked.png in Resources */,
 				B3CFFE101F6F6CE300861E70 /* 05.jpg in Resources */,
+				B3DA1E7C1F9279C100DCC867 /* cancolWhite@3x.png in Resources */,
+				B3DA1E851F927C5A00DCC867 /* moreContent@3x.png in Resources */,
 				B32E8FA91F8234460009431E /* checked@2x.png in Resources */,
 				B3CFFE111F6F6CE300861E70 /* 06.jpg in Resources */,
 				12177BC11F1F7A2D00CA49CD /* LaunchScreen.storyboard in Resources */,
 				B30A58DD1F7CE342002F1AC8 /* camera@2x.png in Resources */,
 				B3CFFE0B1F6F6CE300861E70 /* 00.jpg in Resources */,
 				B32E8FA71F8234460009431E /* cancel@3x.png in Resources */,
+				B3DA1E7A1F9279C100DCC867 /* cancolWhite.png in Resources */,
 				B38C14CC1F78EF1B000F61F7 /* Akrobat-Bold.otf in Resources */,
+				B3DA1E7E1F9279C100DCC867 /* more@2x.png in Resources */,
 				B38C14B81F78B83F000F61F7 /* GenRyuMinTW-Bold.ttf in Resources */,
 				B37FC2681F7A5383000E83F4 /* plue.png in Resources */,
 				B38C14DE1F792303000F61F7 /* solidStar@2x.png in Resources */,
 				12FD67C81F20767B0021EDD6 /* Assets.xcassets in Resources */,
+				B3DA1E841F927C5A00DCC867 /* moreContent@2x.png in Resources */,
 				B32E8F9E1F8213630009431E /* addCell@3x.png in Resources */,
+				B3DA1E7B1F9279C100DCC867 /* cancolWhite@2x.png in Resources */,
 				B38C14DF1F792303000F61F7 /* solidStar@3x.png in Resources */,
 				B38C14DB1F792303000F61F7 /* hollowStar@2x.png in Resources */,
+				B3DA1E7F1F9279C100DCC867 /* more@3x.png in Resources */,
 				B38C14DD1F792303000F61F7 /* solidStar.png in Resources */,
 				B37FC2691F7A5383000E83F4 /* plue@2x.png in Resources */,
 				B32E8F9D1F8213630009431E /* addCell@2x.png in Resources */,
@@ -526,7 +605,9 @@
 				B32E8FAC1F8242BB0009431E /* CreateDiaryHeaderCollectionReusableView.swift in Sources */,
 				12B71D591F8A137E0027589D /* DataManager.swift in Sources */,
 				12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */,
+				B3535D461F86B51C00BE6EF6 /* DiaryViewController.swift in Sources */,
 				B3CFFDFE1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift in Sources */,
+				B31439FC1F9436A000A5529B /* WantToEatTableViewCell.swift in Sources */,
 				12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */,
 				123B889B1F782AD7005FB718 /* UINavigationController+Transparent.swift in Sources */,
 				12826F221F6B596D008297C0 /* PageViewController.swift in Sources */,
@@ -534,10 +615,13 @@
 				B3CFFE001F6F6C4100861E70 /* MainMasonryCollectionViewCell.swift in Sources */,
 				B346B6181F8191170060DE0E /* CreateDiaryFooterCollectionReusableView.swift in Sources */,
 				B30A58E31F7D1B5D002F1AC8 /* CreateDiaryCollectionViewCell.swift in Sources */,
+				B3535D4A1F86B73100BE6EF6 /* DiaryViewCustomSegueUnwind.swift in Sources */,
 				B38C14BA1F78C81B000F61F7 /* UITextFont_Extension.swift in Sources */,
 				123B889F1F782C11005FB718 /* MemberLogInPage.swift in Sources */,
 				12F934AC1F20EB5000E8858E /* memoPageViewController.swift in Sources */,
 				12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */,
+				B3535D481F86B70700BE6EF6 /* DiaryViewCustomSegue.swift in Sources */,
+				B31439FA1F94368C00A5529B /* WantToEatTableViewController.swift in Sources */,
 				12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */,
 				123B88A11F783F0C005FB718 /* MemberForgetPasswordPage.swift in Sources */,
 				1227DB361F78D9B400023A18 /* UITextField+Placeholder.swift in Sources */,

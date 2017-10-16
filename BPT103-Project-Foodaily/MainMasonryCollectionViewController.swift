@@ -148,7 +148,7 @@ class MainMasonryCollectionViewController: UICollectionViewController {
         print("現在totalDiary內共有： \(totalDiary.count) 個items")
         return totalDiary.count
     }
-
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let dailyItem = totalDiary[indexPath.row]

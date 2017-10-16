@@ -677,6 +677,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </view>
+                                <connections>
+                                    <segue destination="h4G-MW-gGR" kind="presentation" id="lDe-3l-6FW"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -699,6 +702,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hd0-iI-RbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2023" y="139"/>
+        </scene>
+        <!--DiaryViewController-->
+        <scene sceneID="yXB-4e-yRG">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DiaryView" storyboardName="DiaryView" referencedIdentifier="DiaryViewController" id="h4G-MW-gGR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oDQ-gz-Bcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4430" y="-689"/>
         </scene>
         <!--Main Page-->
         <scene sceneID="fFT-Sc-EOG">
