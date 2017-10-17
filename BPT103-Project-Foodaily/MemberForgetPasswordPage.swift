@@ -22,7 +22,7 @@ class MemberForgetPasswordPage: UIViewController {
         emailTextField.becomeFirstResponder()
         
         // Do any additional setup after loading the view.
-        resetMyPasswordBtn.layer.cornerRadius = 30
+        resetMyPasswordBtn.layer.cornerRadius = 20
     }
 
     override func didReceiveMemoryWarning() {

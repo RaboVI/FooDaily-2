@@ -39,8 +39,8 @@ class RootPageView: UIViewController,PageViewControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        logInBtn.layer.cornerRadius = 30
-        signUpBtn.layer.cornerRadius = 30
+        logInBtn.layer.cornerRadius = 20
+        signUpBtn.layer.cornerRadius = 20
 
         // Do any additional setup after loading the view.
         welcomeDetailLabel.text = welcomeDetailText[0]

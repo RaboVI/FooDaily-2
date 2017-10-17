@@ -40,7 +40,7 @@ class MemberProfiolePage: UIViewController {
         memberProfileImage.layer.shouldRasterize = true
         memberProfileImage.clipsToBounds = true
         
-        signOutBtn.layer.cornerRadius = 30
+        signOutBtn.layer.cornerRadius = 20
     }
 
     override func didReceiveMemoryWarning() {

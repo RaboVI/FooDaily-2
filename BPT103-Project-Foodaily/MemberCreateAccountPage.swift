@@ -24,7 +24,7 @@ class MemberCreateAccountPage: UIViewController {
         nameTextField.becomeFirstResponder()
         
         // Do any additional setup after loading the view.
-        signUpBtn.layer.cornerRadius = 30
+        signUpBtn.layer.cornerRadius = 20
     }
 
     override func didReceiveMemoryWarning() {

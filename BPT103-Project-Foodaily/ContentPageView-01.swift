@@ -14,6 +14,10 @@ class ContentPageView_01: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let layer = CALayer()
+        layer.backgroundColor = #colorLiteral(red: 0.1254901961, green: 0.007843137719, blue: 0, alpha: 0.5)
+        view.layer.insertSublayer(layer, at: 10)
     }
 
     override func didReceiveMemoryWarning() {

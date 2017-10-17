@@ -28,12 +28,12 @@ class MemberSignInAndOutViewController: UIViewController,GIDSignInDelegate,GIDSi
         GIDSignIn.sharedInstance().uiDelegate = self
         
         // Do any additional setup after loading the view.
-        signInWithEmailBtn.layer.cornerRadius = 30
+        signInWithEmailBtn.layer.cornerRadius = 20
         signInWithEmailBtn.layer.borderColor = UIColor.white.cgColor
         signInWithEmailBtn.layer.borderWidth = 2
-        signInWithFacebookBtn.layer.cornerRadius = 30
-        signInWithGoogleBtn.layer.cornerRadius = 30
-        signUpWithEmailBtn.layer.cornerRadius = 30
+        signInWithFacebookBtn.layer.cornerRadius = 20
+        signInWithGoogleBtn.layer.cornerRadius = 20
+        signUpWithEmailBtn.layer.cornerRadius = 20
         signUpWithEmailBtn.layer.borderColor = UIColor.white.cgColor
         signUpWithEmailBtn.layer.borderWidth = 2
     }

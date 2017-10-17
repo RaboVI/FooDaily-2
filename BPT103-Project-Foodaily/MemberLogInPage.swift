@@ -20,7 +20,7 @@ class MemberLogInPage: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        logInBtn.layer.cornerRadius = 30
+        logInBtn.layer.cornerRadius = 20
     }
     
     override func viewWillAppear(_ animated: Bool) {
