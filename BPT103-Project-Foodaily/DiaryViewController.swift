@@ -38,42 +38,27 @@ class DiaryViewController: UIViewController {
     
     @IBOutlet weak var noteBgView: UIView!
     
+    let dataManager = DataManager.shared
     
-    // Property
+    var indexPath:Int!
     
-    var foodImage = UIImage()
-    
-    var shopName = ""
-    var foodName = ""
-    var createDate = ""
-    
-    var starCount = 0
-    
-    var pirec = 0
-    
-    var note = ""
-    
-    var remark = ""
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // 資料設定
-        foodImageView.image = foodImage
-//        foodImageView.image = UIImage(named: "00.jpg")
+        noteLabel.text = "筆記"
+        remarkLabel.text = "備註"
         
-        shopNameLabel.text = shopName
-        foodNameLabel.text = foodName
-        createDateLabel.text = createDate
-        setStar(starCount: starCount)
-        
+        // 匯入已經下載好的資料
+        shopNameLabel.text = dataManager.allDiary[indexPath].shopName
+        foodNameLabel.text = dataManager.allDiary[indexPath].foodName
+        priceLabel.text = "$" + dataManager.allDiary[indexPath].price
+        createDateLabel.text = dataManager.allDiary[indexPath].createTime
+        noteTextView.text = dataManager.allDiary[indexPath].noteText
+        remarkTextView.text = dataManager.allDiary[indexPath].remarkText
+        foodImageView.image = dataManager.foodImageArray[indexPath]
+        setStar(starCount: dataManager.allDiary[indexPath].starCount)
         noteTextView.isEditable = false
         remarkTextView.isEditable = false
-        noteTextView.text = note
-        remarkTextView.text = remark
-        
         
         
         // 細節美化設定
@@ -229,6 +214,7 @@ class DiaryViewController: UIViewController {
     }
     
     
+    // Cancel != cancol
     @IBAction func cancolBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

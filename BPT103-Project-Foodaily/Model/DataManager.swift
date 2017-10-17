@@ -23,9 +23,7 @@ class DataManager: NSObject {
     static let shared: DataManager = DataManager()
     
     // 若不繼承NSObject會無法override
-    private override init() {
-        
-    }
+    private override init() {}
     
     // Firebase Database 資料路徑設定，創建一個子層叫Diary
     let BASE_DB_REF: DatabaseReference = Database.database().reference()
@@ -35,7 +33,7 @@ class DataManager: NSObject {
     let DIARY_STORAGE_REF: StorageReference = Storage.storage().reference().child("Diary")
     
     // MARK: -Firebase 上傳資料實作
-    func uploadToFirebase(shopName: String, foodName: String, price: String, starCount: Int, noteText: String, remarkText: String, foodImage: UIImage, userName: String) {
+    func uploadToFirebase(shopName: String, foodName: String, price: String, starCount: Int, noteText: String, remarkText: String, foodImage: UIImage, userName: String, foodImageWidth: String, foodImageHeight: String) {
         
         let databaseRef = DIARY_DB_REF.childByAutoId()
         let storageRef = DIARY_STORAGE_REF.child("\(databaseRef.key).jpg")
@@ -64,7 +62,7 @@ class DataManager: NSObject {
                 // 設定日期(String)要顯示的格式
                 let unFormateDate = Date()
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy.MM.dd HH:mm:ss"
+                dateFormatter.dateFormat = "yyyy.MM.dd"
                 let createTime = dateFormatter.string(from: unFormateDate)
                 
                 // 宣告一個字典，並將要上傳至Database內的資料放進字典中(符合JSON的結構)
@@ -78,7 +76,9 @@ class DataManager: NSObject {
                                             DiaryItem.DirayInfoKey.foodImageURL : imageURL,
                                             DiaryItem.DirayInfoKey.createTime : createTime,
                                             DiaryItem.DirayInfoKey.timeStamp : timeStamp,
-                                            DiaryItem.DirayInfoKey.userName : userName
+                                            DiaryItem.DirayInfoKey.userName : userName,
+                                            DiaryItem.DirayInfoKey.foodImageWidth : foodImageWidth,
+                                            DiaryItem.DirayInfoKey.foodImageHeight : foodImageHeight
                 ]
                 // 上傳資料至Database
                 databaseRef.setValue(diaryPost)
@@ -108,7 +108,8 @@ class DataManager: NSObject {
         let diaryQuery = DIARY_DB_REF.queryOrdered(byChild: DiaryItem.DirayInfoKey.timeStamp)
         // 去針對某一特定條件去設置一個觀察者，在這邊是針對.value(任何針對資料的改動)做監聽
         diaryQuery.observe(.value) { (snapshot) in
-            
+            /// 重要，注意tempArray的位置
+            var tempDiary = [DiaryItem]()
             // 注意，任何從Firebase上得到的資料都會是snapshot的型別，內容是資料在Firebase資料庫內的地址
             // 在這邊我們指定要撈出所有的資料
             for diary in snapshot.children.allObjects as! [DataSnapshot] {
@@ -116,17 +117,17 @@ class DataManager: NSObject {
                 let diaryData = diary.value as? [String : Any] ?? [:]
                 // 確認有撈到資料後，將資料整包帶進allDiary內
                 if let diaryPost = DiaryItem(diaryDataFromFirebase: diaryData) {
-                    self.allDiary.append(diaryPost)
+                    tempDiary.append(diaryPost)
                 }
             }
 
-            if self.allDiary.count > 0 {
+            if tempDiary.count > 0 {
                 // 將撈回來的資料按照時戳由大到小排列
                 // 後面尾隨閉包的寫法我看不懂 by Rabo
-                self.allDiary.sort(by: {$0.timeStamp > $1.timeStamp})
+                tempDiary.sort(by: {$0.timeStamp > $1.timeStamp})
             }
             // 把得到的allDiary放到doneHandler去當作參數，並在實際呼叫時實作
-
+            self.allDiary = tempDiary
             doneHandler(true, nil, self.allDiary)
         }
     }
@@ -141,13 +142,19 @@ class DataManager: NSObject {
         }
         
         if let imageURL = URL(string: foodImageURLString) {
-            
+//            print("~~~~~~~~~~~~~~~~~~~~~")
+//            print("即將要下載的照片URL是:\(imageURL)")
             let downloadTask = URLSession.shared.dataTask(with: imageURL, completionHandler: { (data, response, error) in
                 
                 // 由於不能再背景碰UI，所以將圖片的載入放到主執行緒來執行
-                DispatchQueue.main.sync {
-                    let foodImage = UIImage(data: data!)
-                    imageDoneHandler(true, error, foodImage)
+                DispatchQueue.main.async {
+                
+                    if let foodImage = UIImage(data: data!) {
+                        foodImage.url = foodImageURLString
+                        imageDoneHandler(true, error, foodImage)
+                    }else{
+                        print("圖片下載失敗")
+                    }
                 }
             })
             downloadTask.resume()
@@ -158,7 +165,26 @@ class DataManager: NSObject {
     func appendImage(image: UIImage) {
         
         foodImageArray.append(image)
-        print("目前Image的內容是：\(image)")
     }
     
+    
+    
+    // MARK: -整理圖片陣列順序
+    func imageWithURL(){
+        var imageArray = [UIImage]()
+        
+        for item in allDiary {
+            
+            let url = item.foodImageURL
+            
+            for image in foodImageArray {
+                if image.url == url {
+                    imageArray.append(image)
+                    break
+                }
+            }
+        }
+        
+        foodImageArray = imageArray
+    }
 }

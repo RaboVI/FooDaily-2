@@ -22,6 +22,8 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     let createNewDairyBtn = UIButton()
     
     var totalDiary = [DiaryItem]()
+    
+    var loadImage = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +41,8 @@ class MainMasonryCollectionViewController: UICollectionViewController {
                 return
             }
             self.totalDiary = allDiary
-            self.collectionView?.reloadData()
+//            self.collectionView?.reloadData()
+            self.dataManager.foodImageArray = [UIImage]()
             self.totalDiary.forEach({ (everyDiary) in
                 
                 print("-----------------------------------")
@@ -53,25 +56,32 @@ class MainMasonryCollectionViewController: UICollectionViewController {
                 print("記錄日期： \(everyDiary.createTime)")
                 print("時戳： \(everyDiary.timeStamp)")
                 print("照片URL： \(everyDiary.foodImageURL)")
+                print("照片的寬度： \(everyDiary.foodImageWidth)")
+                print("照片的高度： \(everyDiary.foodImageHeight)")
                 
                 self.dataManager.downloadImage(foodImageURLString: everyDiary.foodImageURL, imageDoneHandler: { (success, error, result) in
                     
                     guard let result = result else {
                         return
                     }
+                    
                     self.dataManager.appendImage(image: result)
-                    self.collectionView?.reloadData()
-                    self.collectionView?.collectionViewLayout = self.flowLayout
+                    
+                    if self.dataManager.foodImageArray.count == self.dataManager.allDiary.count {
+                        self.dataManager.imageWithURL()
+                        self.collectionView?.reloadData()
+                        self.collectionView?.collectionViewLayout = self.flowLayout
+                    }
+                    
+                    
                 })
             })
         }
-
         
         self.title = "FooDaily"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
 
         // Do any additional setup after loading the view.
         let createNewDairyBtnSize = CGSize(width: 60,
@@ -103,11 +113,24 @@ class MainMasonryCollectionViewController: UICollectionViewController {
                                                        alpha: 1.0).cgColor
         
         createNewDairyBtn.addTarget(self, action: #selector(createNewDairy), for: .touchUpInside)
+        createNewDairyBtn.addTarget(self, action: #selector(receiveNotification), for: .touchUpInside)
         
         self.view.addSubview(createNewDairyBtn)
         
     }
+    // Notification的觀察者#Selector內需要做的動作
+    /// 重要，要記得取消註冊通知中心
+    @objc func refreshPage() {
+        NotificationCenter.default.removeObserver(self)
+        self.collectionView?.reloadData()
+    }
     
+    @objc func receiveNotification() {
+        
+        let newDiaryDidUpload = Notification.Name(rawValue: "NewDiaryDidUpload")
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refreshPage), name: newDiaryDidUpload, object: nil)
+    }
     
     @objc func createNewDairy() {
         
@@ -118,7 +141,6 @@ class MainMasonryCollectionViewController: UICollectionViewController {
         
         present(vc, animated: true, completion: nil)
     }
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -145,13 +167,15 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         
-        print("現在totalDiary內共有： \(totalDiary.count) 個items")
-        return totalDiary.count
+//        print("現在totalDiary內共有： \(totalDiary.count) 個items")
+        print("現在foodImageArray內共有： \(dataManager.foodImageArray.count) 個items")
+        return dataManager.foodImageArray.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let dailyItem = totalDiary[indexPath.row]
+        print(dataManager.foodImageArray.count)
         let foodImage = dataManager.foodImageArray[indexPath.row]
         let width = (self.view.bounds.size.width - flowLayout.minimumInteritemSpacing - flowLayout.sectionInset.left - flowLayout.sectionInset.right) / 2
         
@@ -164,6 +188,14 @@ class MainMasonryCollectionViewController: UICollectionViewController {
                            width: width)
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+         let diaryVC = storyboard?.instantiateViewController(withIdentifier: "DiaryView") as! DiaryViewController
+        diaryVC.indexPath = indexPath.row
+        // 取代原本Storyboard上的Segue
+        present(diaryVC, animated: true, completion: nil)
     }
 
     // MARK: UICollectionViewDelegate
@@ -196,6 +228,5 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     
     }
     */
-    
     
 }

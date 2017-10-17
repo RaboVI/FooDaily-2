@@ -24,6 +24,7 @@
 		12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */; };
 		12826F201F6B5934008297C0 /* RootPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F1F1F6B5934008297C0 /* RootPageView.swift */; };
 		12826F221F6B596D008297C0 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12826F211F6B596D008297C0 /* PageViewController.swift */; };
+		129A54391F9644490038673C /* UIImage+Properties_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A54381F9644490038673C /* UIImage+Properties_Extension.swift */; };
 		12B71D591F8A137E0027589D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B71D581F8A137E0027589D /* DataManager.swift */; };
 		12B71D5E1F921A250027589D /* DiaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B71D5D1F921A250027589D /* DiaryItem.swift */; };
 		12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349B1F20DBA600E8858E /* newDailyViewController.swift */; };
@@ -114,6 +115,7 @@
 		12826F1D1F6B4FCD008297C0 /* ContentPageView_03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentPageView_03.swift; sourceTree = "<group>"; };
 		12826F1F1F6B5934008297C0 /* RootPageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootPageView.swift; sourceTree = "<group>"; };
 		12826F211F6B596D008297C0 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		129A54381F9644490038673C /* UIImage+Properties_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Properties_Extension.swift"; sourceTree = "<group>"; };
 		12B71D581F8A137E0027589D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		12B71D5D1F921A250027589D /* DiaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryItem.swift; sourceTree = "<group>"; };
 		12F9349B1F20DBA600E8858E /* newDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newDailyViewController.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				1227DB351F78D9B300023A18 /* UITextField+Placeholder.swift */,
 				123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */,
 				B38C14B91F78C81B000F61F7 /* UITextFont_Extension.swift */,
+				129A54381F9644490038673C /* UIImage+Properties_Extension.swift */,
 			);
 			name = Extension;
 			sourceTree = "<group>";
@@ -588,7 +591,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -603,6 +606,7 @@
 				12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */,
 				B3535D461F86B51C00BE6EF6 /* DiaryViewController.swift in Sources */,
 				B3CFFDFE1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift in Sources */,
+				129A54391F9644490038673C /* UIImage+Properties_Extension.swift in Sources */,
 				B31439FC1F9436A000A5529B /* WantToEatTableViewCell.swift in Sources */,
 				12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */,
 				123B889B1F782AD7005FB718 /* UINavigationController+Transparent.swift in Sources */,

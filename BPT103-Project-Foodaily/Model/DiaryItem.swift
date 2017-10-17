@@ -20,6 +20,8 @@ struct DiaryItem {
     var timeStamp: Int
     var userName: String
     var foodImageURL: String
+    var foodImageWidth: String
+    var foodImageHeight: String
     
     // 宣告一系列在Firebase要用的Key值
     // 注意，key值必須要相同，如果與Database上的Key值不合，就會導致抓不到資料
@@ -34,6 +36,8 @@ struct DiaryItem {
         static let timeStamp = "TimeStamp"
         static let userName = "UserName"
         static let foodImageURL = "FoodImageURL"
+        static let foodImageWidth = "FoodImageWidth"
+        static let foodImageHeight = "FoodImageHeight"
     }
     
     // 建立第一種初始化方式
@@ -46,7 +50,10 @@ struct DiaryItem {
          createTime: String,
          timeStamp: Int,
          userName: String,
-         foodImageURL: String)
+         foodImageURL: String,
+         foodImageWidth: String,
+         foodImageHeight: String
+        )
     {
         self.shopName = shopName
         self.foodName = foodName
@@ -58,6 +65,8 @@ struct DiaryItem {
         self.timeStamp = timeStamp
         self.userName = userName
         self.foodImageURL = foodImageURL
+        self.foodImageWidth = foodImageWidth
+        self.foodImageHeight = foodImageHeight
     }
     
     // 建立第二種初始化方式，當從Firebase抓取JSON格式時就採用此種初始化方法
@@ -71,11 +80,13 @@ struct DiaryItem {
             let createTime = diaryDataFromFirebase[DirayInfoKey.createTime] as? String,
             let timeStamp = diaryDataFromFirebase[DirayInfoKey.timeStamp] as? Int,
             let userName = diaryDataFromFirebase[DirayInfoKey.userName] as? String,
-            let foodImageURL = diaryDataFromFirebase[DirayInfoKey.foodImageURL] as? String
+            let foodImageURL = diaryDataFromFirebase[DirayInfoKey.foodImageURL] as? String,
+            let foodImageWidth = diaryDataFromFirebase[DirayInfoKey.foodImageWidth] as? String,
+            let foodImageHeight = diaryDataFromFirebase[DirayInfoKey.foodImageHeight] as? String
         else {
             print("diaryDataFromFirebase初始化失敗")
             return nil
         }
-        self = DiaryItem(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, reamrkText: remarkText, createTime: createTime, timeStamp: timeStamp, userName: userName, foodImageURL: foodImageURL)
+        self = DiaryItem(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, reamrkText: remarkText, createTime: createTime, timeStamp: timeStamp, userName: userName, foodImageURL: foodImageURL, foodImageWidth: foodImageWidth, foodImageHeight: foodImageHeight)
     }
 }
