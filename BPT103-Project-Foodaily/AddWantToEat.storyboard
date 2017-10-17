@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Want To Eat View Controller-->
+        <scene sceneID="86N-tO-Elq">
+            <objects>
+                <viewController storyboardIdentifier="AddWantToEatViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="O4h-xU-GIL" customClass="AddWantToEatViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dyc-ao-iTf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="AddWantToEatCollectionView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SrQ-sR-tc1">
+                                <rect key="frame" x="50" y="0.0" width="275" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BNl-cd-EFg">
+                                    <size key="itemSize" width="275" height="170"/>
+                                    <size key="headerReferenceSize" width="50" height="118"/>
+                                    <size key="footerReferenceSize" width="50" height="50"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" reuseIdentifier="Cell" id="8d6-gR-9ue" customClass="AddWantToEatCollectionViewCell" customModule="BPT103_Project_Foodaily" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="118" width="275" height="170"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="275" height="170"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kuY-1O-Nww" userLabel="Bg">
+                                                    <rect key="frame" x="5" y="5" width="265" height="160"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xEB-mB-wTd">
+                                                            <rect key="frame" x="14" y="14" width="237" height="132"/>
+                                                            <subviews>
+                                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fr0-uP-PKP">
+                                                                    <rect key="frame" x="4" y="4" width="229" height="124"/>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                </textView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                            <constraints>
+                                                                <constraint firstItem="fr0-uP-PKP" firstAttribute="top" secondItem="xEB-mB-wTd" secondAttribute="top" constant="4" id="IKH-BA-iRh"/>
+                                                                <constraint firstAttribute="trailing" secondItem="fr0-uP-PKP" secondAttribute="trailing" constant="4" id="Nrl-iL-yka"/>
+                                                                <constraint firstItem="fr0-uP-PKP" firstAttribute="leading" secondItem="xEB-mB-wTd" secondAttribute="leading" constant="4" id="sbH-Ll-79y"/>
+                                                                <constraint firstAttribute="bottom" secondItem="fr0-uP-PKP" secondAttribute="bottom" constant="4" id="vfc-HF-KKb"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="xEB-mB-wTd" firstAttribute="leading" secondItem="kuY-1O-Nww" secondAttribute="leading" constant="14" id="ERH-bh-bu1"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xEB-mB-wTd" secondAttribute="bottom" constant="14" id="wc0-dO-6lq"/>
+                                                        <constraint firstItem="xEB-mB-wTd" firstAttribute="top" secondItem="kuY-1O-Nww" secondAttribute="top" constant="14" id="x3Y-Vt-0eH"/>
+                                                        <constraint firstAttribute="trailing" secondItem="xEB-mB-wTd" secondAttribute="trailing" constant="14" id="yFv-pG-tjE"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="kuY-1O-Nww" firstAttribute="leading" secondItem="8d6-gR-9ue" secondAttribute="leading" constant="5" id="71c-hE-U3U"/>
+                                            <constraint firstAttribute="trailing" secondItem="kuY-1O-Nww" secondAttribute="trailing" constant="5" id="GlO-9N-Rkv"/>
+                                            <constraint firstItem="kuY-1O-Nww" firstAttribute="top" secondItem="8d6-gR-9ue" secondAttribute="top" constant="5" id="h0b-kr-Mh1"/>
+                                            <constraint firstAttribute="bottom" secondItem="kuY-1O-Nww" secondAttribute="bottom" constant="5" id="lTF-Jj-TRe"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="bgView" destination="kuY-1O-Nww" id="DjU-1X-Xga"/>
+                                            <outlet property="remarkBgView" destination="xEB-mB-wTd" id="yT2-jm-gqy"/>
+                                            <outlet property="remarkTextView" destination="fr0-uP-PKP" id="Nfp-as-omr"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="header" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="header" id="DpT-v6-AFi" customClass="AddWantToEatHeaderCollectionReusableView" customModule="BPT103_Project_Foodaily" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="275" height="118"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                                <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="footer" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="footer" id="KKs-Fg-Adh" customClass="AddWantToEatFooterCollectionReusableView" customModule="BPT103_Project_Foodaily" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="288" width="275" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMT-me-y74">
+                                            <rect key="frame" x="122.5" y="10" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="h49-H0-SoF"/>
+                                                <constraint firstAttribute="height" constant="30" id="lQt-Pb-RXY"/>
+                                            </constraints>
+                                            <state key="normal" image="addCell.png"/>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="mMT-me-y74" firstAttribute="centerY" secondItem="KKs-Fg-Adh" secondAttribute="centerY" id="3Ar-Fs-ih7"/>
+                                        <constraint firstItem="mMT-me-y74" firstAttribute="centerX" secondItem="KKs-Fg-Adh" secondAttribute="centerX" id="jcj-tq-bD2"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="addCellBtnOL" destination="mMT-me-y74" id="ro0-la-O9c"/>
+                                        <outlet property="addCellBtnOl" destination="mMT-me-y74" id="WbU-ff-IMD"/>
+                                    </connections>
+                                </collectionReusableView>
+                                <connections>
+                                    <outlet property="dataSource" destination="O4h-xU-GIL" id="P5M-a3-Gel"/>
+                                    <outlet property="delegate" destination="O4h-xU-GIL" id="NDz-Nj-zWG"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Lm-mP-gI6">
+                                <rect key="frame" x="329" y="27" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="RDJ-fH-Khn"/>
+                                    <constraint firstAttribute="height" constant="30" id="mvo-SO-tMv"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="checked.png"/>
+                                <connections>
+                                    <action selector="saveNewDiaryBtn:" destination="O4h-xU-GIL" eventType="touchUpInside" id="lAF-mQ-fIs"/>
+                                    <action selector="saveNewWantToEatBtn:" destination="O4h-xU-GIL" eventType="touchUpInside" id="qEh-PL-2sD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEP-tz-mrZ">
+                                <rect key="frame" x="16" y="27" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="3Oa-6t-HF2"/>
+                                    <constraint firstAttribute="height" constant="30" id="VUt-C3-J3m"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="cancel.png"/>
+                                <connections>
+                                    <action selector="cancelBtn:" destination="O4h-xU-GIL" eventType="touchUpInside" id="7MP-hx-kyq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="KEP-tz-mrZ" firstAttribute="top" secondItem="EsG-N0-noF" secondAttribute="top" constant="7" id="8Bg-bV-WIH"/>
+                            <constraint firstItem="SrQ-sR-tc1" firstAttribute="top" secondItem="Dyc-ao-iTf" secondAttribute="top" id="CEy-7H-GtE"/>
+                            <constraint firstItem="EsG-N0-noF" firstAttribute="trailing" secondItem="1Lm-mP-gI6" secondAttribute="trailing" constant="16" id="Dbj-j0-jBX"/>
+                            <constraint firstItem="1Lm-mP-gI6" firstAttribute="top" secondItem="EsG-N0-noF" secondAttribute="top" constant="7" id="Q3V-Pr-1ee"/>
+                            <constraint firstItem="EsG-N0-noF" firstAttribute="trailing" secondItem="SrQ-sR-tc1" secondAttribute="trailing" constant="50" id="Vxv-Xo-EfK"/>
+                            <constraint firstItem="KEP-tz-mrZ" firstAttribute="leading" secondItem="EsG-N0-noF" secondAttribute="leading" constant="16" id="gln-Kd-NcD"/>
+                            <constraint firstItem="EsG-N0-noF" firstAttribute="bottom" secondItem="SrQ-sR-tc1" secondAttribute="bottom" id="jrA-qY-AQ2"/>
+                            <constraint firstItem="SrQ-sR-tc1" firstAttribute="leading" secondItem="EsG-N0-noF" secondAttribute="leading" constant="50" id="v9b-MH-yVD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EsG-N0-noF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ch2-bm-vyS"/>
+                    <connections>
+                        <outlet property="addWantToEatCollectionView" destination="SrQ-sR-tc1" id="seF-On-JnT"/>
+                        <outlet property="createDiaryCollectionView" destination="SrQ-sR-tc1" id="f0I-xL-DIc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gds-XP-8DJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="677.60000000000002" y="141.67916041979012"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="addCell.png" width="30" height="30"/>
+        <image name="cancel.png" width="40" height="40"/>
+        <image name="checked.png" width="40" height="40"/>
+    </resources>
+</document>

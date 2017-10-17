@@ -8,7 +8,11 @@
 
 import UIKit
 
+private let reuseIdentifier = "Cell"
+
 class WantToEatTableViewController: UITableViewController {
+    
+    let wantToEatReload = "wantToEatReload"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,8 @@ class WantToEatTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Akrobat", size: 18)!,NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.1921568627, green: 0.3137254902, blue: 0.3490196078, alpha: 1)]
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +35,59 @@ class WantToEatTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return 1 // 待修改
     }
+    
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 91
+    }
+    
+    
+    
+    @IBAction func addWantToEatBtn(_ sender: Any) {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: NSNotification.Name(wantToEatReload), object: nil)
+        
+        let addWantToEatStoryboard = UIStoryboard.init(name: "AddWantToEat", bundle: .main)
+        let vc = addWantToEatStoryboard.instantiateViewController(withIdentifier: "AddWantToEatViewController")
+        
+        vc.modalPresentationStyle = .overCurrentContext
+        
+        present(vc, animated: true, completion: nil)
+        
+        
+    }
+    
+    
+    
+    @objc func refresh() {
+        NotificationCenter.default.removeObserver(self)
+        self.tableView.reloadData()
+    }
+    
+    
+    
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! WantToEatTableViewCell
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
+ 
 
     /*
     // Override to support conditional editing of the table view.

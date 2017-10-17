@@ -60,6 +60,18 @@
 		B37FC2691F7A5383000E83F4 /* plue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B37FC2671F7A5377000E83F4 /* plue@2x.png */; };
 		B37FC26A1F7A5383000E83F4 /* plue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B37FC2651F7A5372000E83F4 /* plue@3x.png */; };
 		B37FC26C1F7A57CC000E83F4 /* CreateDiary.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B37FC26B1F7A57CC000E83F4 /* CreateDiary.storyboard */; };
+		B38BF3A01F94D5CB009316E6 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BF39E1F94D5C5009316E6 /* back.png */; };
+		B38BF3A11F94D5CB009316E6 /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BF39A1F94D5C0009316E6 /* back@2x.png */; };
+		B38BF3A21F94D5CB009316E6 /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BF39B1F94D5C1009316E6 /* back@3x.png */; };
+		B38BF3A31F94D5CB009316E6 /* plusBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BF39C1F94D5C2009316E6 /* plusBlue.png */; };
+		B38BF3A41F94D5CB009316E6 /* plusBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BF39F1F94D5C6009316E6 /* plusBlue@2x.png */; };
+		B38BF3A51F94D5CB009316E6 /* plusBlue@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B38BF39D1F94D5C3009316E6 /* plusBlue@3x.png */; };
+		B38BF3A81F94DB6F009316E6 /* AddWantToEat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B38BF3A71F94DB6F009316E6 /* AddWantToEat.storyboard */; };
+		B38BF3AA1F94DD97009316E6 /* AddWantToEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38BF3A91F94DD97009316E6 /* AddWantToEatViewController.swift */; };
+		B38BF3AC1F94DDC9009316E6 /* AddWantToEatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38BF3AB1F94DDC9009316E6 /* AddWantToEatCollectionViewCell.swift */; };
+		B38BF3AE1F94DDF9009316E6 /* AddWantToEatHeaderCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38BF3AD1F94DDF9009316E6 /* AddWantToEatHeaderCollectionReusableView.swift */; };
+		B38BF3B01F94DE06009316E6 /* AddWantToEatFooterCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38BF3AF1F94DE05009316E6 /* AddWantToEatFooterCollectionReusableView.swift */; };
+		B38BF3B21F95111A009316E6 /* WantToEatContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38BF3B11F95111A009316E6 /* WantToEatContentViewController.swift */; };
 		B38C14B81F78B83F000F61F7 /* GenRyuMinTW-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B38C14B61F78B83A000F61F7 /* GenRyuMinTW-Bold.ttf */; };
 		B38C14BA1F78C81B000F61F7 /* UITextFont_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38C14B91F78C81B000F61F7 /* UITextFont_Extension.swift */; };
 		B38C14CC1F78EF1B000F61F7 /* Akrobat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B38C14C01F78EED3000F61F7 /* Akrobat-Bold.otf */; };
@@ -152,6 +164,18 @@
 		B37FC2661F7A5375000E83F4 /* plue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plue.png; sourceTree = "<group>"; };
 		B37FC2671F7A5377000E83F4 /* plue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plue@2x.png"; sourceTree = "<group>"; };
 		B37FC26B1F7A57CC000E83F4 /* CreateDiary.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateDiary.storyboard; sourceTree = "<group>"; };
+		B38BF39A1F94D5C0009316E6 /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		B38BF39B1F94D5C1009316E6 /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		B38BF39C1F94D5C2009316E6 /* plusBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plusBlue.png; sourceTree = "<group>"; };
+		B38BF39D1F94D5C3009316E6 /* plusBlue@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plusBlue@3x.png"; sourceTree = "<group>"; };
+		B38BF39E1F94D5C5009316E6 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		B38BF39F1F94D5C6009316E6 /* plusBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plusBlue@2x.png"; sourceTree = "<group>"; };
+		B38BF3A71F94DB6F009316E6 /* AddWantToEat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddWantToEat.storyboard; sourceTree = "<group>"; };
+		B38BF3A91F94DD97009316E6 /* AddWantToEatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWantToEatViewController.swift; sourceTree = "<group>"; };
+		B38BF3AB1F94DDC9009316E6 /* AddWantToEatCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWantToEatCollectionViewCell.swift; sourceTree = "<group>"; };
+		B38BF3AD1F94DDF9009316E6 /* AddWantToEatHeaderCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWantToEatHeaderCollectionReusableView.swift; sourceTree = "<group>"; };
+		B38BF3AF1F94DE05009316E6 /* AddWantToEatFooterCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWantToEatFooterCollectionReusableView.swift; sourceTree = "<group>"; };
+		B38BF3B11F95111A009316E6 /* WantToEatContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantToEatContentViewController.swift; sourceTree = "<group>"; };
 		B38C14B61F78B83A000F61F7 /* GenRyuMinTW-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GenRyuMinTW-Bold.ttf"; sourceTree = "<group>"; };
 		B38C14B91F78C81B000F61F7 /* UITextFont_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFont_Extension.swift; sourceTree = "<group>"; };
 		B38C14C01F78EED3000F61F7 /* Akrobat-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Akrobat-Bold.otf"; sourceTree = "<group>"; };
@@ -228,6 +252,7 @@
 				B3535D421F86B44A00BE6EF6 /* DiaryView */,
 				B37FC26D1F7A5A93000E83F4 /* CreateDiary */,
 				B31439F61F94324A00A5529B /* WantToEat */,
+				B38BF3A61F94DB1F009316E6 /* AddWantToEat */,
 				12826F231F6B67C1008297C0 /* WelcomePageView */,
 				12177BBA1F1F7A2C00CA49CD /* Main.storyboard */,
 				12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */,
@@ -311,6 +336,7 @@
 				B31439F71F94327B00A5529B /* WantToEat.storyboard */,
 				B31439F91F94368C00A5529B /* WantToEatTableViewController.swift */,
 				B31439FB1F9436A000A5529B /* WantToEatTableViewCell.swift */,
+				B38BF3B11F95111A009316E6 /* WantToEatContentViewController.swift */,
 			);
 			name = WantToEat;
 			sourceTree = "<group>";
@@ -351,9 +377,27 @@
 			name = CreateDiary;
 			sourceTree = "<group>";
 		};
+		B38BF3A61F94DB1F009316E6 /* AddWantToEat */ = {
+			isa = PBXGroup;
+			children = (
+				B38BF3A71F94DB6F009316E6 /* AddWantToEat.storyboard */,
+				B38BF3A91F94DD97009316E6 /* AddWantToEatViewController.swift */,
+				B38BF3AB1F94DDC9009316E6 /* AddWantToEatCollectionViewCell.swift */,
+				B38BF3AD1F94DDF9009316E6 /* AddWantToEatHeaderCollectionReusableView.swift */,
+				B38BF3AF1F94DE05009316E6 /* AddWantToEatFooterCollectionReusableView.swift */,
+			);
+			name = AddWantToEat;
+			sourceTree = "<group>";
+		};
 		B38C14D61F790B14000F61F7 /* App Icons */ = {
 			isa = PBXGroup;
 			children = (
+				B38BF39E1F94D5C5009316E6 /* back.png */,
+				B38BF39A1F94D5C0009316E6 /* back@2x.png */,
+				B38BF39B1F94D5C1009316E6 /* back@3x.png */,
+				B38BF39C1F94D5C2009316E6 /* plusBlue.png */,
+				B38BF39F1F94D5C6009316E6 /* plusBlue@2x.png */,
+				B38BF39D1F94D5C3009316E6 /* plusBlue@3x.png */,
 				B3DA1E811F927C5200DCC867 /* moreContent.png */,
 				B3DA1E821F927C5300DCC867 /* moreContent@2x.png */,
 				B3DA1E801F927C5100DCC867 /* moreContent@3x.png */,
@@ -493,6 +537,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38BF3A21F94D5CB009316E6 /* back@3x.png in Resources */,
 				B32E8FA61F8234460009431E /* cancel@2x.png in Resources */,
 				B38C14DC1F792303000F61F7 /* hollowStar@3x.png in Resources */,
 				B30A58DE1F7CE342002F1AC8 /* camera@3x.png in Resources */,
@@ -507,18 +552,22 @@
 				B3CFFE0F1F6F6CE300861E70 /* 04.jpg in Resources */,
 				B3F842A31F7E625500806610 /* GenRyuMinTW-Regular.ttf in Resources */,
 				B30A58DC1F7CE342002F1AC8 /* camera.png in Resources */,
+				B38BF3A51F94D5CB009316E6 /* plusBlue@3x.png in Resources */,
 				B3CFFE0C1F6F6CE300861E70 /* 01.jpg in Resources */,
 				B38C14DA1F792303000F61F7 /* hollowStar.png in Resources */,
 				B3CFFE0D1F6F6CE300861E70 /* 02.jpg in Resources */,
 				B32E8FA81F8234460009431E /* checked.png in Resources */,
 				B3CFFE101F6F6CE300861E70 /* 05.jpg in Resources */,
 				B3DA1E7C1F9279C100DCC867 /* cancolWhite@3x.png in Resources */,
+				B38BF3A81F94DB6F009316E6 /* AddWantToEat.storyboard in Resources */,
 				B3DA1E851F927C5A00DCC867 /* moreContent@3x.png in Resources */,
 				B32E8FA91F8234460009431E /* checked@2x.png in Resources */,
 				B3CFFE111F6F6CE300861E70 /* 06.jpg in Resources */,
 				12177BC11F1F7A2D00CA49CD /* LaunchScreen.storyboard in Resources */,
+				B38BF3A11F94D5CB009316E6 /* back@2x.png in Resources */,
 				B30A58DD1F7CE342002F1AC8 /* camera@2x.png in Resources */,
 				B3CFFE0B1F6F6CE300861E70 /* 00.jpg in Resources */,
+				B38BF3A41F94D5CB009316E6 /* plusBlue@2x.png in Resources */,
 				B32E8FA71F8234460009431E /* cancel@3x.png in Resources */,
 				B3DA1E7A1F9279C100DCC867 /* cancolWhite.png in Resources */,
 				B38C14CC1F78EF1B000F61F7 /* Akrobat-Bold.otf in Resources */,
@@ -536,7 +585,9 @@
 				B38C14DD1F792303000F61F7 /* solidStar.png in Resources */,
 				B37FC2691F7A5383000E83F4 /* plue@2x.png in Resources */,
 				B32E8F9D1F8213630009431E /* addCell@2x.png in Resources */,
+				B38BF3A31F94D5CB009316E6 /* plusBlue.png in Resources */,
 				B37FC26C1F7A57CC000E83F4 /* CreateDiary.storyboard in Resources */,
+				B38BF3A01F94D5CB009316E6 /* back.png in Resources */,
 				B32E8F9C1F8213630009431E /* addCell.png in Resources */,
 				12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */,
 				123B88A71F785539005FB718 /* GoogleService-Info.plist in Resources */,
@@ -588,7 +639,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -598,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38BF3AA1F94DD97009316E6 /* AddWantToEatViewController.swift in Sources */,
 				B32E8FAC1F8242BB0009431E /* CreateDiaryHeaderCollectionReusableView.swift in Sources */,
 				12B71D591F8A137E0027589D /* DataManager.swift in Sources */,
 				12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */,
@@ -607,13 +659,17 @@
 				12826F1E1F6B4FCD008297C0 /* ContentPageView_03.swift in Sources */,
 				123B889B1F782AD7005FB718 /* UINavigationController+Transparent.swift in Sources */,
 				12826F221F6B596D008297C0 /* PageViewController.swift in Sources */,
+				B38BF3B01F94DE06009316E6 /* AddWantToEatFooterCollectionReusableView.swift in Sources */,
 				B3CFFE021F6F6C5500861E70 /* MainMasonryFlowLayout.swift in Sources */,
+				B38BF3B21F95111A009316E6 /* WantToEatContentViewController.swift in Sources */,
 				B3CFFE001F6F6C4100861E70 /* MainMasonryCollectionViewCell.swift in Sources */,
 				B346B6181F8191170060DE0E /* CreateDiaryFooterCollectionReusableView.swift in Sources */,
 				B30A58E31F7D1B5D002F1AC8 /* CreateDiaryCollectionViewCell.swift in Sources */,
 				B3535D4A1F86B73100BE6EF6 /* DiaryViewCustomSegueUnwind.swift in Sources */,
 				B38C14BA1F78C81B000F61F7 /* UITextFont_Extension.swift in Sources */,
+				B38BF3AC1F94DDC9009316E6 /* AddWantToEatCollectionViewCell.swift in Sources */,
 				123B889F1F782C11005FB718 /* MemberLogInPage.swift in Sources */,
+				B38BF3AE1F94DDF9009316E6 /* AddWantToEatHeaderCollectionReusableView.swift in Sources */,
 				12F934AC1F20EB5000E8858E /* memoPageViewController.swift in Sources */,
 				12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */,
 				B3535D481F86B70700BE6EF6 /* DiaryViewCustomSegue.swift in Sources */,
