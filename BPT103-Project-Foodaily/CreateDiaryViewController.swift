@@ -15,6 +15,8 @@ class CreateDiaryViewController: UIViewController {
     
     let dataManager = DataManager.shared
     
+    let newDiaryDidUpload = Notification.Name(rawValue: "NewDiaryDidUpload")
+    
     var userName: String?
     
     var cellCount = 1
@@ -57,7 +59,9 @@ class CreateDiaryViewController: UIViewController {
     */
     
     // 按下按鈕後上傳
-    @IBAction func saveNewDiaryBtn(_ sender: Any) {
+    @IBAction func saveNewDiaryBtn(_ sender: UIButton) {
+        
+        
         
         let createDiaryCellHeader = createDiaryCollectionView.supplementaryView(forElementKind: "UICollectionElementKindSectionHeader", at: IndexPath(row: 0, section: 0)) as! CreateDiaryHeaderCollectionReusableView
         
@@ -77,7 +81,12 @@ class CreateDiaryViewController: UIViewController {
             }
             
             if let foodImage = createDiaryCell.foodImage {
-                dataManager.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: foodImage, userName: currentUser)
+                
+                let foodImageWidth = String(describing: createDiaryCell.foodImage!.size.width)
+                let foodImageHeight = String(describing: createDiaryCell.foodImage!.size.height)
+                
+                
+                dataManager.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: foodImage, userName: currentUser, foodImageWidth: foodImageWidth, foodImageHeight: foodImageHeight)
                 
                 NSLog("\n 使用者名稱：\(currentUser) 餐廳名稱：\(shopName)\n 餐點名稱：\(foodName)\n 餐點價格：\(price)\n 評價：\(starCount)\n 筆記：\(noteText)\n 備註：\(remarkText)")
                 
@@ -88,7 +97,11 @@ class CreateDiaryViewController: UIViewController {
                 let tempImageAction = UIAlertAction(title: "預設相片", style: .default, handler: { (UIAlertAciotn:UIAlertAction) in
                     
                     if let tempFoodImage = UIImage(named: "PageView-1.jpg") {
-                        self.dataManager.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: tempFoodImage, userName: currentUser)
+                        
+                        let tempFoodImageWidth = String(describing: tempFoodImage.size.width)
+                        let tempFoodImageHeight = String(describing: tempFoodImage.size.height)
+                        
+                        self.dataManager.uploadToFirebase(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, remarkText: remarkText, foodImage: tempFoodImage, userName: currentUser, foodImageWidth: tempFoodImageWidth, foodImageHeight: tempFoodImageHeight)
                         
                         NSLog("\n 使用者名稱：\(currentUser) 餐廳名稱：\(shopName)\n 餐點名稱：\(foodName)\n 餐點價格：\(price)\n 評價：\(starCount)\n 筆記：\(noteText)\n 備註：\(remarkText)")
                         
@@ -103,6 +116,7 @@ class CreateDiaryViewController: UIViewController {
                 
                 present(alertController, animated: true, completion: nil)
             }
+            NotificationCenter.default.post(name: newDiaryDidUpload, object: nil)
         }
     }
     

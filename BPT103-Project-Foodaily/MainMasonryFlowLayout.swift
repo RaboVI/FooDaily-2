@@ -61,8 +61,14 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
                                   sectionInset.right + cellWidth + minimumInteritemSpacing]
         
         
-        for image in dataManager.foodImageArray {
+        for i in 0..<dataManager.foodImageArray.count {
+            let item = dataManager.allDiary[i]
+            guard let imageWidth = Double(item.foodImageWidth),
+                let imageHeight = Double(item.foodImageHeight) else { return }
         
+            let imageSize = CGSize(width: imageWidth,
+                                   height: imageHeight)
+            
             // 建立一個 attribute 物件，並給予位置設定
             let indexPath = IndexPath.init(row: row,
                                            section: 0)
@@ -86,9 +92,7 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
             let cellHeight = item.size.height * cellWidth / item.size.width
             */
             
-            print(" 現在Flowlayout內使用的Image分別是：\(image)")
-            let cellSize = MainMasonryCollectionViewCell.computeCellSize(image: image,
-                                                                         width: cellWidth)
+            let cellSize = MainMasonryCollectionViewCell.computeCellSize(imageSize: imageSize, width: cellWidth)
             
             // 設定 attribute 的 frame，並加入到 attributes 中
             attribute.frame = CGRect(x: cellX,

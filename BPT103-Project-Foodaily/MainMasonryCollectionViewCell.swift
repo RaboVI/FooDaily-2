@@ -202,12 +202,12 @@ class MainMasonryCollectionViewCell: UICollectionViewCell {
     }
     
    
-    class func computeCellSize(image: UIImage,
+    class func computeCellSize(imageSize: CGSize,
                                width: CGFloat) -> CGSize {
         
         let imageMargin = cellPadding * 2 + bgPadding * 2
         
-        let height = image.size.height * (width - imageMargin) / image.size.width + imageMargin + commentStampHeight
+        let height = imageSize.height * (width - imageMargin) / imageSize.width + imageMargin + commentStampHeight
         
         return CGSize(width: width, height: height)
     }

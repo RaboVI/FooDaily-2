@@ -13,7 +13,7 @@
         <!--Diary View Controller-->
         <scene sceneID="18t-z0-B13">
             <objects>
-                <viewController restorationIdentifier="DiaryViewController" storyboardIdentifier="DiaryViewController" id="IM8-aY-tRo" customClass="DiaryViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DiaryViewController" id="IM8-aY-tRo" customClass="DiaryViewController" customModule="BPT103_Project_Foodaily" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ukE-A8-4hj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
