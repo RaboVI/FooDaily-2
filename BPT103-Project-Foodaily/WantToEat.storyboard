@@ -5,12 +5,16 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangTC-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Want To Eat-->
         <scene sceneID="9gt-OQ-Faf">
@@ -32,33 +36,38 @@
                                             <rect key="frame" x="8" y="8" width="359" height="74.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0WR-sm-N2M">
-                                                    <rect key="frame" x="37.5" y="8" width="284" height="21"/>
+                                                    <rect key="frame" x="37.5" y="9.5" width="284" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="cCX-e0-5lN"/>
                                                     </constraints>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Label">
                                                             <attributes>
-                                                                <font key="NSFont" size="25" name=".AppleSystemUIFont"/>
+                                                                <font key="NSFont" size="22" name=".AppleSystemUIFont"/>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgr-fH-IWq">
-                                                    <rect key="frame" x="37.5" y="37" width="284" height="1"/>
+                                                    <rect key="frame" x="37.5" y="38.5" width="284" height="1"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="2eU-xt-44l"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF6-4z-Z1A">
-                                                    <rect key="frame" x="37" y="46" width="284.5" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pF6-4z-Z1A">
+                                                    <rect key="frame" x="37" y="49" width="284.5" height="18"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="ogY-By-nWE"/>
+                                                        <constraint firstAttribute="height" constant="18" id="ogY-By-nWE"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Label">
+                                                            <attributes>
+                                                                <font key="NSFont" size="16" name="PingFangTC-Thin"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -66,10 +75,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="pF6-4z-Z1A" secondAttribute="trailing" constant="37.5" id="15j-CE-q3X"/>
                                                 <constraint firstAttribute="trailing" secondItem="bgr-fH-IWq" secondAttribute="trailing" constant="37.5" id="3Nr-2g-AZp"/>
-                                                <constraint firstItem="bgr-fH-IWq" firstAttribute="centerY" secondItem="d8Q-Tc-utF" secondAttribute="centerY" id="Dwj-XL-po6"/>
+                                                <constraint firstItem="bgr-fH-IWq" firstAttribute="centerY" secondItem="d8Q-Tc-utF" secondAttribute="centerY" constant="1.5" id="Dwj-XL-po6"/>
                                                 <constraint firstItem="pF6-4z-Z1A" firstAttribute="leading" secondItem="d8Q-Tc-utF" secondAttribute="leading" constant="37.5" id="QTs-u3-KMJ"/>
                                                 <constraint firstItem="bgr-fH-IWq" firstAttribute="leading" secondItem="d8Q-Tc-utF" secondAttribute="leading" constant="37.5" id="TuW-05-leS"/>
-                                                <constraint firstItem="0WR-sm-N2M" firstAttribute="top" secondItem="d8Q-Tc-utF" secondAttribute="top" constant="8" id="Uu1-n3-10W"/>
+                                                <constraint firstItem="0WR-sm-N2M" firstAttribute="top" secondItem="d8Q-Tc-utF" secondAttribute="top" constant="9.5" id="Uu1-n3-10W"/>
                                                 <constraint firstItem="0WR-sm-N2M" firstAttribute="leading" secondItem="d8Q-Tc-utF" secondAttribute="leading" constant="37.5" id="cHm-9R-8se"/>
                                                 <constraint firstAttribute="bottom" secondItem="pF6-4z-Z1A" secondAttribute="bottom" constant="8" id="hdg-PV-5pJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="0WR-sm-N2M" secondAttribute="trailing" constant="37.5" id="w7i-Zx-hDc"/>
@@ -121,24 +130,29 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vMI-Ds-Gxm">
                                 <rect key="frame" x="67" y="161" width="240" height="280"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5Z-51-SZe">
-                                        <rect key="frame" x="90" y="19" width="60" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5Z-51-SZe">
+                                        <rect key="frame" x="12" y="19" width="216" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Fcf-01-FRr"/>
-                                            <constraint firstAttribute="width" secondItem="k5Z-51-SZe" secondAttribute="height" multiplier="2:1" id="WGa-vZ-6FU"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ULp-tU-qaq">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ULp-tU-qaq">
                                         <rect key="frame" x="12" y="68" width="216" height="200"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="gt3-p7-9v4"/>
                                         </constraints>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <attributedString key="attributedText">
+                                            <fragment>
+                                                <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <attributes>
+                                                    <font key="NSFont" size="14" name="PingFangTC-Thin"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
@@ -150,6 +164,7 @@
                                     <constraint firstAttribute="bottom" secondItem="ULp-tU-qaq" secondAttribute="bottom" constant="12" id="bBW-WN-DoG"/>
                                     <constraint firstItem="k5Z-51-SZe" firstAttribute="centerX" secondItem="vMI-Ds-Gxm" secondAttribute="centerX" id="dCu-S8-dpJ"/>
                                     <constraint firstAttribute="width" constant="240" id="j8f-9r-iyH"/>
+                                    <constraint firstItem="k5Z-51-SZe" firstAttribute="width" secondItem="ULp-tU-qaq" secondAttribute="width" id="lYH-Kg-Wx6"/>
                                     <constraint firstAttribute="height" constant="280" id="oOm-ui-KXy"/>
                                     <constraint firstAttribute="trailing" secondItem="ULp-tU-qaq" secondAttribute="trailing" constant="12" id="tlP-Wc-8HE"/>
                                 </constraints>
@@ -159,7 +174,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="QfQ-rb-fcO"/>
                                     <constraint firstAttribute="width" constant="24" id="USW-5d-3aw"/>
-                                    <constraint firstAttribute="width" secondItem="YBN-Qz-743" secondAttribute="height" multiplier="1:1" id="xCc-g6-3ri"/>
                                 </constraints>
                                 <state key="normal" title="X" image="cancel.png"/>
                                 <connections>

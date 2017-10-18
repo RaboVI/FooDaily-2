@@ -12,8 +12,12 @@ private let reuseIdentifier = "Cell"
 
 class WantToEatTableViewController: UITableViewController {
     
+    let dataMnager = FakeDataManager.shared
+    
     let wantToEatReload = "wantToEatReload"
 
+    var wantToEat = [Dictionary<String, String>]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,6 +32,12 @@ class WantToEatTableViewController: UITableViewController {
         // 新建一個leftBarButtonItem
         let backBtn = UIBarButtonItem.init(image: UIImage(named: "back.png"), style: .plain, target: self, action: #selector(pop))
         self.navigationItem.leftBarButtonItem = backBtn
+        
+        // 取消線條的顏色
+        tableView.separatorColor = UIColor.clear
+        
+        //
+        view.backgroundColor = #colorLiteral(red: 0.9837865233, green: 0.9933264852, blue: 0.7701260448, alpha: 1)
     }
     
     // Pop回上一頁
@@ -50,7 +60,8 @@ class WantToEatTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1 // 待修改
+    
+        return dataMnager.wantToEatArray.count // 待修改
     }
     
     
@@ -79,14 +90,18 @@ class WantToEatTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! WantToEatTableViewCell
 
         // Configure the cell...
-
+        cell.titleLabel.text = dataMnager.wantToEatArray[indexPath.row]["ShopName"]
+        cell.remarkLabel.text = dataMnager.wantToEatArray[indexPath.row]["RemarkText"]
+        cell.backgroundColor = UIColor.clear
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if let vc = storyboard?.instantiateViewController(withIdentifier: "WantToEatContentViewController") as? WantToEatContentViewController {
-            
+            vc.modalPresentationStyle = .overCurrentContext
+            vc.indexPath = indexPath.row
             present(vc, animated: true, completion: nil)
         }
     }

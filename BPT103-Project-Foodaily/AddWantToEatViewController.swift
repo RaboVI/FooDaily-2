@@ -27,7 +27,6 @@ class AddWantToEatViewController: UIViewController {
         blurView.frame.size = view.frame.size
         view.insertSubview(blurView, at: 0)
         
-        
         addWantToEatCollectionView.showsVerticalScrollIndicator = false
         
     }

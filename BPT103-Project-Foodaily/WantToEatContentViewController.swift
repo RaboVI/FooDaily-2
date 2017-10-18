@@ -21,6 +21,10 @@ class WantToEatContentViewController: UIViewController {
     
     @IBOutlet weak var toCreateNewDiaryBtnOl: UIButton!
     
+    var indexPath: Int!
+    
+    let dataManager = FakeDataManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,15 +43,24 @@ class WantToEatContentViewController: UIViewController {
         blurView.frame = bgView.frame
         blurView.layer.cornerRadius = 15
         blurView.clipsToBounds = true
+        bgView.layer.cornerRadius = 15
+        bgView.clipsToBounds = true
         self.view.insertSubview(blurView, belowSubview: bgView)
         bgView.backgroundColor = UIColor.clear
+        view.backgroundColor = UIColor.clear
         
-        cancelBtnTopConstraint.constant = -(cancelBtnOl.frame.height / 2)
-        cancelBtnTrailingConstraint.constant = -(cancelBtnOl.frame.width / 2)
+        shopNameLabel.textColor = #colorLiteral(red: 0.2466638088, green: 0.3864281476, blue: 0.4243446589, alpha: 1)
+        remarkTextView.textColor = #colorLiteral(red: 0.2466638088, green: 0.3864281476, blue: 0.4243446589, alpha: 1)
         
-        setShadow(item: blurView)
-        setShadow(item: cancelBtnOl)
-        setShadow(item: toCreateNewDiaryBtnOl)
+        cancelBtnTopConstraint.constant = -cancelBtnOl.frame.height
+        cancelBtnTrailingConstraint.constant += cancelBtnOl.frame.width
+        
+        setShadow(item: bgView)
+//        setShadow(item: cancelBtnOl)
+//        setShadow(item: toCreateNewDiaryBtnOl)
+        
+        shopNameLabel.text = dataManager.wantToEatArray[indexPath]["ShopName"]
+        remarkTextView.text = dataManager.wantToEatArray[indexPath]["RemarkText"]
     }
 
     override func didReceiveMemoryWarning() {

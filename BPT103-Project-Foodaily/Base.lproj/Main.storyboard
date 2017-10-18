@@ -717,7 +717,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PageView-1" translatesAutoresizingMaskIntoConstraints="NO" id="lKv-Qw-JD3">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PageView-1" translatesAutoresizingMaskIntoConstraints="NO" id="lKv-Qw-JD3">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -774,12 +774,12 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="Dmb-F7-2Hi">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="head" id="jnn-7g-ym7">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="user" id="jnn-7g-ym7">
                             <connections>
                                 <segue destination="4qA-P3-ffJ" kind="show" id="nqe-Go-UpF"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="WantToEat" id="cBb-wH-sGc">
+                        <barButtonItem key="rightBarButtonItem" image="wantToEat" id="cBb-wH-sGc">
                             <connections>
                                 <action selector="wantToEatBtnDidPressed:" destination="uTt-G2-Tij" id="0GO-Pp-Qhu"/>
                             </connections>
@@ -873,7 +873,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fJe-6Z-pd1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2849" y="139"/>
+            <point key="canvasLocation" x="2790" y="139"/>
         </scene>
         <!--PageViewController-->
         <scene sceneID="fUw-Il-CuV">
@@ -895,7 +895,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PageView-2" translatesAutoresizingMaskIntoConstraints="NO" id="aFh-Yh-8HH">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PageView-2" translatesAutoresizingMaskIntoConstraints="NO" id="aFh-Yh-8HH">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -924,7 +924,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PageView-3" translatesAutoresizingMaskIntoConstraints="NO" id="64F-UG-yE6">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PageView-3" translatesAutoresizingMaskIntoConstraints="NO" id="64F-UG-yE6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                         </subviews>
@@ -1003,7 +1003,8 @@
         <image name="PageView-1" width="564" height="845"/>
         <image name="PageView-2" width="564" height="789"/>
         <image name="PageView-3" width="564" height="846"/>
-        <image name="head" width="25" height="24"/>
+        <image name="user" width="24" height="24"/>
+        <image name="wantToEat" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="j5N-nX-T28"/>

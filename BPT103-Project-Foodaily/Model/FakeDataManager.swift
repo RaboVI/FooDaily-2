@@ -23,10 +23,28 @@ class FakeDataManager: NSObject {
     
     static let shared = FakeDataManager()
     
+    var wantToEatArray = [Dictionary<String, String>]()
+    
     private override init() {
         dailyItem = [data0, data1, data2, data3, data4, data5, data6]
+        
+        wantToEatArray = [wantToEatDict1, wantToEatDict2, wantToEatDict3]
     }
     
+    let wantToEatDict1 = [
+        "ShopName" : "Lamb",
+        "RemarkText" : "10491台北市中山區吉林路327號，營業時間17:00-01:00，羊排看起來不錯吃"
+    ]
+    
+    let wantToEatDict2 = [
+        "ShopName" : "Michael's kitchen",
+        "RemarkText" : "100台北市中正區徐州路26號，需要預訂，電話：02-23221880"
+    ]
+    
+    let wantToEatDict3 = [
+        "ShopName" : "青島排骨",
+        "RemarkText" : "排骨看起來很厚，價格看起來也很平價。 \n電話：02-2357 7649\n地址：100台北市中正區青島東路3-3號"
+    ]
 //    var dailyImage = [UIImage(named: "00.jpg"),
 //                      UIImage(named: "01.jpg"),
 //                      UIImage(named: "02.jpg"),

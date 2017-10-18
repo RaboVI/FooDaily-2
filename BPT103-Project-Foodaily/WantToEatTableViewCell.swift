@@ -22,11 +22,11 @@ class WantToEatTableViewCell: UITableViewCell {
         // Initialization code
         
         let color = #colorLiteral(red: 0.1921568627, green: 0.3137254902, blue: 0.3490196078, alpha: 1)
-        
         bgView.layer.cornerRadius = bgView.frame.height / 2
         bgView.layer.borderColor = color.cgColor
         bgView.layer.borderWidth = 1
         bgView.clipsToBounds = true
+        bgView.backgroundColor = UIColor.clear
         
         lineView.backgroundColor = color
         

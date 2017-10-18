@@ -26,7 +26,7 @@ class AddWantToEatCollectionViewCell: UICollectionViewCell, UITextViewDelegate, 
         blurView.frame = bgView.frame
         blurView.layer.cornerRadius = 15
         blurView.layer.shadowOffset = CGSize(width: 1, height: 1)
-        blurView.layer.shadowOpacity = 0.2
+        blurView.layer.shadowOpacity = 0.9
         blurView.layer.shadowRadius = 3.5
         blurView.layer.shadowColor = UIColor(red: 44.0/255.0,
                                              green: 62.0/255.0,
