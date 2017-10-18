@@ -51,7 +51,7 @@ class DiaryViewController: UIViewController {
         // 匯入已經下載好的資料
         shopNameLabel.text = dataManager.allDiary[indexPath].shopName
         foodNameLabel.text = dataManager.allDiary[indexPath].foodName
-        priceLabel.text = "$" + dataManager.allDiary[indexPath].price
+        priceLabel.text = "$ " + dataManager.allDiary[indexPath].price
         createDateLabel.text = dataManager.allDiary[indexPath].createTime
         noteTextView.text = dataManager.allDiary[indexPath].noteText
         remarkTextView.text = dataManager.allDiary[indexPath].remarkText

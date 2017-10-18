@@ -14,10 +14,8 @@ class AddWantToEatViewController: UIViewController {
     
     let wantToEatReload = "wantToEatReload"
     
-    
     var cellCount = 1
     var cellWidth: CGFloat = 0
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,12 +49,12 @@ class AddWantToEatViewController: UIViewController {
     */
     
     
-    
     @IBAction func saveNewWantToEatBtn(_ sender: Any) {
         NotificationCenter.default.post(name: NSNotification.Name(wantToEatReload), object: nil)
+        
+        
         self.dismiss(animated: true, completion: nil)
     }
-    
     
     
     @IBAction func cancelBtn(_ sender: Any) {
@@ -85,8 +83,8 @@ extension AddWantToEatViewController: UICollectionViewDataSource {
         
         if kind == UICollectionElementKindSectionHeader {
             //            print(UICollectionElementKindSectionHeader)
-            var reusableView = CreateDiaryHeaderCollectionReusableView()
-            reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! CreateDiaryHeaderCollectionReusableView
+            var reusableView = AddWantToEatHeaderCollectionReusableView()
+            reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! AddWantToEatHeaderCollectionReusableView
             
             
             //            reusableView.headerWidth = addWantToEatCollectionView.frame.size.width
@@ -96,10 +94,10 @@ extension AddWantToEatViewController: UICollectionViewDataSource {
             return reusableView
             
         } else if kind == UICollectionElementKindSectionFooter {
-            var reusableView = CreateDiaryFooterCollectionReusableView()
-            reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath) as! CreateDiaryFooterCollectionReusableView
+            var reusableView = AddWantToEatFooterCollectionReusableView()
+            reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "footer", for: indexPath) as! AddWantToEatFooterCollectionReusableView
             
-            reusableView.addCellBtnOL.addTarget(self, action: #selector(addCell), for: .touchUpInside)
+            reusableView.addCellBtnOl.addTarget(self, action: #selector(addCell), for: .touchUpInside)
             
             return reusableView
             

@@ -41,7 +41,6 @@ class MainMasonryCollectionViewController: UICollectionViewController {
                 return
             }
             self.totalDiary = allDiary
-//            self.collectionView?.reloadData()
             self.dataManager.foodImageArray = [UIImage]()
             self.totalDiary.forEach({ (everyDiary) in
                 
@@ -64,16 +63,16 @@ class MainMasonryCollectionViewController: UICollectionViewController {
                     guard let result = result else {
                         return
                     }
-                    
+                    // 將下載完的圖片放到圖片陣列中
                     self.dataManager.appendImage(image: result)
                     
                     if self.dataManager.foodImageArray.count == self.dataManager.allDiary.count {
+                        
                         self.dataManager.imageWithURL()
+                        
                         self.collectionView?.reloadData()
                         self.collectionView?.collectionViewLayout = self.flowLayout
                     }
-                    
-                    
                 })
             })
         }
@@ -175,7 +174,6 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let dailyItem = totalDiary[indexPath.row]
-        print(dataManager.foodImageArray.count)
         let foodImage = dataManager.foodImageArray[indexPath.row]
         let width = (self.view.bounds.size.width - flowLayout.minimumInteritemSpacing - flowLayout.sectionInset.left - flowLayout.sectionInset.right) / 2
         

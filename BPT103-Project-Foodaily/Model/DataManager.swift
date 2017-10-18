@@ -161,6 +161,16 @@ class DataManager: NSObject {
         }
     }
     
+    func downloadImageWithUniqueURL(foodImageUrlString: String) {
+        
+        print("現在每一筆UrlString分別是：\(foodImageUrlString)")
+        
+        if let imageURL = URL(string: foodImageUrlString) {
+         
+            
+        }
+    }
+    
     // MARK: -將下載的圖片放到圖片陣列中，準備給Flowlayout使用
     func appendImage(image: UIImage) {
         
@@ -176,9 +186,14 @@ class DataManager: NSObject {
         for item in allDiary {
             
             let url = item.foodImageURL
-            
+//            print("FoodImage: \(foodImageArray)")
             for image in foodImageArray {
+                print("")
+                print("URL: \(url)")
+                print("Image.URL現在: \(String(describing: image.url).isEmpty)")
+                print("")
                 if image.url == url {
+                    
                     imageArray.append(image)
                     break
                 }

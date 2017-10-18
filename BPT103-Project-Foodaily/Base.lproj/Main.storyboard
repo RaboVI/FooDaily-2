@@ -734,6 +734,14 @@
             </objects>
             <point key="canvasLocation" x="-3276" y="1577"/>
         </scene>
+        <!--WantToEatTableViewController-->
+        <scene sceneID="r3d-JU-957">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="WantToEatTableViewController" storyboardName="WantToEat" referencedIdentifier="WantToEatTableViewController" id="Dmr-9J-zo7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l1e-DP-yCe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2190" y="-281"/>
+        </scene>
         <!--Main Masonry Collection View Controller-->
         <scene sceneID="nqT-OS-OXp">
             <objects>
@@ -767,6 +775,11 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="head" id="jnn-7g-ym7">
                             <connections>
                                 <segue destination="4qA-P3-ffJ" kind="show" id="nqe-Go-UpF"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="WantToEat" id="cBb-wH-sGc">
+                            <connections>
+                                <segue destination="Dmr-9J-zo7" kind="presentation" id="Mt9-aA-05k"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

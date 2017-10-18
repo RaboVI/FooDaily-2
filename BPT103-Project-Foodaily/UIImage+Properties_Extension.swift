@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
+private var key = ""
+
 extension UIImage {
     
-    
-    var url: String? {
-        set {
-            self.url = newValue
-        }
+    var url: String {
+        
         get {
-            return nil
+            return (objc_getAssociatedObject(self, &key) as? String)!
+        }
+        
+        set {
+            objc_setAssociatedObject(self, &key, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    
-    
-    
 }

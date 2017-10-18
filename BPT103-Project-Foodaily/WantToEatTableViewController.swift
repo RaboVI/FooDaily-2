@@ -48,8 +48,6 @@ class WantToEatTableViewController: UITableViewController {
         return 91
     }
     
-    
-    
     @IBAction func addWantToEatBtn(_ sender: Any) {
         
         NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: NSNotification.Name(wantToEatReload), object: nil)
@@ -60,20 +58,12 @@ class WantToEatTableViewController: UITableViewController {
         vc.modalPresentationStyle = .overCurrentContext
         
         present(vc, animated: true, completion: nil)
-        
-        
     }
-    
-    
     
     @objc func refresh() {
         NotificationCenter.default.removeObserver(self)
         self.tableView.reloadData()
     }
-    
-    
-    
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! WantToEatTableViewCell
@@ -82,7 +72,6 @@ class WantToEatTableViewController: UITableViewController {
 
         return cell
     }
-    
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // ...
