@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddWantToEatViewController: UIViewController {
     
@@ -14,12 +15,20 @@ class AddWantToEatViewController: UIViewController {
     
     let wantToEatReload = "wantToEatReload"
     
+    let dataManger = DataManager.shared
+    
     var cellCount = 1
     var cellWidth: CGFloat = 0
     
+    var userName: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if let currentUser = Auth.auth().currentUser {
+            userName = currentUser.displayName
+        }
+        
         // Do any additional setup after loading the view.
         
         let blurEffect = UIBlurEffect(style: .light)
@@ -49,8 +58,24 @@ class AddWantToEatViewController: UIViewController {
     
     
     @IBAction func saveNewWantToEatBtn(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name(wantToEatReload), object: nil)
         
+        let createWTECellHeader = addWantToEatCollectionView.supplementaryView(forElementKind: "UICollectionElementKindSectionHeader", at: IndexPath(row: 0, section: 0)) as! AddWantToEatHeaderCollectionReusableView
+        
+        for i in 0..<cellCount {
+            let indexPath = IndexPath(row: i, section: 0)
+            let createWTECell = addWantToEatCollectionView.cellForItem(at: indexPath) as! AddWantToEatCollectionViewCell
+            
+            guard let currentUser = userName,
+                let shopName = createWTECellHeader.shopNameField.text,
+                let remarkText = createWTECell.remarkTextView.text
+            else{
+                return
+            }
+            
+            dataManger.uploadWteDataToFirebase(shopName: shopName, remarkText: remarkText, userName: currentUser)
+        }
+        
+        NotificationCenter.default.post(name: NSNotification.Name(wantToEatReload), object: nil)
         
         self.dismiss(animated: true, completion: nil)
     }

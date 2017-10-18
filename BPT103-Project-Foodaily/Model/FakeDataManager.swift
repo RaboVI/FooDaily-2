@@ -44,6 +44,7 @@ class FakeDataManager: NSObject {
     let wantToEatDict3 = [
         "ShopName" : "青島排骨",
         "RemarkText" : "排骨看起來很厚，價格看起來也很平價。 \n電話：02-2357 7649\n地址：100台北市中正區青島東路3-3號"
+        
     ]
 //    var dailyImage = [UIImage(named: "00.jpg"),
 //                      UIImage(named: "01.jpg"),

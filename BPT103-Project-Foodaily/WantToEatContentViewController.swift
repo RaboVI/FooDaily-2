@@ -25,6 +25,8 @@ class WantToEatContentViewController: UIViewController {
     
     let dataManager = FakeDataManager.shared
     
+    let newDataManager = DataManager.shared
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -59,8 +61,12 @@ class WantToEatContentViewController: UIViewController {
 //        setShadow(item: cancelBtnOl)
 //        setShadow(item: toCreateNewDiaryBtnOl)
         
-        shopNameLabel.text = dataManager.wantToEatArray[indexPath]["ShopName"]
-        remarkTextView.text = dataManager.wantToEatArray[indexPath]["RemarkText"]
+//        shopNameLabel.text = dataManager.wantToEatArray[indexPath]["ShopName"]
+//        remarkTextView.text = dataManager.wantToEatArray[indexPath]["RemarkText"]
+        
+        let wteItem = newDataManager.allWantToEat[indexPath]
+        shopNameLabel.text = wteItem.shopName
+        remarkTextView.text = wteItem.remarkText
     }
 
     override func didReceiveMemoryWarning() {
@@ -92,6 +98,10 @@ class WantToEatContentViewController: UIViewController {
     
     
     @IBAction func toCreateNewDiaryBtn(_ sender: Any) {
+        
+        // 呼叫新增日誌頁面...
+        
+        // 把預計享用的店名帶到新增日誌上傳的參數裡...
     }
     
     @IBAction func cancalBtn(_ sender: Any) {

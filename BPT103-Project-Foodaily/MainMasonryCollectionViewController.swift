@@ -44,6 +44,7 @@ class MainMasonryCollectionViewController: UICollectionViewController {
             self.dataManager.foodImageArray = [UIImage]()
             self.totalDiary.forEach({ (everyDiary) in
                 
+                /*
                 print("-----------------------------------")
                 print("餐廳名稱： \(everyDiary.shopName)")
                 print("餐點名稱： \(everyDiary.foodName)")
@@ -57,6 +58,7 @@ class MainMasonryCollectionViewController: UICollectionViewController {
                 print("照片URL： \(everyDiary.foodImageURL)")
                 print("照片的寬度： \(everyDiary.foodImageWidth)")
                 print("照片的高度： \(everyDiary.foodImageHeight)")
+                 */
                 
                 self.dataManager.downloadImage(foodImageURLString: everyDiary.foodImageURL, imageDoneHandler: { (success, error, result) in
                     

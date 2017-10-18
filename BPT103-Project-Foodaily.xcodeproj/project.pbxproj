@@ -11,6 +11,7 @@
 		12177BB91F1F7A2C00CA49CD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12177BB81F1F7A2C00CA49CD /* ViewController.swift */; };
 		12177BBC1F1F7A2C00CA49CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBA1F1F7A2C00CA49CD /* Main.storyboard */; };
 		12177BC11F1F7A2D00CA49CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 12177BBF1F1F7A2D00CA49CD /* LaunchScreen.storyboard */; };
+		1224A39C1F97E2C300ED7B90 /* WantToEatItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1224A39B1F97E2C300ED7B90 /* WantToEatItem.swift */; };
 		1227DB361F78D9B400023A18 /* UITextField+Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1227DB351F78D9B300023A18 /* UITextField+Placeholder.swift */; };
 		123B88991F7826BC005FB718 /* MemberSignInAndOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B88981F7826BC005FB718 /* MemberSignInAndOutViewController.swift */; };
 		123B889B1F782AD7005FB718 /* UINavigationController+Transparent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B889A1F782AD7005FB718 /* UINavigationController+Transparent.swift */; };
@@ -113,6 +114,7 @@
 		12177BBB1F1F7A2C00CA49CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		12177BC01F1F7A2D00CA49CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		12177BC21F1F7A2D00CA49CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1224A39B1F97E2C300ED7B90 /* WantToEatItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WantToEatItem.swift; sourceTree = "<group>"; };
 		1227DB351F78D9B300023A18 /* UITextField+Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Placeholder.swift"; sourceTree = "<group>"; };
 		1227DB391F78F7A600023A18 /* FooDaily color ticket.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FooDaily color ticket.png"; sourceTree = "<group>"; };
 		123B88981F7826BC005FB718 /* MemberSignInAndOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberSignInAndOutViewController.swift; sourceTree = "<group>"; };
@@ -316,6 +318,7 @@
 			children = (
 				B3CFFE161F6FD9D200861E70 /* FakeDataManager.swift */,
 				12B71D5D1F921A250027589D /* DiaryItem.swift */,
+				1224A39B1F97E2C300ED7B90 /* WantToEatItem.swift */,
 				12B71D581F8A137E0027589D /* DataManager.swift */,
 			);
 			path = Model;
@@ -664,6 +667,7 @@
 				123B889B1F782AD7005FB718 /* UINavigationController+Transparent.swift in Sources */,
 				12826F221F6B596D008297C0 /* PageViewController.swift in Sources */,
 				B38BF3B01F94DE06009316E6 /* AddWantToEatFooterCollectionReusableView.swift in Sources */,
+				1224A39C1F97E2C300ED7B90 /* WantToEatItem.swift in Sources */,
 				B3CFFE021F6F6C5500861E70 /* MainMasonryFlowLayout.swift in Sources */,
 				B38BF3B21F95111A009316E6 /* WantToEatContentViewController.swift in Sources */,
 				B3CFFE001F6F6C4100861E70 /* MainMasonryCollectionViewCell.swift in Sources */,

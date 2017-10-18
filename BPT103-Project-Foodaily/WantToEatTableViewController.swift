@@ -14,13 +14,42 @@ class WantToEatTableViewController: UITableViewController {
     
     let dataMnager = FakeDataManager.shared
     
+    let newDataManager = DataManager.shared
+    
     let wantToEatReload = "wantToEatReload"
 
     var wantToEat = [Dictionary<String, String>]()
     
+    var totalWTE = [WTEItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        newDataManager.downloadWteFromFirebase { (success, error, result) in
+            
+            guard success == true else {
+                print("獲取WantToEat資料失敗或中斷")
+                return
+            }
+            
+            guard let allWantToEatItem = result else {
+                print("沒有得到WantToEat Database的資料內容")
+                return
+            }
+            
+            allWantToEatItem.forEach({ (everyWTEItem) in
+                
+                print("-----------------------------------")
+                print("預計享用餐廳名稱： \(everyWTEItem.shopName)")
+                print("預計享用備註： \(everyWTEItem.remarkText)")
+                print("預計享用創建時間： \(everyWTEItem.createData)")
+                print("預計享用時戳： \(everyWTEItem.timeStamp)")
+                print("預計享用使用者： \(everyWTEItem.userName)")
+            })
+            
+            self.tableView.reloadData()
+        }
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -61,7 +90,7 @@ class WantToEatTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
     
-        return dataMnager.wantToEatArray.count // 待修改
+        return newDataManager.allWantToEat.count // 待修改
     }
     
     
@@ -90,8 +119,12 @@ class WantToEatTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! WantToEatTableViewCell
 
         // Configure the cell...
-        cell.titleLabel.text = dataMnager.wantToEatArray[indexPath.row]["ShopName"]
-        cell.remarkLabel.text = dataMnager.wantToEatArray[indexPath.row]["RemarkText"]
+//        cell.titleLabel.text = dataMnager.wantToEatArray[indexPath.row]["ShopName"]
+//        cell.remarkLabel.text = dataMnager.wantToEatArray[indexPath.row]["RemarkText"]
+        
+        let wteItem = newDataManager.allWantToEat[indexPath.row]
+        cell.titleLabel.text = wteItem.shopName
+        cell.remarkLabel.text = wteItem.remarkText
         cell.backgroundColor = UIColor.clear
         
         return cell

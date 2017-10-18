@@ -61,8 +61,6 @@ class CreateDiaryViewController: UIViewController {
     // 按下按鈕後上傳
     @IBAction func saveNewDiaryBtn(_ sender: UIButton) {
         
-        
-        
         let createDiaryCellHeader = createDiaryCollectionView.supplementaryView(forElementKind: "UICollectionElementKindSectionHeader", at: IndexPath(row: 0, section: 0)) as! CreateDiaryHeaderCollectionReusableView
         
         for i in 0..<cellCount {

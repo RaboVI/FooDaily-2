@@ -120,15 +120,16 @@ class MemberSignInAndOutViewController: UIViewController,GIDSignInDelegate,GIDSi
                 return
             }
             
-            // 呈現主視窗
-//            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-//                UIApplication.shared.keyWindow?.rootViewController = viewController
-//                self.dismiss(animated: true, completion: nil)
-//            }
+             // 呈現主視窗
             if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
-                    self.navigationController?.present(viewController, animated: true, completion: nil)
+                UIApplication.shared.keyWindow?.rootViewController = viewController
+                self.dismiss(animated: true, completion: nil)
             }
-
+            
+            // 不能用下面這個來跳轉，會卡在原畫面
+//            if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "MainView") {
+//                    self.navigationController?.present(viewController, animated: true, completion: nil)
+//            }
         }
     }
     
