@@ -24,8 +24,18 @@ class WantToEatTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "Akrobat", size: 18)!,NSAttributedStringKey.foregroundColor: #colorLiteral(red: 0.1921568627, green: 0.3137254902, blue: 0.3490196078, alpha: 1)]
+        
+        // 新建一個leftBarButtonItem
+        let backBtn = UIBarButtonItem.init(image: UIImage(named: "back.png"), style: .plain, target: self, action: #selector(pop))
+        self.navigationItem.leftBarButtonItem = backBtn
     }
-
+    
+    // Pop回上一頁
+    @objc func pop() {
+        
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -48,7 +58,7 @@ class WantToEatTableViewController: UITableViewController {
         return 91
     }
     
-    @IBAction func addWantToEatBtn(_ sender: Any) {
+    @IBAction func addWantToEatBtn(_ sender: UIButton) {
         
         NotificationCenter.default.addObserver(self, selector: #selector(refresh), name: NSNotification.Name(wantToEatReload), object: nil)
         
@@ -74,7 +84,11 @@ class WantToEatTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // ...
+        
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "WantToEatContentViewController") as? WantToEatContentViewController {
+            
+            present(vc, animated: true, completion: nil)
+        }
     }
  
 

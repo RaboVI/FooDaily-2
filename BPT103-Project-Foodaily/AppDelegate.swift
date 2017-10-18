@@ -80,12 +80,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return handled
     }
 }
-
-extension AppDelegate {
-    func customizeUIStyle() {
-        
-        // Customize Navigation bar items
-        UIBarButtonItem.appearance(whenContainedInInstancesOf: [UINavigationBar.self]).setTitleTextAttributes([NSAttributedStringKey.font: UIFont(name: "Akrobat", size: 18)!, NSAttributedStringKey.foregroundColor: UIColor.white], for: UIControlState.normal)
-    }
-}
-

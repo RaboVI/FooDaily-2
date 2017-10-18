@@ -41,6 +41,17 @@ class MemberProfiolePage: UIViewController {
         memberProfileImage.clipsToBounds = true
         
         signOutBtn.layer.cornerRadius = 20
+        
+        // 新建一個leftBarButtonItem
+        let backBtn = UIBarButtonItem.init(image: UIImage(named: "back.png"), style: .plain, target: self, action: #selector(pop))
+        self.navigationItem.leftBarButtonItem = backBtn
+        
+    }
+    
+    // Pop回上一頁
+    @objc func pop() {
+        
+        self.navigationController?.popViewController(animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -88,12 +99,6 @@ class MemberProfiolePage: UIViewController {
             
         }
     }
-    
-    // 回到主畫面
-    @IBAction func backToMainPageView(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     
     /*
     // MARK: - Navigation

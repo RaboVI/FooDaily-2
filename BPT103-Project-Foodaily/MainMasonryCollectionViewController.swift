@@ -116,6 +116,11 @@ class MainMasonryCollectionViewController: UICollectionViewController {
         
         self.view.addSubview(createNewDairyBtn)
         
+        // 修改下一頁NagationItem的樣式
+//        let back = UIBarButtonItem.init(image: UIImage(named: "back.png"), style: .plain, target: self, action: nil)
+//        back.image = UIImage(named: "back.png")
+//        navigationItem.leftBarButtonItem = back
+        
     }
     // Notification的觀察者#Selector內需要做的動作
     /// 重要，要記得取消註冊通知中心
@@ -145,6 +150,16 @@ class MainMasonryCollectionViewController: UICollectionViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func wantToEatBtnDidPressed(_ sender: Any) {
+        
+        let wantToEatStoryboard = UIStoryboard(name: "WantToEat", bundle: nil)
+        let vc = wantToEatStoryboard.instantiateViewController(withIdentifier: "WantToEatTableViewController")
+        
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
     /*
     // MARK: - Navigation

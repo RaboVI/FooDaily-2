@@ -82,6 +82,7 @@ class WantToEatContentViewController: UIViewController {
     }
     
     @IBAction func cancalBtn(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 
