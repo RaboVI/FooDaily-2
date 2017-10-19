@@ -39,14 +39,13 @@ class WantToEatTableViewController: UITableViewController {
             
             allWantToEatItem.forEach({ (everyWTEItem) in
                 
-                print("-----------------------------------")
-                print("預計享用餐廳名稱： \(everyWTEItem.shopName)")
-                print("預計享用備註： \(everyWTEItem.remarkText)")
-                print("預計享用創建時間： \(everyWTEItem.createData)")
-                print("預計享用時戳： \(everyWTEItem.timeStamp)")
-                print("預計享用使用者： \(everyWTEItem.userName)")
+//                print("-----------------------------------")
+//                print("預計享用餐廳名稱： \(everyWTEItem.shopName)")
+//                print("預計享用備註： \(everyWTEItem.remarkText)")
+//                print("預計享用創建時間： \(everyWTEItem.createData)")
+//                print("預計享用時戳： \(everyWTEItem.timeStamp)")
+//                print("預計享用使用者： \(everyWTEItem.userName)")
             })
-            
             self.tableView.reloadData()
         }
         

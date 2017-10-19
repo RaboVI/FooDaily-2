@@ -32,8 +32,8 @@ class MainMasonryFlowLayout: UICollectionViewFlowLayout {
         guard let collectionViewWidth = collectionView?.bounds.size.width else { return }
         let cellWidth = (collectionViewWidth - sectionInset.left - sectionInset.right - minimumInteritemSpacing) / 2
         
-        print("")
-        print("瀑布流現在cell的寬度是：\(cellWidth)")
+//        print("")
+//        print("瀑布流現在cell的寬度是：\(cellWidth)")
         
         computeAndSaveAttributes(cellWidth: cellWidth)
         

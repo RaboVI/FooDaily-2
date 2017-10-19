@@ -84,7 +84,7 @@ struct DiaryItem {
             let foodImageWidth = diaryDataFromFirebase[DirayInfoKey.foodImageWidth] as? String,
             let foodImageHeight = diaryDataFromFirebase[DirayInfoKey.foodImageHeight] as? String
         else {
-            print("diaryDataFromFirebase初始化失敗")
+//            print("diaryDataFromFirebase初始化失敗")
             return nil
         }
         self = DiaryItem(shopName: shopName, foodName: foodName, price: price, starCount: starCount, noteText: noteText, reamrkText: remarkText, createTime: createTime, timeStamp: timeStamp, userName: userName, foodImageURL: foodImageURL, foodImageWidth: foodImageWidth, foodImageHeight: foodImageHeight)

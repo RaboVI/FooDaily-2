@@ -16,11 +16,12 @@ class CreateDiaryHeaderCollectionReusableView: UICollectionReusableView {
 //    var headerWidth: CGFloat = 0
     let shopNameField = UITextField()
     
-    
+    var shopName = ""
     
     func setHeader(width: CGFloat) {
-        print("")
-        print("目前self.frame.size的大小是：\(self.frame.size)")
+        
+//        print("")
+//        print("目前self.frame.size的大小是：\(self.frame.size)")
         let blurEffect = UIBlurEffect(style: .light)
         let blurView = UIVisualEffectView(effect: blurEffect)
         let blurViewWidth = width - cellPadding * 2
@@ -46,8 +47,8 @@ class CreateDiaryHeaderCollectionReusableView: UICollectionReusableView {
         shopNameField.font = UIFont.systemFont(ofSize: 22)
         shopNameField.sizeToFit()
         let shopNameFieldHeight = shopNameField.frame.height
-        print("")
-        print("目前shopNameFieldHeight是：\(shopNameFieldHeight)")
+//        print("")
+//        print("目前shopNameFieldHeight是：\(shopNameFieldHeight)")
         let shopNameFieldY = blurView.frame.minY + (blurView.frame.height - shopNameFieldHeight) / 2
         
         
@@ -127,10 +128,10 @@ class CreateDiaryHeaderCollectionReusableView: UICollectionReusableView {
         //        NSLayoutConstraint.activate([top, width, height, centerX])
         //        blurView.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        
         self.addSubview(blurView)
         self.addSubview(shopNameField)
         
+        // 把從CreateDiaryViewController得到的shopName顯示到shopNameField上
+        shopNameField.text = shopName
     }
 }

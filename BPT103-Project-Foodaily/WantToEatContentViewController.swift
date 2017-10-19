@@ -33,7 +33,6 @@ class WantToEatContentViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         // UI 細節調整
-        
         let bgBlurEffect = UIBlurEffect(style: .light)
         let bgBlurView = UIVisualEffectView(effect: bgBlurEffect)
         bgBlurView.frame.size = view.frame.size
@@ -96,17 +95,23 @@ class WantToEatContentViewController: UIViewController {
     }
     */
     
-    
     @IBAction func toCreateNewDiaryBtn(_ sender: Any) {
         
-        // 呼叫新增日誌頁面...
+        // 呼叫新增日誌頁面
+        let createDiaryStoryboard = UIStoryboard.init(name: "CreateDiary", bundle: .main)
+        let vc = createDiaryStoryboard.instantiateViewController(withIdentifier: "CreateDiaryViewController") as! CreateDiaryViewController
+        vc.modalPresentationStyle = .overCurrentContext
         
-        // 把預計享用的店名帶到新增日誌上傳的參數裡...
+        // 把預計享用的shopNameLabel.text傳到CreateDiaryViewController
+        if shopNameLabel.text != nil {
+            
+            vc.shopName = shopNameLabel.text!
+        }
+        present(vc, animated: true, completion: nil)
     }
     
     @IBAction func cancalBtn(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
     
-
 }

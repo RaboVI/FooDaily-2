@@ -22,6 +22,8 @@ class CreateDiaryViewController: UIViewController {
     var cellCount = 1
     var cellWidth: CGFloat = 0
     
+    var shopName = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -143,6 +145,8 @@ extension CreateDiaryViewController: UICollectionViewDataSource {
             var reusableView = CreateDiaryHeaderCollectionReusableView()
             reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath) as! CreateDiaryHeaderCollectionReusableView
             
+            // 將從WantToEat取到的值餵給reusableView.shopName
+            reusableView.shopName = self.shopName
             
 //            reusableView.headerWidth = createDiaryCollectionView.frame.size.width
             

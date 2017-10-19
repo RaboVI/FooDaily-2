@@ -158,7 +158,6 @@ class MainMasonryCollectionViewController: UICollectionViewController {
         let wantToEatStoryboard = UIStoryboard(name: "WantToEat", bundle: nil)
         let vc = wantToEatStoryboard.instantiateViewController(withIdentifier: "WantToEatTableViewController")
         
-        
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -184,7 +183,7 @@ class MainMasonryCollectionViewController: UICollectionViewController {
         // #warning Incomplete implementation, return the number of items
         
 //        print("現在totalDiary內共有： \(totalDiary.count) 個items")
-        print("現在foodImageArray內共有： \(dataManager.foodImageArray.count) 個items")
+//        print("現在foodImageArray內共有： \(dataManager.foodImageArray.count) 個items")
         return dataManager.foodImageArray.count
     }
     

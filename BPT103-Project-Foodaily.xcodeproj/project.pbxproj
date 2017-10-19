@@ -516,6 +516,7 @@
 				TargetAttributes = {
 					12177BB21F1F7A2C00CA49CD = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = MB966M732A;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -835,12 +836,15 @@
 			baseConfigurationReference = 1E4A4D5F87B3827849C6E37E /* Pods-BPT103-Project-Foodaily.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MB966M732A;
 				INFOPLIST_FILE = "BPT103-Project-Foodaily/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RaboLu.BPT103-Project-Foodaily";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rabo.Foodaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -850,12 +854,15 @@
 			baseConfigurationReference = C5E0299527D4856C95BA434E /* Pods-BPT103-Project-Foodaily.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MB966M732A;
 				INFOPLIST_FILE = "BPT103-Project-Foodaily/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.RaboLu.BPT103-Project-Foodaily";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Rabo.Foodaily;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
