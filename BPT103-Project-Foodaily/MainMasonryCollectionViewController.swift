@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseDatabase
 import FirebaseStorage
 
@@ -24,9 +25,26 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     var totalDiary = [DiaryItem]()
     
     var loadImage = false
+    
+    override func awakeFromNib() {
+        //
+        if UserDefaults.standard.string(forKey: "firstLogin") == nil {
+
+            let vc = storyboard?.instantiateViewController(withIdentifier: "RPV")
+            present(vc!, animated: true, completion: nil)
+        }
+        
+        //
+        if detectAccessToken() == false {
+            
+            let vc = storyboard?.instantiateViewController(withIdentifier: "WelcomeView")
+            present(vc!, animated: true, completion: nil)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // 嘗試抓取Firebase資料，若成功則顯示在Console上
         dataManager.downloadFromFirebase { (success, error, result) in
@@ -243,4 +261,14 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     }
     */
     
+    func detectAccessToken() -> Bool {
+     
+        if Auth.auth().currentUser == nil {
+            
+            return false
+        }else{
+            
+            return true
+        }
+    }
 }

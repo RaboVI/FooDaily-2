@@ -44,6 +44,8 @@ class RootPageView: UIViewController,PageViewControllerDelegate {
 
         // Do any additional setup after loading the view.
         welcomeDetailLabel.text = welcomeDetailText[0]
+        
+        detectAccessTokenAlreadyExist()
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,4 +74,13 @@ class RootPageView: UIViewController,PageViewControllerDelegate {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //
+    func detectAccessTokenAlreadyExist() {
+        
+        let firstLogin = false
+        
+        UserDefaults.standard.setValue(firstLogin, forKey: "firstLogin")
+        
+    }
 }

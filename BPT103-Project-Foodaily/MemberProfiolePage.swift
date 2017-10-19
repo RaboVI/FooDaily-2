@@ -74,6 +74,8 @@ class MemberProfiolePage: UIViewController {
                 case "facebook.com":
                     let  manager = FBSDKLoginManager()
                     manager.logOut()
+                    FBSDKAccessToken.setCurrent(nil)
+                    FBSDKProfile.setCurrent(nil)
                     
                 default:
                     break
