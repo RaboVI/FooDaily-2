@@ -28,6 +28,7 @@
 		129A54391F9644490038673C /* UIImage+Properties_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A54381F9644490038673C /* UIImage+Properties_Extension.swift */; };
 		12B71D591F8A137E0027589D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B71D581F8A137E0027589D /* DataManager.swift */; };
 		12B71D5E1F921A250027589D /* DiaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B71D5D1F921A250027589D /* DiaryItem.swift */; };
+		12E09CA31F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E09CA21F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift */; };
 		12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349B1F20DBA600E8858E /* newDailyViewController.swift */; };
 		12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */; };
 		12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F934A71F20E56900E8858E /* statisticsViewController.swift */; };
@@ -132,6 +133,7 @@
 		129A54381F9644490038673C /* UIImage+Properties_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Properties_Extension.swift"; sourceTree = "<group>"; };
 		12B71D581F8A137E0027589D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		12B71D5D1F921A250027589D /* DiaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryItem.swift; sourceTree = "<group>"; };
+		12E09CA21F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeMainMasonryCollectionViewController.swift; sourceTree = "<group>"; };
 		12F9349B1F20DBA600E8858E /* newDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newDailyViewController.swift; sourceTree = "<group>"; };
 		12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wantToEatViewController.swift; sourceTree = "<group>"; };
 		12F934A71F20E56900E8858E /* statisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statisticsViewController.swift; sourceTree = "<group>"; };
@@ -444,6 +446,7 @@
 			children = (
 				B3CFFDFD1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift */,
 				B3CFFDFF1F6F6C4100861E70 /* MainMasonryCollectionViewCell.swift */,
+				12E09CA21F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift */,
 				B3CFFE011F6F6C5500861E70 /* MainMasonryFlowLayout.swift */,
 			);
 			name = MainView;
@@ -660,6 +663,7 @@
 				B32E8FAC1F8242BB0009431E /* CreateDiaryHeaderCollectionReusableView.swift in Sources */,
 				12B71D591F8A137E0027589D /* DataManager.swift in Sources */,
 				12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */,
+				12E09CA31F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift in Sources */,
 				B3535D461F86B51C00BE6EF6 /* DiaryViewController.swift in Sources */,
 				B3CFFDFE1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift in Sources */,
 				129A54391F9644490038673C /* UIImage+Properties_Extension.swift in Sources */,

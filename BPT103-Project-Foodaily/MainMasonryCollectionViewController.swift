@@ -17,6 +17,7 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     
     @IBOutlet weak var flowLayout: MainMasonryFlowLayout!
     @IBOutlet var MMCollectionView: UICollectionView!
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     let dataManager = DataManager.shared
     
@@ -45,6 +46,7 @@ class MainMasonryCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        loading.startAnimating()
         
         // 嘗試抓取Firebase資料，若成功則顯示在Console上
         dataManager.downloadFromFirebase { (success, error, result) in
@@ -89,6 +91,10 @@ class MainMasonryCollectionViewController: UICollectionViewController {
                     if self.dataManager.foodImageArray.count == self.dataManager.allDiary.count {
                         
                         self.dataManager.imageWithURL()
+                        
+                        self.loading.isHidden = true
+                        self.loading.stopAnimating()
+                        self.view.willRemoveSubview(self.loading)
                         
                         self.collectionView?.reloadData()
                         self.collectionView?.collectionViewLayout = self.flowLayout

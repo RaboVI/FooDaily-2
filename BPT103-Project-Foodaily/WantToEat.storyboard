@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -147,7 +148,7 @@
                                         </constraints>
                                         <attributedString key="attributedText">
                                             <fragment>
-                                                <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                                <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <attributes>
                                                     <font key="NSFont" size="14" name="PingFangTC-Thin"/>
                                                 </attributes>
@@ -160,6 +161,7 @@
                                 <constraints>
                                     <constraint firstItem="ULp-tU-qaq" firstAttribute="top" secondItem="k5Z-51-SZe" secondAttribute="bottom" constant="19" id="6em-1V-OuK"/>
                                     <constraint firstItem="ULp-tU-qaq" firstAttribute="leading" secondItem="vMI-Ds-Gxm" secondAttribute="leading" constant="12" id="GcG-uT-L4c"/>
+                                    <constraint firstAttribute="width" secondItem="vMI-Ds-Gxm" secondAttribute="height" multiplier="6:7" id="JxB-Ni-y5B"/>
                                     <constraint firstItem="k5Z-51-SZe" firstAttribute="top" secondItem="vMI-Ds-Gxm" secondAttribute="top" constant="19" id="Y9I-gF-oCC"/>
                                     <constraint firstAttribute="bottom" secondItem="ULp-tU-qaq" secondAttribute="bottom" constant="12" id="bBW-WN-DoG"/>
                                     <constraint firstItem="k5Z-51-SZe" firstAttribute="centerX" secondItem="vMI-Ds-Gxm" secondAttribute="centerX" id="dCu-S8-dpJ"/>

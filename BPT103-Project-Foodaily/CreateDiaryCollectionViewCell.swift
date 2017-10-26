@@ -157,8 +157,15 @@ class CreateDiaryCollectionViewCell: UICollectionViewCell, UIScrollViewDelegate,
             noteTextView.text = noteTextViewPlaceholder
             noteTextView.textColor = UIColor.lightGray
             
+            
         }
     }
+    
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        self.resignFirstResponder()
+//    }
+
+    
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
 //        let width = bgView.frame.size.width

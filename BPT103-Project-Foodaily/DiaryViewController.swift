@@ -132,7 +132,7 @@ class DiaryViewController: UIViewController {
         noteBgViewLayer.frame = noteBgView.frame
         noteBgViewLayer.colors = [#colorLiteral(red: 0.1764705882, green: 0.1764705882, blue: 0.1764705882, alpha: 1), #colorLiteral(red: 0.2431372549, green: 0.2274509804, blue: 0.2235294118, alpha: 1)]
         noteBgViewLayer.locations = [0, 0.73]
-        noteBgView.layer.insertSublayer(noteBgViewLayer, at: 0)
+        noteBgView.layer.addSublayer(noteBgViewLayer)
         
     }
     
@@ -216,6 +216,24 @@ class DiaryViewController: UIViewController {
     
     // Cancel != cancol
     @IBAction func cancolBtn(_ sender: Any) {
+        
+        if self.foodImageViewBottomConstraint.constant != 0 {
+            
+            self.foodImageViewBottomConstraint.constant = 0
+            let angle = -(360 * CGFloat.pi / 180)
+            UIView.animate(withDuration: 0.5,
+                           delay: 0,
+                           options: .curveEaseInOut,
+                           animations: {
+                            
+                            self.moreContentBtnOl.transform = CGAffineTransform(rotationAngle: angle)
+                            self.view.layoutIfNeeded()
+            }) { (_) in
+                self.dismiss(animated: true, completion: nil)
+                return
+            }
+            
+        }
         self.dismiss(animated: true, completion: nil)
     }
     

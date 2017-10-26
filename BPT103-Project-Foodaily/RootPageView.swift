@@ -20,13 +20,13 @@ class RootPageView: UIViewController,PageViewControllerDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     
     // welcomeTitleLabel上要顯示的文字
-    let welcomeTitleText = ["壓力腦袋","壓力腦袋","壓力腦袋"]
+    let welcomeTitleText = ["簡單上手","精美ＵI","雲端儲存"]
     
     // welcomeDetailLabel上要顯示的文字
     let welcomeDetailText = [
-        "原料回憶是以同時娛樂正確郵箱下載次數掌握簡介現金日誌，傳統想到介紹隨着後面好好戰爭上了達到您可以律師面對當中寂寞不以同時原料回憶",
-        "原料回憶是以同時娛樂正確郵箱下載次數掌握簡介現金日誌，傳統想到介紹隨着後面好好戰爭上了達到您可以律師面對當中寂寞不以同時原料回憶",
-        "原料回憶是以同時娛樂正確郵箱下載次數掌握簡介現金日誌，傳統想到介紹隨着後面好好戰爭上了達到您可以律師面對當中寂寞不以同時原料回憶"]
+        "擺脫繁雜的操作，從現在開始愛上紀錄。吃過的東西、想吃的東西，通通一鍵新增！！",
+        "瀑布流顯示，賞心悅目。一點一滴累積只屬於你的美食照片牆！！",
+        "無論何處，隨存隨取。美食每刻，伴你一生！！"]
 
     // 準備一個頁面
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
