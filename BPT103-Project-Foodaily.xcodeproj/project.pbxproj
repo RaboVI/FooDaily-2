@@ -28,7 +28,6 @@
 		129A54391F9644490038673C /* UIImage+Properties_Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129A54381F9644490038673C /* UIImage+Properties_Extension.swift */; };
 		12B71D591F8A137E0027589D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B71D581F8A137E0027589D /* DataManager.swift */; };
 		12B71D5E1F921A250027589D /* DiaryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12B71D5D1F921A250027589D /* DiaryItem.swift */; };
-		12E09CA31F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E09CA21F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift */; };
 		12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349B1F20DBA600E8858E /* newDailyViewController.swift */; };
 		12F9349E1F20DBCD00E8858E /* wantToEatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */; };
 		12F934A81F20E56900E8858E /* statisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12F934A71F20E56900E8858E /* statisticsViewController.swift */; };
@@ -84,6 +83,7 @@
 		B38C14DD1F792303000F61F7 /* solidStar.png in Resources */ = {isa = PBXBuildFile; fileRef = B38C14D81F790B29000F61F7 /* solidStar.png */; };
 		B38C14DE1F792303000F61F7 /* solidStar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B38C14D91F790B29000F61F7 /* solidStar@2x.png */; };
 		B38C14DF1F792303000F61F7 /* solidStar@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B38C14D71F790B29000F61F7 /* solidStar@3x.png */; };
+		B3C68E8E1FA3E817001826FC /* FakeMainMasonryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C68E8D1FA3E816001826FC /* FakeMainMasonryCollectionViewController.swift */; };
 		B3CFFDFE1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFFDFD1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift */; };
 		B3CFFE001F6F6C4100861E70 /* MainMasonryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFFDFF1F6F6C4100861E70 /* MainMasonryCollectionViewCell.swift */; };
 		B3CFFE021F6F6C5500861E70 /* MainMasonryFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3CFFE011F6F6C5500861E70 /* MainMasonryFlowLayout.swift */; };
@@ -133,7 +133,6 @@
 		129A54381F9644490038673C /* UIImage+Properties_Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Properties_Extension.swift"; sourceTree = "<group>"; };
 		12B71D581F8A137E0027589D /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		12B71D5D1F921A250027589D /* DiaryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryItem.swift; sourceTree = "<group>"; };
-		12E09CA21F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeMainMasonryCollectionViewController.swift; sourceTree = "<group>"; };
 		12F9349B1F20DBA600E8858E /* newDailyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newDailyViewController.swift; sourceTree = "<group>"; };
 		12F9349D1F20DBCD00E8858E /* wantToEatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = wantToEatViewController.swift; sourceTree = "<group>"; };
 		12F934A71F20E56900E8858E /* statisticsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = statisticsViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +190,7 @@
 		B38C14D71F790B29000F61F7 /* solidStar@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "solidStar@3x.png"; sourceTree = "<group>"; };
 		B38C14D81F790B29000F61F7 /* solidStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = solidStar.png; sourceTree = "<group>"; };
 		B38C14D91F790B29000F61F7 /* solidStar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "solidStar@2x.png"; sourceTree = "<group>"; };
+		B3C68E8D1FA3E816001826FC /* FakeMainMasonryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FakeMainMasonryCollectionViewController.swift; sourceTree = "<group>"; };
 		B3CFFDFD1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMasonryCollectionViewController.swift; sourceTree = "<group>"; };
 		B3CFFDFF1F6F6C4100861E70 /* MainMasonryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMasonryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B3CFFE011F6F6C5500861E70 /* MainMasonryFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMasonryFlowLayout.swift; sourceTree = "<group>"; };
@@ -446,7 +446,7 @@
 			children = (
 				B3CFFDFD1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift */,
 				B3CFFDFF1F6F6C4100861E70 /* MainMasonryCollectionViewCell.swift */,
-				12E09CA21F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift */,
+				B3C68E8D1FA3E816001826FC /* FakeMainMasonryCollectionViewController.swift */,
 				B3CFFE011F6F6C5500861E70 /* MainMasonryFlowLayout.swift */,
 			);
 			name = MainView;
@@ -519,7 +519,7 @@
 				TargetAttributes = {
 					12177BB21F1F7A2C00CA49CD = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = MB966M732A;
+						DevelopmentTeam = N244XN77P3;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -663,7 +663,7 @@
 				B32E8FAC1F8242BB0009431E /* CreateDiaryHeaderCollectionReusableView.swift in Sources */,
 				12B71D591F8A137E0027589D /* DataManager.swift in Sources */,
 				12F9349C1F20DBA600E8858E /* newDailyViewController.swift in Sources */,
-				12E09CA31F98E73700E38E7C /* FakeMainMasonryCollectionViewController.swift in Sources */,
+				B3C68E8E1FA3E817001826FC /* FakeMainMasonryCollectionViewController.swift in Sources */,
 				B3535D461F86B51C00BE6EF6 /* DiaryViewController.swift in Sources */,
 				B3CFFDFE1F6F6C2E00861E70 /* MainMasonryCollectionViewController.swift in Sources */,
 				129A54391F9644490038673C /* UIImage+Properties_Extension.swift in Sources */,
@@ -842,7 +842,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MB966M732A;
+				DEVELOPMENT_TEAM = N244XN77P3;
 				INFOPLIST_FILE = "BPT103-Project-Foodaily/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -860,7 +860,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MB966M732A;
+				DEVELOPMENT_TEAM = N244XN77P3;
 				INFOPLIST_FILE = "BPT103-Project-Foodaily/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

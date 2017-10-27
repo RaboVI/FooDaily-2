@@ -9,10 +9,10 @@
 import UIKit
 import Firebase
 
+
 private let reuseIdentifier = "Cell"
 
 class FakeMainMasonryCollectionViewController: UICollectionViewController {
-    
     @IBOutlet weak var loading: UIActivityIndicatorView!
     
     func detectAccessToken() -> Bool {
@@ -29,6 +29,7 @@ class FakeMainMasonryCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
         loading.startAnimating()
 
         // Uncomment the following line to preserve selection between presentations
@@ -68,6 +69,7 @@ class FakeMainMasonryCollectionViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
+
     /*
     // MARK: - Navigation
 
@@ -98,6 +100,7 @@ class FakeMainMasonryCollectionViewController: UICollectionViewController {
     
         return cell
     }
+
 
     // MARK: UICollectionViewDelegate
 
